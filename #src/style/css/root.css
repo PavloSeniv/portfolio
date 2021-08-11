@@ -1,0 +1,20 @@
+:root {
+    --header-bg-color: #ffffff;
+    --header-width-container: 1408px;
+    --header-font-family: DINPro-Light;
+    --header-bg-color-mobile: #5B6460;
+    --header-bg-menu-body-mobile: #ffffff;
+    --header-bg-menu-icon-mobile: #ffffff;
+    --header-menu-link-color: #000000;
+    --header-menu-sub-link-color: #000000;
+    --header-menu-button-bg-color: #5b6460;
+    --header-menu-button-color: #ffffff;
+    --header-menu-button-color-hover: #808e88;
+    --header-menu-button-color-active: #79857f;
+    --header-menu-arrow-color: #000000;
+
+    --footer-bg-color: #5b6460;
+    --footer-bg-newsletter-color: #fff;
+    --footer-newsletter-sub-text-color: #fff;
+
+}

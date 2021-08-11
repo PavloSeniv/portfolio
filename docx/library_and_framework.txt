@@ -1,0 +1,19 @@
+Framework:
+1) Bootstrap
+2) Vue
+
+Library:
+1) Swiper
+2) AOS.js
+3) Vivus.js
+
+Task Runner:
+1) Gulp
+
+Компоненти сторінки:
+1) Header
+2) Map
+3) Slider
+4) Spoiler
+5) Footer
+6) Video

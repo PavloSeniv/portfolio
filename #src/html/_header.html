@@ -1,0 +1,55 @@
+<header class="header">
+    <div class="header__container">
+        <a class="header__logo" href="index.html">
+            <!--
+            Адаптивні картинки та заміна зображення відповідно медіа запиту(також можлива заміна відносно
+            моделі телефону(Android - header__logo 1x, iPhone - header__logo 2x - залежність від дисплею))
+            -->
+            <picture>
+                <source srcset="img/index/header/header_logo_mobile.png, img/index/header/header_logo_mobile.webp, img/index/header/header_logo_mobile.svg"
+                        media="(max-width:767px)">
+                <img src="img/index/header/header_logo_desktop.png"
+                     srcset="img/index/header/header_logo_desktop.webp, img/index/header/header_logo_desktop.svg"
+                     alt="header_logo_desktop">
+            </picture>
+        </a>
+        <div class="header__menu menu">
+            <div class="menu__icon">
+                <span></span>
+            </div>
+        </div>
+        <nav class="menu__body">
+            <ul class="menu__list">
+                <li class="menu__list-link"><a class="menu__link" href="index.html">Home</a></li>
+                <li class="menu__list-link"><a class="menu__link" href="the-hut.html">The Hut</a></li>
+                <li class="menu__list-link"><a class="menu__link" href="the-area.html">The Area</a></li>
+                <li class="menu__list-link"><a class="menu__link" href="booking.html">Booking</a></li>
+                <li class="menu__list-link"><a class="menu__link" href="about-us.html">About Us</a></li>
+                <li class="menu__list-link"><a class="menu__link" href="faq.html">Faq</a></li>
+                <li>
+                    <a class="menu__link" href="#">Language</a>
+                    <span class="menu__arrow"></span>
+                    <ul class="menu__sub-list">
+                        <li>
+                            <a class="menu__sub-link" href="#">
+                                <img src="img/index/header/germany.png" alt="germany">German
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu__sub-link" href="#">
+                                <img src="img/index/header/united_kingdom.png" alt="united_kingdom">English
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu__sub-link" href="#">
+                                <img src="img/index/header/denmark.png" alt="denmark">Danish
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <a class="menu__button-mobile" href="#">Book now</a>
+        </nav>
+        <a class="menu__button-desktop" href="#">Book now</a>
+    </div>
+</header>
