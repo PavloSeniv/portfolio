@@ -14,13 +14,98 @@
 @import "../css/root";
 
 @import "../css/style_header";
-
+@import "../css/style";
 @import "../css/style_footer";
 
 /*-------- index Start -------*/
-@import "../css/slider_home";
-@import "../css/style";
-/*-------- index End -------*/
 
-/*-------- Page Start -------*/
-/*-------- Page End -------*/
+// Variables
+
+
+/*-------- Home Start -------*/
+.home {
+  margin: 150px 0 50px 0;
+  display: flex;
+}
+
+.home__info {
+  flex: 0 0 30%;
+}
+
+.home__title {
+  font-family: TitilliumWeb-Bold;
+  font-size: 48px;
+  color: #070707;
+}
+
+.home__text {
+  font-family: TitilliumWeb-SemiBold;
+  font-size: 18px;
+  color: #070707;
+}
+
+.home__background {
+  flex: 0 0 60%;
+}
+
+.home__photo {
+  pointer-events: none;
+  width: 100%;
+  height: auto;
+}
+
+.home__photo-background {
+  background-color: black;
+}
+
+.home__switch-lang {
+  display: flex;
+  flex: 0 0 auto;
+  font-family: TitilliumWeb-SemiBold;
+  font-size: 16px;
+  color: #070707;
+  text-transform: uppercase;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  transform: rotate(0.5turn);
+}
+
+/*-------- Home End -------*/
+
+/*-------- About Me Start -------*/
+.about-me {
+  margin-bottom: 50px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 400px;
+}
+
+
+.about-me__title {
+  font-family: TitilliumWeb-Bold;
+  font-size: 34px;
+  color: #070707;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.about-me__text {
+  font-family: TitilliumWeb-SemiBold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #070707;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-me__text:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+/*-------- About Me End -------*/
+
+/*-------- index End -------*/

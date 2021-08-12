@@ -1,17 +1,12 @@
 /*-------- All -------*/
 ::selection {
-    background-color: #41906d;
+    background-color: #000000;
     color: #fff;
 }
 
 ._container {
-    max-width: 1408px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 /*-------- All -------*/
-
-/*-------- Block Start -------*/
-
-/*-------- Block End -------*/
-
