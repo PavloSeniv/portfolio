@@ -114,9 +114,6 @@ h6 {
   --header-bg-menu-body-mobile: #ffffff;
   --header-bg-menu-icon-mobile: #000000;
   --header-menu-link-color: #828282;
-  --footer-bg-color: #5b6460;
-  --footer-bg-newsletter-color: #fff;
-  --footer-newsletter-sub-text-color: #fff;
 }
 
 /*-------- Header Start -------*/
@@ -223,135 +220,31 @@ body._pc .menu__list > li:hover .menu__sub-list {
 
 /*-------- Footer Start -------*/
 
-.footer {
-  background-color: var(--footer-bg-color);
-  padding: 8em 10em;
-}
-
 .footer__container {
-  max-width: 1408px;
+  max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-gap: 100px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  padding: 100px 0;
 }
 
-.footer__newsletter {
-  grid-area: my-newsletter;
-}
-
-.footer__license {
-  grid-area: my-license;
-}
-
-.footer__security-police {
-  grid-area: my-security-police;
-}
-
-/*Шаблон вигляду футера*/
-
-.footer__container {
-  grid-template-areas: "my-newsletter my-license" "my-security-police my-security-police";
-}
-
-.newsletter__form {
-  position: relative;
-}
-
-.newsletter__title {
-  font-family: "Open Sans Semibold";
-  color: var(--footer-bg-newsletter-color);
-  font-size: 16px;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.newsletter__input {
-  width: 100%;
-  background-color: var(--footer-bg-color);
-  border-bottom: 2px solid var(--footer-bg-newsletter-color);
-  padding: 3px;
-  color: var(--footer-bg-newsletter-color);
-  font-family: OpenSans-LightItalic;
-  font-size: 16px;
-}
-
-.newsletter__input:focus,
-.newsletter__input:hover {
-  background-color: #808e88;
-}
-
-.newsletter__input::-moz-placeholder {
-  color: var(--footer-bg-newsletter-color);
-  font-family: OpenSans-LightItalic;
-  font-size: 16px;
-}
-
-.newsletter__input:-ms-input-placeholder {
-  color: var(--footer-bg-newsletter-color);
-  font-family: OpenSans-LightItalic;
-  font-size: 16px;
-}
-
-.newsletter__input::placeholder {
-  color: var(--footer-bg-newsletter-color);
-  font-family: OpenSans-LightItalic;
-  font-size: 16px;
-}
-
-.newsletter__button {
-  position: absolute;
-  display: inline-block;
-  right: 2px;
-  top: 43px;
-  background-color: unset;
-}
-
-.newsletter-sub-text {
-  font-family: OpenSans-Light;
-  font-size: 16px;
-  margin-top: 10px;
-  color: var(--footer-newsletter-sub-text-color);
-  line-height: 20px;
-}
-
-.footer__license-text {
+.footer__social-ethernet {
   display: flex;
-  margin-bottom: 30px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
-.footer__license-item-text {
-  text-align: center;
-  flex: 0 0 33.333%;
-}
-
-.footer__license-item-text > a {
-  color: var(--footer-bg-newsletter-color);
-  font-family: DINPro-Light;
-  font-size: 14px;
-  text-transform: uppercase;
-  line-height: 24px;
-}
-
-.footer__license-item-text > a:hover {
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
-}
-
-.footer__license-icon {
+.social__item-link {
   display: flex;
-  align-items: center;
+  flex: 0 0 33%;
+  justify-content: center;
 }
 
-.footer__license-item {
-  flex: 0 0 25%;
-  text-align: center;
-}
-
-.footer__security-police {
-  font-family: OpenSans-Light;
+.footer__subtitle {
+  font-family: TitilliumWeb-SemiBold;
   font-size: 14px;
-  color: var(--footer-bg-newsletter-color);
+  line-height: 21px;
+  text-align: center;
+  color: #828282;
 }
 
 /*-------- Footer End -------*/
@@ -453,7 +346,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
 }
 
 .home .home__photo-background {
-  background-image: url("../img/index/home/home_photo_background.png");
+  background-image: url("../img/index/home/home_photo_background_desktop.png");
   width: 100%;
 }
 
@@ -907,14 +800,6 @@ body._pc .menu__list > li:hover .menu__sub-list {
 }
 
 @media (max-width: 991px) {
-  .footer__container {
-    grid-template-areas: "my-newsletter my-newsletter" "my-license my-license" "my-security-police my-security-police";
-  }
-
-  .footer {
-    padding: 4em 5em;
-  }
-
   .about-me .about-me__content {
     padding: 0 200px;
   }
@@ -1058,10 +943,6 @@ body._pc .menu__list > li:hover .menu__sub-list {
     height: 55px;
   }
 
-  .footer {
-    padding: 2em 2em;
-  }
-
   .home .home__info {
     flex: 0 0 100%;
     align-items: unset;
@@ -1119,16 +1000,12 @@ body._pc .menu__list > li:hover .menu__sub-list {
 }
 
 @media (max-width: 575px) {
-  .footer {
-    padding: 2em 2em;
-  }
-
   .about-me .about-me__content {
     padding: 0 20px;
   }
 }
 @supports (-webkit-appearance:none){
-.home .home__photo-background{background-image:url("../img/index/home/home_photo_background.webp")}
+.home .home__photo-background{background-image:url("../img/index/home/home_photo_background_desktop.webp")}
 }
 
  @media (min-width: 768px){
