@@ -593,6 +593,57 @@ body._pc .menu__list > li:hover .menu__sub-list {
 
 /*-------- Skills End -------*/
 
+/*-------- Portfolio Start -------*/
+
+.portfolio {
+  background-color: #f6f6f6;
+}
+
+.portfolio .portfolio__position {
+  padding: 100px 0;
+}
+
+.portfolio .portfolio__title {
+  font-family: TitilliumWeb-Bold;
+  font-size: 34px;
+  color: #070707;
+  margin-bottom: 47px;
+  text-align: center;
+}
+
+.portfolio .portfolio__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.portfolio .portfolio__info:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.portfolio .portfolio__info .portfolio__photo-item {
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+.portfolio .portfolio__info .portfolio__link-item {
+  font-family: TitilliumWeb-SemiBold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #070707;
+  margin-bottom: 47px;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+.portfolio .portfolio__info .portfolio__link-item:hover {
+  -webkit-text-decoration-line: overline;
+  text-decoration-line: overline;
+}
+
+/*-------- Portfolio End -------*/
+
 /*-------- index End -------*/
 
 @media (min-width: 768px) {

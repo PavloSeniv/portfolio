@@ -338,5 +338,52 @@
 }
 
 /*-------- Skills End -------*/
+/*-------- Portfolio Start -------*/
+.portfolio {
+  background-color: #f6f6f6;
+
+  .portfolio__position {
+    padding: 100px 0;
+  }
+
+  .portfolio__title {
+    font-family: TitilliumWeb-Bold;
+    font-size: 34px;
+    color: #070707;
+    margin-bottom: 47px;
+    text-align: center;
+  }
+
+  .portfolio__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    .portfolio__photo-item {
+      width: 100%;
+      margin-bottom: 45px;
+    }
+
+    .portfolio__link-item {
+      font-family: TitilliumWeb-SemiBold;
+      font-size: 18px;
+      line-height: 27px;
+      color: #070707;
+      margin-bottom: 47px;
+      text-decoration-line: underline;
+
+      &:hover {
+        text-decoration-line: overline;
+      }
+    }
+  }
+}
+
+/*-------- Portfolio End -------*/
 
 /*-------- index End -------*/
