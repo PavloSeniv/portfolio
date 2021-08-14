@@ -26,52 +26,104 @@
 .home {
   margin: 150px 0 50px 0;
   display: flex;
-}
+  flex-direction: row;
+  justify-content: space-between;
 
-.home__info {
-  flex: 0 0 30%;
-}
+  .home__info {
+    flex: 0 0 30%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.home__title {
-  font-family: TitilliumWeb-Bold;
-  font-size: 48px;
-  color: #070707;
-}
+  .home__title {
+    font-family: TitilliumWeb-Bold;
+    font-size: 48px;
+    color: #070707;
+    margin-bottom: 30px;
+  }
 
-.home__text {
-  font-family: TitilliumWeb-SemiBold;
-  font-size: 18px;
-  color: #070707;
-}
+  .home__text {
+    font-family: TitilliumWeb-SemiBold;
+    font-size: 18px;
+    color: #070707;
+    line-height: 24px;
+  }
 
-.home__background {
-  flex: 0 0 60%;
-}
+  .home__background {
+    flex: 0 0 60%;
+  }
 
-.home__photo {
-  pointer-events: none;
-  width: 100%;
-  height: auto;
-}
+  .home__photo {
+    pointer-events: none;
+    width: 100%;
+    height: auto;
+    position: relative;
+    right: 10px;
+    bottom: 10px;
+  }
 
-.home__photo-background {
-  background-color: black;
+  .home__photo-background {
+    background: url("../img/index/home/home_photo_background.png");
+    width: 100%;
+  }
+
+  @media (max-width: 1199px) {
+    padding-left: 20px;
+  }
+
 }
 
 .home__switch-lang {
   display: flex;
+  position: relative;
+  top: 12px;
   flex: 0 0 auto;
-  font-family: TitilliumWeb-SemiBold;
-  font-size: 16px;
-  color: #070707;
-  text-transform: uppercase;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
   align-items: flex-start;
-  flex-direction: row;
-  transform: rotate(0.5turn);
+
+  .menu__body & {
+    display: none;
+
+    &._active {
+      display: flex;
+      justify-content: flex-end;
+      top: -30px;
+    }
+  }
+
+
+  @media (max-width: 767px) {
+    & {
+      display: none;
+    }
+  }
+
+  .home__switch-title {
+    transform: rotate(0.75turn);
+
+    & span {
+      font-size: inherit;
+      width: 100%;
+    }
+
+    & > a {
+      font-family: TitilliumWeb-SemiBold;
+      font-size: 16px;
+      color: #070707;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration-line: underline;
+      }
+
+      .menu__body & {
+        font-size: 30px;
+      }
+    }
+  }
 }
+
 
 /*-------- Home End -------*/
 
