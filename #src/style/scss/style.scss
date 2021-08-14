@@ -20,6 +20,57 @@
 /*-------- index Start -------*/
 
 // Variables
+/*-------- Header Start -------*/
+.menu__body {
+  .menu__link {
+    position: relative;
+    transition: .3s ease-out .1s;
+
+    &::before {
+      height: 2px;
+      width: 100%;
+      background: #828282;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      visibility: hidden;
+      transition: .3s;
+
+    }
+
+    &::after {
+      height: 2px;
+      width: 100%;
+      background: #828282;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 100%;
+      visibility: hidden;
+      transition: .3s;
+    }
+
+    &:hover {
+      color: #000000;
+
+      &::before {
+        visibility: visible;
+        top: 100%;
+        background: #000000;
+
+      }
+
+      &::after {
+        visibility: visible;
+        top: 0;
+        background: #000000;
+      }
+    }
+  }
+}
+
+/*-------- Header End -------*/
 
 
 /*-------- Home Start -------*/
@@ -28,6 +79,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   .home__info {
     flex: 0 0 30%;
@@ -35,6 +87,12 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 767px) {
+      flex: 0 0 100%;
+      align-items: center;
+
+    }
   }
 
   .home__title {
@@ -42,6 +100,9 @@
     font-size: 48px;
     color: #070707;
     margin-bottom: 30px;
+    @media (max-width: 767px) {
+      margin-top: 0;
+    }
   }
 
   .home__text {
@@ -49,10 +110,16 @@
     font-size: 18px;
     color: #070707;
     line-height: 24px;
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
 
   .home__background {
     flex: 0 0 60%;
+    @media (max-width: 767px) {
+      flex: 0 0 100%;
+    }
   }
 
   .home__photo {
@@ -67,6 +134,11 @@
   .home__photo-background {
     background: url("../img/index/home/home_photo_background.png");
     width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media (max-width: 1199px) {

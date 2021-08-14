@@ -47,63 +47,14 @@ body._lock {
     margin: 0 10px;
 }
 
-.menu__list-link:hover :after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 3px;
-    background-color: #000000;
-    margin-top: 4px;
-}
-
 .menu__link {
     font-family: TitilliumWeb-SemiBold;
     font-size: 18px;
     text-align: center;
     line-height: 17px;
     color: var(--header-menu-link-color);
-}
-
-.menu__sub-list {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    padding: 3px 0;
-}
-
-.menu__sub-list img {
-    display: block;
-    margin: 0 auto 5px auto;
-}
-
-.menu__sub-list li {
-    margin: 10px 0;
-    background-color: white;
-    text-align: center;
-    border-radius: 10%;
-}
-
-.menu__sub-link {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 15px;
-    -webkit-text-stroke: thin #000000;
-}
-
-.menu__sub-link:hover {
-    text-decoration-line: overline;
-}
-
-.menu__arrow {
-    display: none;
-}
-
-.menu__button-mobile {
-    display: none;
-}
-
-.menu__button-mobile._active {
-    display: none;
+    display: flex;
+    align-items: center;
 }
 
 /*----------------------------------*/
@@ -122,18 +73,6 @@ body._pc .menu__list > li:hover .menu__sub-list {
 
 .menu__list {
     flex: 1 1 auto;
-}
-
-
-body._touch .menu__list > li._active .menu__sub-list {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0, 0);
-    pointer-events: all;
-}
-
-body._touch .menu__list > li._active .menu__arrow {
-    transform: rotate(-180deg);
 }
 
 /*----------------------------------*/
@@ -265,46 +204,15 @@ body._touch .menu__list > li._active .menu__arrow {
         margin-bottom: 0;
     }
 
-    .menu__list > li._active .menu__sub-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
     .menu__link {
         font-size: 35px;
         height: 55px;
-
     }
-
-
-    .menu__button-desktop {
-        display: none;
-    }
-
-    .menu__list-link:hover :after {
-        display: block;
-        content: "";
-        width: 100%;
-        height: 3px;
-        background-color: #000000;
-        margin-top: 10px;
-    }
-
 }
 
 @media (min-width: 1200px) {
     .header__container {
-        max-width: var(--header-width-container);
-        margin: 0 auto;
         padding: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 100px;
-        border-bottom: 1px solid var(--header-menu-link-color);
     }
 }
 
