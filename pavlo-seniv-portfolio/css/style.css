@@ -520,7 +520,16 @@ body._touch .menu__list > li._active .menu__arrow {
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  padding: 50px 400px;
+  padding: 50px 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.about-me .about-me__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 400px;
 }
 
 .about-me__title {
@@ -577,6 +586,10 @@ body._touch .menu__list > li._active .menu__arrow {
   .home {
     padding-left: 20px;
   }
+
+  .about-me .about-me__content {
+    padding: 0 300px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -586,6 +599,10 @@ body._touch .menu__list > li._active .menu__arrow {
 
   .footer {
     padding: 4em 5em;
+  }
+
+  .about-me .about-me__content {
+    padding: 0 200px;
   }
 }
 
@@ -735,11 +752,19 @@ body._touch .menu__list > li._active .menu__arrow {
   .home__switch-lang {
     display: none;
   }
+
+  .about-me .about-me__content {
+    padding: 0 100px;
+  }
 }
 
 @media (max-width: 575px) {
   .footer {
     padding: 2em 2em;
+  }
+
+  .about-me .about-me__content {
+    padding: 0 20px;
   }
 }
 @supports (-webkit-appearance:none){
