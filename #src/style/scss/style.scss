@@ -75,11 +75,14 @@
 
 /*-------- Home Start -------*/
 .home {
-  margin: 150px 0 50px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
+  .home__position {
+    margin: 170px 0 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
   .home__info {
     flex: 0 0 30%;
@@ -90,17 +93,19 @@
 
     @media (max-width: 767px) {
       flex: 0 0 100%;
-      align-items: center;
-
+      align-items: unset;
     }
   }
 
   .home__title {
+
     font-family: TitilliumWeb-Bold;
     font-size: 48px;
     color: #070707;
     margin-bottom: 30px;
     @media (max-width: 767px) {
+      display: flex;
+      justify-content: center;
       margin-top: 0;
     }
   }
@@ -111,6 +116,8 @@
     color: #070707;
     line-height: 24px;
     @media (max-width: 767px) {
+      display: flex;
+      justify-content: flex-end;
       margin-bottom: 30px;
     }
   }
@@ -129,16 +136,20 @@
     position: relative;
     right: 10px;
     bottom: 10px;
+    @media (max-width: 767px) {
+      position: unset;
+    }
   }
 
   .home__photo-background {
-    background: url("../img/index/home/home_photo_background.png");
+    background-image: url("../img/index/home/home_photo_background.png");
     width: 100%;
   }
 
   @media (max-width: 767px) {
     padding-left: 20px;
     padding-right: 20px;
+    margin: 120px 0 50px 0;
   }
 
   @media (max-width: 1199px) {
@@ -206,9 +217,6 @@
   display: flex;
   flex-direction: column;
   padding: 50px 0;
-  position: absolute;
-  left: 0;
-  width: 100%;
 
   .about-me__content {
     max-width: 1200px;
@@ -256,5 +264,79 @@
 }
 
 /*-------- About Me End -------*/
+
+/*-------- Skills Start -------*/
+.skills {
+  .skills__position {
+    margin: 100px 0;
+    padding: 0 20px;
+  }
+
+  .skills__title {
+    font-family: TitilliumWeb-Bold;
+    font-size: 34px;
+    text-align: center;
+    color: #070707;
+    margin-bottom: 70px;
+  }
+
+  .skills__subtitle {
+    font-family: TitilliumWeb-SemiBold;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #070707;
+    margin-bottom: 80px;
+  }
+
+  .skills__program-language {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 991px) {
+      justify-content: space-evenly;
+    }
+
+    .skills__info-item {
+      display: flex;
+      flex: 0 0 25%;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+
+      @media (max-width: 767px) {
+        flex: 0 0 100%;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (max-width: 991px) {
+        flex: 0 0 33%;
+      }
+
+
+      .skills__photo-item {
+        margin-bottom: 25px;
+      }
+
+      .skills__title-item {
+        font-family: TitilliumWeb-Bold;
+        font-size: 14px;
+        line-height: 21px;
+        color: #828282;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+
+}
+
+/*-------- Skills End -------*/
 
 /*-------- index End -------*/

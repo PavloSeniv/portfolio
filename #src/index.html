@@ -19,26 +19,35 @@
 
 @@include('html/_header.html')
 
-<main class="_container">
-    <section class="home">
-        <div class="home__info">
-            <h1 class="home__title">Seniv Pavlo</h1>
-            <p class="home__text">Front-end Developer <br> 20 years old, Ukraine</p>
-        </div>
-        <div class="home__background">
-            <div class="home__photo-background">
-                <img class="home__photo" src="img/index/home/home_photo.png" alt="home_photo">
+<main class="">
+    <section class="_container home">
+        <div class="home__position">
+            <div class="home__info">
+                <h1 class="home__title">Seniv Pavlo</h1>
+                <p class="home__text">Front-end Developer <br> 20 years old, Ukraine</p>
             </div>
-        </div>
-        <div class="home__switch-lang">
-            <h2 class="home__switch-title">
-                <a href="#">Ua</a> | <a href="#">Eng</a>
-            </h2>
+            <div class="home__background">
+                <div class="home__photo-background">
+                    <!--Адаптивні картинки та заміна зображення відповідно медіа запиту(також можлива заміна відносно моделі телефону(Android - header__logo 1x, iPhone - header__logo 2x - залежність від дисплею))-->
+                    <picture>
+                        <source srcset="img/index/home/home_photo_mobile.png, img/index/home/home_photo_mobile.webp"
+                                media="(max-width:767px)">
+                        <img class="home__photo" src="img/index/home/home_photo_desktop.jpg"
+                             srcset="img/index/home/home_photo_desktop.webp" alt="home_photo_mobile">
+                    </picture>
+
+                </div>
+            </div>
+            <div class="home__switch-lang">
+                <h2 class="home__switch-title">
+                    <a href="#">Ua</a> | <a href="#">Eng</a>
+                </h2>
+            </div>
         </div>
     </section>
 
     <section class="about-me">
-        <div class="about-me__content">
+        <div class="_container about-me__content">
             <h2 class="about-me__title">About Me</h2>
             <p class="about-me__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus mollitia nobis
                 non
@@ -49,6 +58,76 @@
             <p class="about-me__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus mollitia nobis
                 non
                 nostrum obcaecati odit porro! Accusantium aliquid et modi.</p>
+        </div>
+    </section>
+
+    <section class="_container skills ">
+        <div class="skills__position">
+            <h2 class="skills__title">Skills</h2>
+            <p class="skills__subtitle">I work in such programs us</p>
+
+            <div class="skills__program-language">
+
+                <div class="skills__info-item">
+                    <div class="skills__photo-item">
+                        <img src="img/index/skills/skills_photo_item_1.png" alt="skills_photo_item_1">
+                    </div>
+                    <h3 class="skills__title-item">Figma</h3>
+                    <div class="skills__progress">
+                        <img src="img/index/skills/skills_progress_1.png" alt="skills_progress_1">
+                    </div>
+                </div>
+
+                <div class="skills__info-item">
+                    <div class="skills__photo-item">
+                        <img src="img/index/skills/skills_photo_item_1.png" alt="skills_photo_item_1">
+                    </div>
+                    <h3 class="skills__title-item">Figma</h3>
+                    <div class="skills__progress">
+                        <img src="img/index/skills/skills_progress_1.png" alt="skills_progress_1">
+                    </div>
+                </div>
+
+                <div class="skills__info-item">
+                    <div class="skills__photo-item">
+                        <img src="img/index/skills/skills_photo_item_1.png" alt="skills_photo_item_1">
+                    </div>
+                    <h3 class="skills__title-item">Figma</h3>
+                    <div class="skills__progress">
+                        <img src="img/index/skills/skills_progress_1.png" alt="skills_progress_1">
+                    </div>
+                </div>
+
+                <div class="skills__info-item">
+                    <div class="skills__photo-item">
+                        <img src="img/index/skills/skills_photo_item_1.png" alt="skills_photo_item_1">
+                    </div>
+                    <h3 class="skills__title-item">Figma</h3>
+                    <div class="skills__progress">
+                        <img src="img/index/skills/skills_progress_1.png" alt="skills_progress_1">
+                    </div>
+                </div>
+
+                <div class="skills__info-item">
+                    <div class="skills__photo-item">
+                        <img src="img/index/skills/skills_photo_item_1.png" alt="skills_photo_item_1">
+                    </div>
+                    <h3 class="skills__title-item">Figma</h3>
+                    <div class="skills__progress">
+                        <img src="img/index/skills/skills_progress_1.png" alt="skills_progress_1">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="portfolio">
+        <div class="_container">
+            <h2 class="portfolio__title">Portfolio</h2>
+            <a href="">Homepage</a>
         </div>
     </section>
 </main>
