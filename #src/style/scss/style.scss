@@ -344,6 +344,10 @@
 
   .portfolio__position {
     padding: 100px 0;
+    @media (max-width: 991px) {
+      padding: 100px 20px;
+
+    }
   }
 
   .portfolio__title {
@@ -364,9 +368,22 @@
       margin-bottom: 0;
     }
 
+    .portfolio__link-photo {
+      margin-bottom: 45px;
+
+      &:hover {
+        overflow: hidden;
+        transition: transform 3s ease 0s;
+      }
+
+    }
+
     .portfolio__photo-item {
       width: 100%;
-      margin-bottom: 45px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     .portfolio__link-item {

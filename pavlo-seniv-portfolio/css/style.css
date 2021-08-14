@@ -622,9 +622,21 @@ body._pc .menu__list > li:hover .menu__sub-list {
   margin-bottom: 0;
 }
 
+.portfolio .portfolio__info .portfolio__link-photo {
+  margin-bottom: 45px;
+}
+
+.portfolio .portfolio__info .portfolio__link-photo:hover {
+  overflow: hidden;
+  transition: transform 3s ease 0s;
+}
+
 .portfolio .portfolio__info .portfolio__photo-item {
   width: 100%;
-  margin-bottom: 45px;
+}
+
+.portfolio .portfolio__info .portfolio__photo-item:hover {
+  transform: scale(1.1);
 }
 
 .portfolio .portfolio__info .portfolio__link-item {
@@ -693,6 +705,10 @@ body._pc .menu__list > li:hover .menu__sub-list {
 
   .skills .skills__program-language .skills__info-item {
     flex: 0 0 33%;
+  }
+
+  .portfolio .portfolio__position {
+    padding: 100px 20px;
   }
 }
 
