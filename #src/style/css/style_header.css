@@ -147,7 +147,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
     }
 
     .menu__icon span {
-        top: 50%;
+        top: 57%;
         transform: scale(1) translate(0px, -50%);
     }
 
@@ -165,7 +165,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
     }
 
     .menu__icon._active::after {
-        top: 49%;
+        top: 44%;
         transform: rotate(45deg) translate(0px, 50%);
     }
 

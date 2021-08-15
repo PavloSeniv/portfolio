@@ -173,6 +173,9 @@
       display: flex;
       justify-content: flex-end;
       top: -30px;
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -185,6 +188,10 @@
 
   .home__switch-title {
     transform: rotate(0.75turn);
+    @media (max-width: 767px) {
+      position: relative;
+      left: 40px;
+    }
 
     & span {
       font-size: inherit;

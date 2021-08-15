@@ -789,6 +789,10 @@ body._pc .menu__list > li:hover .menu__sub-list {
   .menu__link {
     height: 20px;
   }
+
+  .menu__body .home__switch-lang._active {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -884,7 +888,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
   }
 
   .menu__icon span {
-    top: 50%;
+    top: 57%;
     transform: scale(1) translate(0px, -50%);
   }
 
@@ -902,7 +906,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
   }
 
   .menu__icon._active::after {
-    top: 49%;
+    top: 44%;
     transform: rotate(45deg) translate(0px, 50%);
   }
 
@@ -989,6 +993,11 @@ body._pc .menu__list > li:hover .menu__sub-list {
 
   .home__switch-lang {
     display: none;
+  }
+
+  .home__switch-lang .home__switch-title {
+    position: relative;
+    left: 40px;
   }
 
   .about-me .about-me__content {
