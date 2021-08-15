@@ -7,15 +7,38 @@
 
 .footer__social-ethernet {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
-.social__item-link {
+.footer__socials-item {
+    width: 30%;
     display: flex;
-    flex: 0 0 33%;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+.social__item-link {
+    width: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social__item-link svg:hover {
+    transform: scale(1.2);
+}
+
+.social__item-link svg:active {
+    fill: #828282;
+}
+
+.footer__title {
+    font-family: TitilliumWeb-SemiBold;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #828282;
+    margin-bottom: 40px;
 }
 
 .footer__subtitle {
