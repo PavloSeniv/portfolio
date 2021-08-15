@@ -129,6 +129,7 @@ body._lock {
   width: 100%;
   z-index: 10;
   background-color: var(--header-background-color);
+  border-bottom: 1px solid var(--header-menu-link-color);
 }
 
 .header__container {
@@ -139,7 +140,6 @@ body._lock {
   justify-content: space-between;
   align-items: center;
   min-height: 100px;
-  border-bottom: 1px solid var(--header-menu-link-color);
 }
 
 .header__logo {
@@ -826,6 +826,11 @@ body._pc .menu__list > li:hover .menu__sub-list {
 }
 
 @media (max-width: 767px) {
+  .header {
+    position: fixed;
+    border-bottom: none;
+  }
+
   .header__logo {
     position: relative;
     z-index: 5;

@@ -56,7 +56,7 @@ if (iconMenu) {
 }
 
 // Прокрутка при кліку
-const menuLinks = document.querySelectorAll('[data-goto]');
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {
     menuLinks.forEach(menuLink => {
         menuLink.addEventListener("click", onMenuLinkClick);
