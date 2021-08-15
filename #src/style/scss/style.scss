@@ -51,7 +51,8 @@
       transition: .3s;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: #000000;
 
       &::before {

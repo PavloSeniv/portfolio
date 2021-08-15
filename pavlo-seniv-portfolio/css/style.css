@@ -152,6 +152,11 @@ body._lock {
   color: #000000;
 }
 
+.header__logo:hover,
+:focus {
+  transform: scale(1.1);
+}
+
 .menu__icon {
   display: none;
 }
@@ -282,17 +287,20 @@ body._pc .menu__list > li:hover .menu__sub-list {
   transition: .3s;
 }
 
-.menu__body .menu__link:hover {
+.menu__body .menu__link:hover,
+.menu__body .menu__link:focus {
   color: #000000;
 }
 
-.menu__body .menu__link:hover::before {
+.menu__body .menu__link:hover::before,
+.menu__body .menu__link:focus::before {
   visibility: visible;
   top: 100%;
   background: #000000;
 }
 
-.menu__body .menu__link:hover::after {
+.menu__body .menu__link:hover::after,
+.menu__body .menu__link:focus::after {
   visibility: visible;
   top: 0;
   background: #000000;

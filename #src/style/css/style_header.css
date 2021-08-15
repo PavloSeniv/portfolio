@@ -33,6 +33,11 @@ body._lock {
     color: #000000;
 }
 
+.header__logo:hover, :focus {
+    transform: scale(1.1);
+}
+
+
 .menu__icon {
     display: none;
 }
