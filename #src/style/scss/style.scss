@@ -55,6 +55,11 @@
     &:focus {
       color: #000000;
 
+      &:active {
+        color: #828282;
+
+      }
+
       &::before {
         visibility: visible;
         top: 100%;

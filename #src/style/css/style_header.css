@@ -38,6 +38,10 @@ body._lock {
     transform: scale(1.1);
 }
 
+.header__logo:active {
+    color: #828282;
+}
+
 
 .menu__icon {
     display: none;

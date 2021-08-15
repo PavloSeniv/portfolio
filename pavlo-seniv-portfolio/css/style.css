@@ -157,6 +157,10 @@ body._lock {
   transform: scale(1.1);
 }
 
+.header__logo:active {
+  color: #828282;
+}
+
 .menu__icon {
   display: none;
 }
@@ -290,6 +294,11 @@ body._pc .menu__list > li:hover .menu__sub-list {
 .menu__body .menu__link:hover,
 .menu__body .menu__link:focus {
   color: #000000;
+}
+
+.menu__body .menu__link:hover:active,
+.menu__body .menu__link:focus:active {
+  color: #828282;
 }
 
 .menu__body .menu__link:hover::before,
