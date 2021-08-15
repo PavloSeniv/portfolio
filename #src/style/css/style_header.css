@@ -33,7 +33,8 @@ body._lock {
     color: #000000;
 }
 
-.header__logo:hover, :focus {
+.header__logo:hover,
+.header__logo:focus {
     transform: scale(1.1);
 }
 
