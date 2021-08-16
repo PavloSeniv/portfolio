@@ -266,7 +266,11 @@ body._pc .menu__list > li:hover .menu__sub-list {
   flex-direction: column;
 }
 
-.social__item-link svg:hover {
+.social__item-link a:hover svg {
+  transform: scale(1.2);
+}
+
+.social__item-link a:focus svg {
   transform: scale(1.2);
 }
 
