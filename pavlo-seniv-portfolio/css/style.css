@@ -392,18 +392,15 @@ body._pc .menu__list > li:hover .menu__sub-list {
   flex: 0 0 60%;
 }
 
+.home .home__background:hover,
+.home .home__background:focus {
+  box-shadow: 15px 15px 15px 2px rgba(0, 0, 0, 0.5);
+}
+
 .home .home__photo {
   pointer-events: none;
   width: 100%;
   height: auto;
-  position: relative;
-  right: 10px;
-  bottom: 10px;
-}
-
-.home .home__photo-background {
-  background-image: url("../img/index/home/home_photo_background_desktop.png");
-  width: 100%;
 }
 
 .home__switch-lang {
@@ -1136,12 +1133,13 @@ body._pc .menu__list > li:hover .menu__sub-list {
     margin-bottom: 30px;
   }
 
-  .home .home__background {
-    flex: 0 0 100%;
+  .home .home__background:hover,
+  .home .home__background:focus {
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.5);
   }
 
-  .home .home__photo {
-    position: unset;
+  .home .home__background {
+    flex: 0 0 100%;
   }
 
   .home {
@@ -1190,7 +1188,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
   }
 }
 @supports (-webkit-appearance:none){
-.home .home__photo-background{background-image:url("../img/index/home/home_photo_background_desktop.webp")}
+
 }
 
  @media (min-width: 768px){

@@ -130,6 +130,19 @@
 
   .home__background {
     flex: 0 0 60%;
+
+    &:hover,
+    &:focus {
+      -webkit-box-shadow: 15px 15px 15px 2px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 15px 15px 15px 2px rgba(0, 0, 0, 0.5);
+      box-shadow: 15px 15px 15px 2px rgba(0, 0, 0, 0.5);
+      @media (max-width: 767px) {
+        -webkit-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.5);
+      }
+    }
+
     @media (max-width: 767px) {
       flex: 0 0 100%;
     }
@@ -139,17 +152,6 @@
     pointer-events: none;
     width: 100%;
     height: auto;
-    position: relative;
-    right: 10px;
-    bottom: 10px;
-    @media (max-width: 767px) {
-      position: unset;
-    }
-  }
-
-  .home__photo-background {
-    background-image: url("../img/index/home/home_photo_background_desktop.png");
-    width: 100%;
   }
 
   @media (max-width: 767px) {
