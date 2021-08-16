@@ -67,6 +67,11 @@ body._lock {
     align-items: center;
 }
 
+.menu__link svg {
+    display: none;
+}
+
+
 /*----------------------------------*/
 body._pc .menu__list > li:hover .menu__sub-list {
     opacity: 1;
@@ -223,6 +228,13 @@ body._pc .menu__list > li:hover .menu__sub-list {
     .menu__link {
         font-size: 35px;
         height: 55px;
+        flex: 0 0 100%;
+        line-height: 38px;
+        justify-content: space-between;
+    }
+
+    .menu__link svg {
+        display: block;
     }
 }
 
