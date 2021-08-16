@@ -211,7 +211,8 @@
       color: #070707;
       text-transform: uppercase;
 
-      &:hover {
+      &:hover,
+      &:focus {
         text-decoration-line: underline;
       }
 

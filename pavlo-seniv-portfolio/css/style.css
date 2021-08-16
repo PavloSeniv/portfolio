@@ -437,7 +437,8 @@ body._pc .menu__list > li:hover .menu__sub-list {
   text-transform: uppercase;
 }
 
-.home__switch-lang .home__switch-title > a:hover {
+.home__switch-lang .home__switch-title > a:hover,
+.home__switch-lang .home__switch-title > a:focus {
   -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
 }
