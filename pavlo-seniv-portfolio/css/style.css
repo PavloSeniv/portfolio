@@ -303,7 +303,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
 
 .menu__body .menu__link {
   position: relative;
-  transition: .3s ease-out .1s;
+  transition: 0.3s ease-out 0.1s;
 }
 
 .menu__body .menu__link::before {
@@ -315,7 +315,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
   left: 0;
   top: 0;
   visibility: hidden;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .menu__body .menu__link::after {
@@ -327,7 +327,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
   left: 0;
   top: 100%;
   visibility: hidden;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .menu__body .menu__link:hover,
@@ -462,10 +462,9 @@ body._pc .menu__list > li:hover .menu__sub-list {
 .about-me .about-me__content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 400px;
 }
 
-.about-me__title {
+.about-me .about-me__content .about-me__title {
   font-family: TitilliumWeb-Bold;
   font-size: 34px;
   color: #070707;
@@ -473,17 +472,103 @@ body._pc .menu__list > li:hover .menu__sub-list {
   margin-bottom: 18px;
 }
 
-.about-me__text {
+.about-me .about-me__content .about-me__subtitle {
   font-family: TitilliumWeb-SemiBold;
   font-size: 18px;
   line-height: 27px;
-  color: #070707;
   text-align: center;
+  color: #070707;
   margin-bottom: 50px;
 }
 
-.about-me__text:nth-last-child(1) {
+.about-me .about-me__content .about-me__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-me .about-me__content .about-me__info .about-me__photo {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-me .about-me__content .about-me__info .about-me__photo img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.about-me .about-me__content .about-me__info .about-me__info-text {
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+}
+
+.about-me .about-me__content .about-me__info .about-me__info-text .about-me__text {
+  font-family: TitilliumWeb-SemiBold;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: justify;
+  color: #070707;
+  margin-bottom: 50px;
+}
+
+.about-me .about-me__content .about-me__info .about-me__info-text .about-me__text:nth-last-child(1) {
   margin-bottom: 0;
+}
+
+.about-me .about-me__content .about-me__info .about-me__info-text .about-me__experience {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.about-me .about-me__content .about-me__info .about-me__info-text .about-me__experience .about-me__item-expirience .about-me__title-expirience {
+  font-family: TitilliumWeb-Bold;
+  font-size: 25px;
+  color: #070707;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.about-me .about-me__content .about-me__info .about-me__info-text .about-me__experience .about-me__item-expirience .about-me__subtitle-expirience {
+  font-family: TitilliumWeb-SemiBold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #070707;
+}
+
+.about-me .about-me__content .about-me__info .about-me__info-text .about-me__button-download {
+  width: 180px;
+  display: flex;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #070707;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.about-me .about-me__content .about-me__info .about-me__info-text .about-me__button-download:hover,
+.about-me .about-me__content .about-me__info .about-me__info-text .about-me__button-download:focus {
+  background-color: #272323;
+}
+
+.about-me .about-me__content .about-me__info .about-me__info-text .about-me__button-download:active {
+  background-color: #504747;
+}
+
+.about-me .about-me__content .about-me__info .about-me__info-text .about-me__button-download a {
+  font-family: TitilliumWeb-SemiBold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.about-me .about-me__content .about-me__info .about-me__info-text .about-me__button-download a svg {
+  margin-left: 10px;
 }
 
 /*-------- About Me End -------*/
@@ -602,7 +687,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
 }
 
 .portfolio .portfolio__info .portfolio__link .portfolio__link-item:after {
-  content: '';
+  content: "";
   display: block;
   height: 2px;
   position: absolute;
@@ -670,7 +755,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
 
 .portfolio__link-photo img {
   transform: scale(1);
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .portfolio__link-photo:hover img,
@@ -945,13 +1030,13 @@ body._pc .menu__list > li:hover .menu__sub-list {
   }
 
   .about-me .about-me__content {
-    padding: 0 300px;
+    padding: 0 30px;
   }
 }
 
 @media (max-width: 991px) {
-  .about-me .about-me__content {
-    padding: 0 200px;
+  .about-me .about-me__content .about-me__info .about-me__info-text {
+    padding-left: 20px;
   }
 
   .skills .skills__program-language {
@@ -1158,8 +1243,14 @@ body._pc .menu__list > li:hover .menu__sub-list {
     left: 40px;
   }
 
-  .about-me .about-me__content {
-    padding: 0 100px;
+  .about-me .about-me__content .about-me__info .about-me__photo {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-me .about-me__content .about-me__info .about-me__info-text {
+    flex: 0 0 100%;
+    padding-left: 0;
   }
 
   .skills .skills__program-language {
@@ -1180,10 +1271,6 @@ body._pc .menu__list > li:hover .menu__sub-list {
 }
 
 @media (max-width: 575px) {
-  .about-me .about-me__content {
-    padding: 0 20px;
-  }
-
   .portfolio__link-photo .portfolio__text h2 {
     font-size: 30px;
   }

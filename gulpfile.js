@@ -13,7 +13,9 @@ let path = {
         video: project_folder + "/video/",
         fonts: project_folder + "/fonts/",
         pluginsJs: project_folder + "/plugins/",
-        pluginsCss: project_folder + "/plugins/"
+        pluginsCss: project_folder + "/plugins/",
+        pdf: project_folder + "/pdf/"
+
     },
     //Папка із початковими файлами
     src: {
@@ -27,6 +29,8 @@ let path = {
         fonts: source_folder + "/fonts/*.ttf",
         pluginsJs: source_folder + "/plugins/**/*.js",
         pluginsCss: source_folder + "/plugins/**/*.css",
+        pdf: source_folder + "/pdf/**/*.pdf"
+
     },
     //Об'єкт  для слідкування за файлами в реальному часі(browserSync)
     watch: {
@@ -37,7 +41,9 @@ let path = {
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         video: source_folder + "/video/**/*.+(mp4|mp3)",
         pluginsJs: source_folder + "/plugins/**/*.js",
-        pluginsCss: source_folder + "/plugins/**/*.css"
+        pluginsCss: source_folder + "/plugins/**/*.css",
+        pdf: source_folder + "/pdf/**/*.pdf"
+
     },
     clean: "./" + project_folder + "/"
 }
@@ -249,6 +255,13 @@ function pluginsCss(params) {
         .pipe(browsersync.stream())
 }
 
+
+function pdf(params) {
+    return src(path.src.pdf)
+        .pipe(dest(path.build.pdf))
+        .pipe(browsersync.stream())
+}
+
 //Слідкування за файлами в реальному часі
 function watchFiles(params) {
     gulp.watch([path.watch.html], html); //Для html
@@ -258,7 +271,7 @@ function watchFiles(params) {
     gulp.watch([path.watch.video], video); // Для video
     gulp.watch([path.watch.pluginsJs], pluginsJs); // Для plugins .js file
     gulp.watch([path.watch.pluginsCss], pluginsCss); // Для plugins .css file
-
+    gulp.watch([path.watch.pdf], pdf); // Для plugins .css file
 }
 
 function clean(params) {
@@ -266,9 +279,10 @@ function clean(params) {
 }
 
 //Процес виконання
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, video, fonts, pluginsJs, pluginsCss), fontsStyle); //тут присутній варіант паралельного запису шрифтів та відео
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, video, fonts, pluginsJs, pluginsCss, pdf), fontsStyle); //тут присутній варіант паралельного запису шрифтів та відео
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.pdf = pdf;
 exports.pluginsCss = pluginsCss;
 exports.pluginsJs = pluginsJs;
 exports.video = video;

@@ -1,5 +1,4 @@
 @mixin font($font_name, $file_name, $weight, $style) {
-
   @font-face {
     font-family: $font_name;
     font-display: swap;
@@ -24,7 +23,7 @@
 .menu__body {
   .menu__link {
     position: relative;
-    transition: .3s ease-out .1s;
+    transition: 0.3s ease-out 0.1s;
 
     &::before {
       height: 2px;
@@ -35,8 +34,7 @@
       left: 0;
       top: 0;
       visibility: hidden;
-      transition: .3s;
-
+      transition: 0.3s;
     }
 
     &::after {
@@ -48,7 +46,7 @@
       left: 0;
       top: 100%;
       visibility: hidden;
-      transition: .3s;
+      transition: 0.3s;
     }
 
     &:hover,
@@ -57,14 +55,12 @@
 
       &:active {
         color: #828282;
-
       }
 
       &::before {
         visibility: visible;
         top: 100%;
         background: #000000;
-
       }
 
       &::after {
@@ -78,10 +74,8 @@
 
 /*-------- Header End -------*/
 
-
 /*-------- Home Start -------*/
 .home {
-
   .home__position {
     margin: 170px 0 50px 0;
     display: flex;
@@ -104,7 +98,6 @@
   }
 
   .home__title {
-
     font-family: TitilliumWeb-Bold;
     font-size: 48px;
     color: #070707;
@@ -163,7 +156,6 @@
   @media (max-width: 1199px) {
     padding-left: 20px;
   }
-
 }
 
 .home__switch-lang {
@@ -185,7 +177,6 @@
       }
     }
   }
-
 
   @media (max-width: 767px) {
     & {
@@ -223,7 +214,6 @@
   }
 }
 
-
 /*-------- Home End -------*/
 
 /*-------- About Me Start -------*/
@@ -237,48 +227,125 @@
   .about-me__content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 400px;
-    @media (max-width: 575px) {
-      padding: 0 20px;
-    }
-
-
-    @media (max-width: 767px) {
-      padding: 0 100px;
-    }
-
-    @media (max-width: 991px) {
-      padding: 0 200px;
-    }
 
     @media (max-width: 1199px) {
-      padding: 0 300px;
+      padding: 0 30px;
+    }
+
+    .about-me__title {
+      font-family: TitilliumWeb-Bold;
+      font-size: 34px;
+      color: #070707;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .about-me__subtitle {
+      font-family: TitilliumWeb-SemiBold;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      color: #070707;
+      margin-bottom: 50px;
+    }
+
+    .about-me__info {
+      display: flex;
+      flex-wrap: wrap;
+
+      .about-me__photo {
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: center;
+        @media (max-width: 767px) {
+          flex: 0 0 100%;
+          margin-bottom: 30px;
+        }
+        & img {
+          width: 100%;
+          max-width: 400px;
+          border-radius: 10px;
+        }
+      }
+
+      .about-me__info-text {
+        display: flex;
+        flex: 0 0 50%;
+        flex-direction: column;
+        @media (max-width: 991px) {
+          padding-left: 20px;
+        }
+        @media (max-width: 767px) {
+          flex: 0 0 100%;
+          padding-left: 0;
+
+        }
+        .about-me__text {
+          font-family: TitilliumWeb-SemiBold;
+          font-size: 18px;
+          line-height: 27px;
+          text-align: justify;
+          color: #070707;
+          margin-bottom: 50px;
+        }
+
+        .about-me__text:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+
+        .about-me__experience {
+          margin-bottom: 50px;
+          display: flex;
+          justify-content: space-evenly;
+          .about-me__item-expirience {
+            .about-me__title-expirience {
+              font-family: TitilliumWeb-Bold;
+              font-size: 25px;
+              color: #070707;
+              text-align: center;
+              margin-bottom: 5px;
+            }
+            .about-me__subtitle-expirience {
+              font-family: TitilliumWeb-SemiBold;
+              font-size: 18px;
+              line-height: 22px;
+              text-align: center;
+              color: #070707;
+            }
+          }
+        }
+        .about-me__button-download {
+          width: 180px;
+          display: flex;
+          height: 60px;
+          border-radius: 10px;
+          background-color: #070707;
+          align-items: center;
+          justify-content: center;
+          align-self: center;
+          &:hover,
+          &:focus {
+            background-color: #272323;
+          }
+          &:active {
+            background-color: #504747;
+          }
+          & a {
+            font-family: TitilliumWeb-SemiBold;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            color: #ffffff;
+
+            & svg {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
     }
   }
 }
-
-
-.about-me__title {
-  font-family: TitilliumWeb-Bold;
-  font-size: 34px;
-  color: #070707;
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.about-me__text {
-  font-family: TitilliumWeb-SemiBold;
-  font-size: 18px;
-  line-height: 27px;
-  color: #070707;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.about-me__text:nth-last-child(1) {
-  margin-bottom: 0;
-}
-
 /*-------- About Me End -------*/
 
 /*-------- Skills Start -------*/
@@ -335,7 +402,6 @@
         flex: 0 0 33%;
       }
 
-
       .skills__photo-item {
         margin-bottom: 25px;
       }
@@ -349,8 +415,6 @@
       }
     }
   }
-
-
 }
 
 /*-------- Skills End -------*/
@@ -362,7 +426,6 @@
     padding: 100px 0;
     @media (max-width: 991px) {
       padding: 100px 20px;
-
     }
   }
 
@@ -392,13 +455,11 @@
 
     .portfolio__link-photo {
       margin-bottom: 45px;
-
     }
 
     .portfolio__photo-item {
       width: 100%;
     }
-
 
     .portfolio__link {
       display: flex;
@@ -415,11 +476,11 @@
         padding: 1rem 1.25rem;
         text-decoration: none;
         position: relative;
-        transition: all .3s cubic-bezier(.2, 0, 0, 1);
+        transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
         z-index: 1;
 
         &:after {
-          content: '';
+          content: "";
           display: block;
           height: 2px;
           position: absolute;
@@ -427,7 +488,7 @@
           right: 1.25rem;
           left: 1.25rem;
           background-color: #070707;
-          transition: all .3s cubic-bezier(.2, 0, 0, 1);
+          transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
           transform-origin: bottom center;
           z-index: -1;
         }
@@ -481,7 +542,7 @@
 
 .portfolio__link-photo:hover img,
 .portfolio__link-photo:focus img {
-  filter: blur(5px)
+  filter: blur(5px);
 }
 
 /*Zoom In*/
@@ -492,17 +553,15 @@
 .portfolio__link-photo img {
   -webkit-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .portfolio__link-photo:hover img,
 .portfolio__link-photo:focus img {
-
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
-
 
 /*-------- Portfolio End -------*/
 /*-------- Contacts Start -------*/
@@ -541,18 +600,17 @@
     display: grid;
     grid-gap: 30px;
     grid-template-areas:
-            "my-input-name my-input-mail"
-            "my-input-message my-input-message"
-            "my-input-button my-input-button";
+      "my-input-name my-input-mail"
+      "my-input-message my-input-message"
+      "my-input-button my-input-button";
     justify-items: center;
 
     @media (max-width: 991px) {
       grid-template-areas:
-            "my-input-name my-input-name"
-            "my-input-mail my-input-mail"
-            "my-input-message my-input-message"
-            "my-input-button my-input-button";
-
+        "my-input-name my-input-name"
+        "my-input-mail my-input-mail"
+        "my-input-message my-input-message"
+        "my-input-button my-input-button";
     }
 
     .contacts__name {
@@ -605,7 +663,6 @@
       grid-area: my-input-mail;
       width: 100%;
 
-
       & label {
         display: block;
         font-family: TitilliumWeb-Bold;
@@ -645,14 +702,12 @@
           color: #828282;
           padding: 5px 3px;
         }
-
       }
     }
 
     .contacts__message {
       grid-area: my-input-message;
       width: 100%;
-
 
       & label {
         display: block;
@@ -685,7 +740,6 @@
           box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
         }
 
-
         &::selection {
           background-color: #f6f6f6;
           color: #070707;
@@ -716,8 +770,6 @@
       }
     }
   }
-
-
 }
 
 /*-------- Contacts End -------*/
