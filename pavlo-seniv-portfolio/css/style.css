@@ -585,7 +585,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
   font-size: 34px;
   text-align: center;
   color: #070707;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 .skills .skills__subtitle {
@@ -594,7 +594,49 @@ body._pc .menu__list > li:hover .menu__sub-list {
   line-height: 27px;
   text-align: center;
   color: #070707;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+}
+
+.skills .spoiler-skills__block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills .spoiler-skills__block-1 {
+  flex: 0 0 50%;
+}
+
+.skills .block__info {
+  display: flex;
+  align-items: center;
+}
+
+.skills .spoiler-skills__block-title-icon {
+  margin-right: 20px;
+}
+
+.skills .spoiler-skills__block-info-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: unset;
+}
+
+.skills .spoiler-skills__button-info .spoiler-skills__block-title {
+  font-family: TitilliumWeb-Bold;
+  font-size: 34px;
+  color: #070707;
+  text-align: left;
+}
+
+.skills .spoiler-skills__button-info .spoiler-skills__block-subtitle {
+  font-family: TitilliumWeb-SemiBold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #070707;
+  text-align: left;
 }
 
 /*-------- Skills End -------*/

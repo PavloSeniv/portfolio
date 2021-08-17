@@ -359,7 +359,7 @@
     font-size: 34px;
     text-align: center;
     color: #070707;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
   }
 
   .skills__subtitle {
@@ -368,9 +368,62 @@
     line-height: 27px;
     text-align: center;
     color: #070707;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 
+  .spoiler-skills {
+  }
+  .spoiler-skills__block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spoiler-skills__block-title-button {
+  }
+  .spoiler-skills__block-1 {
+    flex: 0 0 50%;
+  }
+  .spoiler-skills__block-item {
+  }
+
+  .block__info {
+    display: flex;
+    align-items: center;
+  }
+
+  .spoiler-skills__block-title-icon{
+    margin-right: 20px;
+  }
+  .spoiler-skills__block-info-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: unset;
+  }
+
+  .spoiler-skills__button-info {
+    .spoiler-skills__block-title {
+      font-family: TitilliumWeb-Bold;
+      font-size: 34px;
+      color: #070707;
+      text-align: left;
+    }
+    .spoiler-skills__block-subtitle {
+      font-family: TitilliumWeb-SemiBold;
+      font-size: 18px;
+      line-height: 27px;
+      color: #070707;
+      text-align: left;
+    }
+  }
+  .spoiler-skills__block-content {
+  }
+  .spoiler-skills__block-info {
+  }
+  .spoiler-skills__block-text {
+  }
 }
 
 /*-------- Skills End -------*/
