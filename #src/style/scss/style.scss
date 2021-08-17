@@ -278,7 +278,6 @@
         @media (max-width: 767px) {
           flex: 0 0 100%;
           padding-left: 0;
-
         }
         .about-me__text {
           font-family: TitilliumWeb-SemiBold;
@@ -372,49 +371,6 @@
     margin-bottom: 80px;
   }
 
-  .skills__program-language {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    @media (max-width: 767px) {
-      justify-content: center;
-    }
-
-    @media (max-width: 991px) {
-      justify-content: space-evenly;
-    }
-
-    .skills__info-item {
-      display: flex;
-      flex: 0 0 25%;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 30px;
-
-      @media (max-width: 767px) {
-        flex: 0 0 100%;
-        &:nth-last-child(1) {
-          margin-bottom: 0;
-        }
-      }
-
-      @media (max-width: 991px) {
-        flex: 0 0 33%;
-      }
-
-      .skills__photo-item {
-        margin-bottom: 25px;
-      }
-
-      .skills__title-item {
-        font-family: TitilliumWeb-Bold;
-        font-size: 14px;
-        line-height: 21px;
-        color: #828282;
-        margin-bottom: 30px;
-      }
-    }
-  }
 }
 
 /*-------- Skills End -------*/
@@ -506,63 +462,62 @@
       }
     }
   }
-}
 
-/*With Simple Caption*/
-.portfolio__link-photo {
-  position: relative;
-}
+  //With Simple Caption
+  .portfolio__link-photo {
+    position: relative;
+  }
 
-.portfolio__link-photo .portfolio__text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  opacity: 0;
-  transition: all 0.8s ease;
-}
+  .portfolio__link-photo .portfolio__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.8s ease;
+  }
 
-.portfolio__link-photo .portfolio__text h2 {
-  margin: 0;
-  font-family: TitilliumWeb-SemiBold;
-  font-size: 44px;
-  color: #070707;
-  text-align: center;
-  line-height: 47px;
-  @media (max-width: 575px) {
-    font-size: 30px;
+  .portfolio__link-photo .portfolio__text h2 {
+    margin: 0;
+    font-family: TitilliumWeb-SemiBold;
+    font-size: 44px;
+    color: #070707;
+    text-align: center;
+    line-height: 47px;
+    @media (max-width: 575px) {
+      font-size: 30px;
+    }
+  }
+
+  .portfolio__link-photo:hover .portfolio__text,
+  .portfolio__link-photo:focus .portfolio__text {
+    opacity: 1;
+  }
+
+  .portfolio__link-photo:hover img,
+  .portfolio__link-photo:focus img {
+    filter: blur(5px);
+  }
+
+  //Zoom In
+  .portfolio__link-photo figure {
+    overflow: hidden;
+  }
+
+  .portfolio__link-photo img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+
+  .portfolio__link-photo:hover img,
+  .portfolio__link-photo:focus img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
   }
 }
-
-.portfolio__link-photo:hover .portfolio__text,
-.portfolio__link-photo:focus .portfolio__text {
-  opacity: 1;
-}
-
-.portfolio__link-photo:hover img,
-.portfolio__link-photo:focus img {
-  filter: blur(5px);
-}
-
-/*Zoom In*/
-.portfolio__link-photo figure {
-  overflow: hidden;
-}
-
-.portfolio__link-photo img {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-
-.portfolio__link-photo:hover img,
-.portfolio__link-photo:focus img {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
-}
-
 /*-------- Portfolio End -------*/
 /*-------- Contacts Start -------*/
 .contacts {

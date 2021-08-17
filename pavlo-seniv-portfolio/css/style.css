@@ -597,32 +597,6 @@ body._pc .menu__list > li:hover .menu__sub-list {
   margin-bottom: 80px;
 }
 
-.skills .skills__program-language {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.skills .skills__program-language .skills__info-item {
-  display: flex;
-  flex: 0 0 25%;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.skills .skills__program-language .skills__info-item .skills__photo-item {
-  margin-bottom: 25px;
-}
-
-.skills .skills__program-language .skills__info-item .skills__title-item {
-  font-family: TitilliumWeb-Bold;
-  font-size: 14px;
-  line-height: 21px;
-  color: #828282;
-  margin-bottom: 30px;
-}
-
 /*-------- Skills End -------*/
 
 /*-------- Portfolio Start -------*/
@@ -712,13 +686,11 @@ body._pc .menu__list > li:hover .menu__sub-list {
   height: 100%;
 }
 
-/*With Simple Caption*/
-
-.portfolio__link-photo {
+.portfolio .portfolio__link-photo {
   position: relative;
 }
 
-.portfolio__link-photo .portfolio__text {
+.portfolio .portfolio__link-photo .portfolio__text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -728,7 +700,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
   transition: all 0.8s ease;
 }
 
-.portfolio__link-photo .portfolio__text h2 {
+.portfolio .portfolio__link-photo .portfolio__text h2 {
   margin: 0;
   font-family: TitilliumWeb-SemiBold;
   font-size: 44px;
@@ -737,29 +709,27 @@ body._pc .menu__list > li:hover .menu__sub-list {
   line-height: 47px;
 }
 
-.portfolio__link-photo:hover .portfolio__text,
-.portfolio__link-photo:focus .portfolio__text {
+.portfolio .portfolio__link-photo:hover .portfolio__text,
+.portfolio .portfolio__link-photo:focus .portfolio__text {
   opacity: 1;
 }
 
-.portfolio__link-photo:hover img,
-.portfolio__link-photo:focus img {
+.portfolio .portfolio__link-photo:hover img,
+.portfolio .portfolio__link-photo:focus img {
   filter: blur(5px);
 }
 
-/*Zoom In*/
-
-.portfolio__link-photo figure {
+.portfolio .portfolio__link-photo figure {
   overflow: hidden;
 }
 
-.portfolio__link-photo img {
+.portfolio .portfolio__link-photo img {
   transform: scale(1);
   transition: 0.3s ease-in-out;
 }
 
-.portfolio__link-photo:hover img,
-.portfolio__link-photo:focus img {
+.portfolio .portfolio__link-photo:hover img,
+.portfolio .portfolio__link-photo:focus img {
   transform: scale(1.3);
 }
 
@@ -1039,14 +1009,6 @@ body._pc .menu__list > li:hover .menu__sub-list {
     padding-left: 20px;
   }
 
-  .skills .skills__program-language {
-    justify-content: space-evenly;
-  }
-
-  .skills .skills__program-language .skills__info-item {
-    flex: 0 0 33%;
-  }
-
   .portfolio .portfolio__position {
     padding: 100px 20px;
   }
@@ -1253,25 +1215,13 @@ body._pc .menu__list > li:hover .menu__sub-list {
     padding-left: 0;
   }
 
-  .skills .skills__program-language {
-    justify-content: center;
-  }
-
-  .skills .skills__program-language .skills__info-item {
-    flex: 0 0 100%;
-  }
-
-  .skills .skills__program-language .skills__info-item:nth-last-child(1) {
-    margin-bottom: 0;
-  }
-
   .contacts {
     padding: 0 20px;
   }
 }
 
 @media (max-width: 575px) {
-  .portfolio__link-photo .portfolio__text h2 {
+  .portfolio .portfolio__link-photo .portfolio__text h2 {
     font-size: 30px;
   }
 }
