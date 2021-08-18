@@ -77,11 +77,14 @@
 /*-------- Home Start -------*/
 .home {
     .home__position {
-        margin: 170px 0 50px 0;
+        padding: 150px 0 50px 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+        @media (max-width: 1199px) {
+            padding: 150px 30px 50px 30px;
+        }
     }
 
     .home__info {
@@ -146,22 +149,12 @@
         width: 100%;
         height: auto;
     }
-
-    @media (max-width: 767px) {
-        padding-left: 20px;
-        padding-right: 20px;
-        margin: 120px 0 50px 0;
-    }
-
-    @media (max-width: 1199px) {
-        padding-left: 20px;
-    }
 }
 
 .home__switch-lang {
     display: flex;
     position: relative;
-    top: 12px;
+    top: 20px;
     flex: 0 0 auto;
     align-items: flex-start;
 
@@ -218,11 +211,10 @@
 
 /*-------- About Me Start -------*/
 .about-me {
-    margin-bottom: 50px;
     background-color: #f6f6f6;
     display: flex;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 100px 0;
 
     .about-me__content {
         max-width: 1200px;
@@ -350,8 +342,10 @@
 /*-------- Skills Start -------*/
 .skills {
     .skills__position {
-        margin: 100px 0;
-        padding: 0 20px;
+        padding: 100px 0;
+        @media (max-width: 1199px) {
+            padding: 100px 30px;
+        }
     }
 
     .skills__title {
@@ -381,9 +375,9 @@
 
     .spoiler-skills__block-item {
         flex: 0 0 49%;
+        margin-bottom: 20px;
         @media (max-width: 991px) {
             flex: 0 0 100%;
-            margin-bottom: 30px;
         }
     }
 
@@ -428,7 +422,7 @@
         }
     }
     .spoiler-skills__block-content {
-        margin: 30px 0 0 0;
+        padding: 30px 0;
     }
     .spoiler-skills__block-info {
         padding: 0 0 0 60px;
@@ -583,8 +577,8 @@
 
     .portfolio__position {
         padding: 100px 0;
-        @media (max-width: 991px) {
-            padding: 100px 20px;
+        @media (max-width: 1199px) {
+            padding: 100px 30px;
         }
     }
 
@@ -726,15 +720,15 @@
 .contacts {
     padding: 0 200px;
     @media (max-width: 767px) {
-        padding: 0 20px;
+        padding: 0 30px;
     }
 
     @media (max-width: 991px) {
-        padding: 0 100px;
+        padding: 0 60px;
     }
 
     .contacts__position {
-        margin: 100px 0px 0 0;
+        padding: 100px 0 0 0;
     }
 
     .contacts__title {
