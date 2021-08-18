@@ -376,6 +376,12 @@
     .spoiler-skills__block-item {
         flex: 0 0 49%;
         margin-bottom: 20px;
+
+        &:focus {
+            -webkit-box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.6);
+            -moz-box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.6);
+            box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.6);
+        }
         @media (max-width: 991px) {
             flex: 0 0 100%;
         }
