@@ -1,8 +1,8 @@
 :root {
-    --header-background-color: #ffffff;
-    --header-width-container: 1200px;
-    --header-bg-color-mobile: #ffffff;
-    --header-bg-menu-body-mobile: #ffffff;
-    --header-bg-menu-icon-mobile: #000000;
-    --header-menu-link-color: #828282;
+  --header-background-color: #ffffff;
+  --header-width-container: 1200px;
+  --header-bg-color-mobile: #ffffff;
+  --header-bg-menu-body-mobile: #ffffff;
+  --header-bg-menu-icon-mobile: #000000;
+  --header-menu-link-color: #828282;
 }

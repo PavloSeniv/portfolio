@@ -1,16 +1,17 @@
 /*-------- All -------*/
 ::selection {
-    background-color: #000000;
-    color: #fff;
+  background-color: #000000;
+  color: #fff;
 }
 
-._container {
-    max-width: 1200px;
-    margin: 0 auto;
+.__container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-::-webkit-scrollbar{
-    
-}
+/* 
+::-webkit-scrollbar {
+} 
+*/
 
 /*-------- All -------*/

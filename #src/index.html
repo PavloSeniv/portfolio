@@ -1,330 +1,354 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Seniv Pavlo, https://github.com/PavloSeniv">
     <meta name="copyright" content="Seniv Pavlo">
     <title>Seniv Pavlo</title>
-    <!------- Іконка ------->
+    <!-- ======== Іконка ======== -->
     <link rel="shortcut icon" href="img/favicon.ico">
-    <!------- Style ------->
+    <!-- ======== Style ======== -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
 
+    @@include('html/_header.html')
 
-@@include('html/_header.html')
-
-<main>
-    <section class="_container home">
-        <div class="home__position">
-            <div class="home__info">
-                <h1 class="home__title">Seniv Pavlo</h1>
-                <p class="home__text">Front-end Developer <br> 20 years old, Ukraine</p>
-            </div>
-            <div tabindex="1" class="home__background">
+    <main>
+        <section class="__container home">
+            <div class="home__position">
+                <div class="home__info">
+                    <h1 class="home__title">Seniv Pavlo</h1>
+                    <p class="home__text">Front-end Developer <br> 20 years old, Ukraine</p>
+                </div>
+                <div tabindex="1" class="home__background">
                     <!--Адаптивні картинки та заміна зображення відповідно медіа запиту(також можлива заміна відносно моделі телефону(Android - header__logo 1x, iPhone - header__logo 2x - залежність від дисплею))-->
                     <picture>
                         <source srcset="img/index/home/home_photo_mobile.png, img/index/home/home_photo_mobile.webp"
-                                media="(max-width:767px)">
-                        <img class="home__photo" src="img/index/home/home_photo_desktop.jpg"
-                             srcset="img/index/home/home_photo_desktop.webp" alt="home_photo_mobile">
+                            media="(max-width:767px)">
+                        <img class="home__photo" src="img/index/home/home_photo_desktop.jpg" srcset="img/index/home/home_photo_desktop.webp" alt="home_photo_mobile">
                     </picture>
-            </div>
-            <div class="home__switch-lang">
-                <h2 class="home__switch-title">
-                    <a tabindex="1" href="#">Ua</a> | <a tabindex="1" href="#">Eng</a>
-                </h2>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-me">
-        <div class="_container about-me__content">
-            <h2 class="about-me__title">About Me</h2>
-            <p class="about-me__subtitle">My introduction</p>
-
-
-            <div class="about-me__info">
-
-                <div class="about-me__photo">
-<img src="img/index/home/home_photo_desktop.jpg" alt="home_photo_desktop">
                 </div>
-
-                <div class="about-me__info-text">
-                    <p class="about-me__text">
-                        Student of Vasyl Stefanyk Precarpathian National University. The work was performed by deadlines
-                        and
-                        quality. I guarantee execution in modern style and according to requirements of TK.
-                        Beginner website developer and web client. I develop on technologies HTML5, CSS3, JS, BOOTSTRAP5
-                        and
-                        so on ...
-                        I work in Figma. I use Bootstrap, CSS3, HTML5, JS technologies
-                    </p>
-                <div class="about-me__experience">
-                    <div class="about-me__item-expirience">
-                        <h3 class="about-me__title-expirience">01+</h3>
-                        <p class="about-me__subtitle-expirience">Years <br> expirience</p>
-                    </div>
-                    <div class="about-me__item-expirience">
-                        <h3 class="about-me__title-expirience">7+</h3>
-                        <p class="about-me__subtitle-expirience">Complete <br> project</p>
-                    </div>
-                    <div class="about-me__item-expirience">
-                        <h3 class="about-me__title-expirience">1-</h3>
-                        <p class="about-me__subtitle-expirience">Companies <br> work</p>
-                    </div>
+                <div class="home__switch-lang">
+                    <h2 class="home__switch-title">
+                        <a tabindex="1" href="#">Ua</a> | <a tabindex="1" href="#">Eng</a>
+                    </h2>
                 </div>
-                
-                    <div tabindex="1" class="about-me__button-download">
-                        <a  download="" href="pdf/SenivResume.pdf">Download CV 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                              </svg>
-                        </a>
-                    </div>
-                </div>
-               
             </div>
+        </section>
+
+        <section class="about-me">
+            <div class="__container about-me__content">
+                <h2 class="about-me__title">About Me</h2>
+                <p class="about-me__subtitle">My introduction</p>
 
 
-        </div>
-    </section>
+                <div class="about-me__info">
 
-<section class="_container skills ">
-    <div class="skills__position">
-        <h2 class="skills__title">Skills</h2>
-        <p class="skills__subtitle">My technical level</p>
+                    <div class="about-me__photo">
+                        <img src="img/index/home/home_photo_desktop.jpg" alt="home_photo_desktop">
+                    </div>
 
-        <div class="spoiler-skills">
-            <div data-spollers data-one-spoller class="spoiler-skills__block spoiler-skills__block-1">
-                <div class="spoiler-skills__block-item">
-                    <button tabindex="-1" type="button" data-spoller class="spoiler-skills__block-info-title">
-                        <div class="block__info">
-                            <div class="spoiler-skills__block-title-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                                    class="bi bi-braces" viewBox="0 0 16 16">
+                    <div class="about-me__info-text">
+                        <p class="about-me__text">
+                            Student of Vasyl Stefanyk Precarpathian National University. The work was performed by
+                            deadlines
+                            and
+                            quality. I guarantee execution in modern style and according to requirements of TK.
+                            Beginner website developer and web client. I develop on technologies HTML5, CSS3, JS,
+                            BOOTSTRAP5
+                            and
+                            so on ...
+                            I work in Figma. I use Bootstrap, CSS3, HTML5, JS technologies
+                        </p>
+                        <div class="about-me__experience">
+                            <div class="about-me__item-expirience">
+                                <h3 class="about-me__title-expirience">01+</h3>
+                                <p class="about-me__subtitle-expirience">Years <br> expirience</p>
+                            </div>
+                            <div class="about-me__item-expirience">
+                                <h3 class="about-me__title-expirience">7+</h3>
+                                <p class="about-me__subtitle-expirience">Complete <br> project</p>
+                            </div>
+                            <div class="about-me__item-expirience">
+                                <h3 class="about-me__title-expirience">1-</h3>
+                                <p class="about-me__subtitle-expirience">Companies <br> work</p>
+                            </div>
+                        </div>
+
+                        <div tabindex="1" class="about-me__button-download">
+                            <a download="" href="pdf/SenivResume.pdf">Download CV
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-download" viewbox="0 0 16 16">
                                     <path
-                                        d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z" />
-                                </svg>
-                            </div>
-                            <div class="spoiler-skills__button-info">
-                                <p class="spoiler-skills__block-title">Frontend Developer</p>
-                                <p class="spoiler-skills__block-subtitle">More than 1 years</p>
-                            </div>
-                        </div>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-chevron-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                        </svg>
-                    </button>
-                    <div class="spoiler-skills__block-content">
-                        <div class="spoiler-skills__block-info">
-                            <p class="spoiler-skills__block-text">
-                                HTML
-                            </p>
-
-                            <p class="spoiler-skills__block-text">
-                                CSS
-                            </p>
-
-                            <p class="spoiler-skills__block-text">
-                                JS
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div data-spollers data-one-spoller class="spoiler-skills__block spoiler-skills__block-1">
-                <div class="spoiler-skills__block-item">
-                    <button tabindex="-1" type="button" data-spoller class="spoiler-skills__block-info-title">
-                        <div class="block__info">
-                            <div class="spoiler-skills__block-title-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                                    class="bi bi-braces" viewBox="0 0 16 16">
+                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
                                     <path
-                                        d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z" />
+                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
                                 </svg>
-                            </div>
-                            <div class="spoiler-skills__button-info">
-                                <p class="spoiler-skills__block-title">Frontend Developer</p>
-                                <p class="spoiler-skills__block-subtitle">More than 1 years</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="__container skills ">
+            <div class="skills__position">
+                <h2 class="skills__title">Skills</h2>
+                <p class="skills__subtitle">My technical level</p>
+
+                <div class="spoiler-skills">
+                    <div data-spollers data-one-spoller class="spoiler-skills__block spoiler-skills__block-1">
+                        <div class="spoiler-skills__block-item">
+                            <button tabindex="-1" type="button" data-spoller class="spoiler-skills__block-info-title">
+                                <div class="block__info">
+                                    <div class="spoiler-skills__block-title-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            fill="currentColor" class="bi bi-braces" viewbox="0 0 16 16">
+                                            <path
+                                                d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z" />
+                                        </svg>
+                                    </div>
+                                    <div class="spoiler-skills__button-info">
+                                        <p class="spoiler-skills__block-title">Frontend Developer</p>
+                                        <p class="spoiler-skills__block-subtitle">More than 1 years</p>
+                                    </div>
+                                </div>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewbox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                            </button>
+                            <div class="spoiler-skills__block-content">
+                                <div class="spoiler-skills__block-info">
+                                    <p class="spoiler-skills__block-text">
+                                        HTML
+                                    </p>
+
+                                    <p class="spoiler-skills__block-text">
+                                        CSS
+                                    </p>
+
+                                    <p class="spoiler-skills__block-text">
+                                        JS
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-chevron-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                        </svg>
-                    </button>
-                    <div class="spoiler-skills__block-content">
-                        <div class="spoiler-skills__block-info">
-                            <p class="spoiler-skills__block-text">
-                                HTML
-                            </p>
+                    </div>
 
-                            <p class="spoiler-skills__block-text">
-                                CSS
-                            </p>
+                    <div data-spollers data-one-spoller class="spoiler-skills__block spoiler-skills__block-1">
+                        <div class="spoiler-skills__block-item">
+                            <button tabindex="-1" type="button" data-spoller class="spoiler-skills__block-info-title">
+                                <div class="block__info">
+                                    <div class="spoiler-skills__block-title-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            fill="currentColor" class="bi bi-braces" viewbox="0 0 16 16">
+                                            <path
+                                                d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z" />
+                                        </svg>
+                                    </div>
+                                    <div class="spoiler-skills__button-info">
+                                        <p class="spoiler-skills__block-title">Frontend Developer</p>
+                                        <p class="spoiler-skills__block-subtitle">More than 1 years</p>
+                                    </div>
+                                </div>
 
-                            <p class="spoiler-skills__block-text">
-                                JS
-                            </p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewbox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                            </button>
+                            <div class="spoiler-skills__block-content">
+                                <div class="spoiler-skills__block-info">
+                                    <p class="spoiler-skills__block-text">
+                                        HTML
+                                    </p>
+
+                                    <p class="spoiler-skills__block-text">
+                                        CSS
+                                    </p>
+
+                                    <p class="spoiler-skills__block-text">
+                                        JS
+                                    </p>
+                                </div>
+
+                            </div>
                         </div>
 
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <div class="__container portfolio__position">
+                <h2 class="portfolio__title">Portfolio</h2>
+
+                <article tabindex="1" class="portfolio__info">
+                    <a tabindex="1" class="portfolio__link-photo"
+                        href="https://pavloseniv.github.io/The-Glass-Huts/The-Glass-Huts/index.html" target="_blank">
+                        <span class="portfolio__text">
+                            <h2>The Glass Huts</h2>
+                        </span>
+                        <figure>
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_1.jpg" alt="portfolio_photo_item_1">
+                        </figure>
+                    </a>
+                    <div class="portfolio__link">
+                        <a tabindex="1" class="portfolio__link-item"
+                            href="https://pavloseniv.github.io/The-Glass-Huts/The-Glass-Huts/index.html"
+                            target="_blank">The Glass Huts - homepage</a>
+                    </div>
+
+                </article>
+
+                <article tabindex="1" class="portfolio__info">
+                    <a tabindex="1" class="portfolio__link-photo"
+                        href="https://pavloseniv.github.io/Frontend_Project/Project_Bicycle_Shop/" target="_blank">
+                        <span class="portfolio__text">
+                            <h2>Streetster</h2>
+                        </span>
+                        <figure>
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_2.jpg" alt="portfolio_photo_item_2">
+                        </figure>
+                    </a>
+                    <div class="portfolio__link">
+                        <a tabindex="1" class="portfolio__link-item"
+                            href="https://pavloseniv.github.io/Frontend_Project/Project_Bicycle_Shop/"
+                            target="_blank">Streetster -
+                            homepage</a>
+                    </div>
+
+                </article>
+
+                <article tabindex="1" class="portfolio__info">
+                    <a tabindex="1" class="portfolio__link-photo"
+                        href="https://pavloseniv.github.io/Portfolio/PortfolioOne/" target="_blank">
+                        <span class="portfolio__text">
+                            <h2>Portfolio First</h2>
+                        </span>
+                        <figure>
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_3.jpg" alt="portfolio_photo_item_3">
+                        </figure>
+                    </a>
+                    <div class="portfolio__link">
+                        <a tabindex="1" class="portfolio__link-item"
+                            href="https://pavloseniv.github.io/Portfolio/PortfolioOne/" target="_blank">Portfolio First
+                            - homepage</a>
+                    </div>
+
+                </article>
+
+                <article tabindex="1" class="portfolio__info">
+                    <a tabindex="1" class="portfolio__link-photo"
+                        href="https://pavloseniv.github.io/ProjectFigma/Project1/" target="_blank">
+                        <span class="portfolio__text">
+                            <h2>Alivio</h2>
+                        </span>
+                        <figure>
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_4.jpg" alt="portfolio_photo_item_4">
+                        </figure>
+                    </a>
+                    <div class="portfolio__link">
+                        <a tabindex="1" class="portfolio__link-item"
+                            href="https://pavloseniv.github.io/ProjectFigma/Project1/" target="_blank">Alivio -
+                            homepage</a>
+                    </div>
+
+                </article>
+
+                <article tabindex="1" class="portfolio__info">
+                    <a tabindex="1" class="portfolio__link-photo"
+                        href="https://pavloseniv.github.io/Portfolio/PortfolioTwo/" target="_blank">
+                        <span class="portfolio__text">
+                            <h2>Portfolio Second</h2>
+                        </span>
+                        <figure>
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_5.jpg" alt="portfolio_photo_item_5">
+                        </figure>
+                    </a>
+                    <div class="portfolio__link">
+                        <a tabindex="1" class="portfolio__link-item"
+                            href="https://pavloseniv.github.io/Portfolio/PortfolioTwo/" target="_blank">Portfolio Second
+                            - homepage</a>
+                    </div>
+
+                </article>
+
+                <article tabindex="1" class="portfolio__info">
+                    <a tabindex="1" class="portfolio__link-photo"
+                        href="https://pavloseniv.github.io/ProjectFigma/Project2_Barber/" target="_blank">
+                        <span class="portfolio__text">
+                            <h2>Barber</h2>
+                        </span>
+                        <figure>
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_6.jpg" alt="portfolio_photo_item_6">
+                        </figure>
+                    </a>
+                    <div class="portfolio__link">
+                        <a tabindex="1" class="portfolio__link-item"
+                            href="https://pavloseniv.github.io/ProjectFigma/Project2_Barber/" target="_blank">Barber -
+                            homepage</a>
+                    </div>
+
+                </article>
+
 
             </div>
-        </div>
+        </section>
 
-</section>
+        <section class="__container contacts">
+            <div class="contacts__position">
+                <h2 class="contacts__title">Contacts</h2>
+                <p class="contacts__subtitle">Want to know more or just chat? <br> You are welcome</p>
 
-    <section class="portfolio">
-        <div class="_container portfolio__position">
-            <h2 class="portfolio__title">Portfolio</h2>
+                <div class="contacts_form">
+                    <form class="contacts__form-action" method="post">
+                        <div class="contacts__name">
+                            <label for="input__name">Your name:</label>
+                            <input tabindex="1" type="text" id="input__name" name="name" placeholder="Seniv Pavlo">
+                        </div>
 
-            <article tabindex="1" class="portfolio__info">
-                <a tabindex="1" class="portfolio__link-photo"
-                   href="https://pavloseniv.github.io/The-Glass-Huts/The-Glass-Huts/index.html" target="_blank">
-                    <span class="portfolio__text"><h2>The Glass Huts</h2></span>
-                    <figure>
-                        <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_1.jpg" alt="portfolio_photo_item_1">
-                    </figure>
-                </a>
-                <div class="portfolio__link">
-                    <a tabindex="1" class="portfolio__link-item"
-                       href="https://pavloseniv.github.io/The-Glass-Huts/The-Glass-Huts/index.html" target="_blank">The Glass Huts - homepage</a>
+                        <div class="contacts__mail">
+                            <label for="input__mail">Your mail:</label>
+                            <input tabindex="1" type="text" id="input__mail" name="mail" placeholder="mail@gmail.com">
+                        </div>
+
+
+                        <div class="contacts__message">
+                            <label for="textarea__message">Write your message:</label>
+                            <textarea tabindex="1" name="message" id="textarea__message" placeholder="Message" cols="30"
+                                rows="10"></textarea>
+                        </div>
+
+
+                        <button type="submit" class="contacts__button">Send message</button>
+                    </form>
                 </div>
-
-            </article>
-
-            <article tabindex="1" class="portfolio__info">
-                <a tabindex="1" class="portfolio__link-photo"
-                   href="https://pavloseniv.github.io/Frontend_Project/Project_Bicycle_Shop/" target="_blank">
-                    <span class="portfolio__text"><h2>Streetster</h2></span>
-                    <figure>
-                        <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_2.jpg" alt="portfolio_photo_item_2">
-                    </figure>
-                </a>
-                <div class="portfolio__link">
-                    <a tabindex="1" class="portfolio__link-item"
-                       href="https://pavloseniv.github.io/Frontend_Project/Project_Bicycle_Shop/" target="_blank">Streetster -
-                        homepage</a>
-                </div>
-
-            </article>
-
-            <article tabindex="1" class="portfolio__info">
-                <a tabindex="1" class="portfolio__link-photo"
-                   href="https://pavloseniv.github.io/Portfolio/PortfolioOne/" target="_blank">
-                    <span class="portfolio__text"><h2>Portfolio First</h2></span>
-                    <figure>
-                        <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_3.jpg" alt="portfolio_photo_item_3">
-                    </figure>
-                </a>
-                <div class="portfolio__link">
-                    <a tabindex="1" class="portfolio__link-item"
-                       href="https://pavloseniv.github.io/Portfolio/PortfolioOne/" target="_blank">Portfolio First - homepage</a>
-                </div>
-
-            </article>
-
-            <article tabindex="1" class="portfolio__info">
-                <a tabindex="1" class="portfolio__link-photo"
-                   href="https://pavloseniv.github.io/ProjectFigma/Project1/" target="_blank">
-                    <span class="portfolio__text"><h2>Alivio</h2></span>
-                    <figure>
-                        <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_4.jpg" alt="portfolio_photo_item_4">
-                    </figure>
-                </a>
-                <div class="portfolio__link">
-                    <a tabindex="1" class="portfolio__link-item"
-                       href="https://pavloseniv.github.io/ProjectFigma/Project1/" target="_blank">Alivio - homepage</a>
-                </div>
-
-            </article>
-
-            <article tabindex="1" class="portfolio__info">
-                <a tabindex="1" class="portfolio__link-photo"
-                   href="https://pavloseniv.github.io/Portfolio/PortfolioTwo/" target="_blank">
-                    <span class="portfolio__text"><h2>Portfolio Second</h2></span>
-                    <figure>
-                        <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_5.jpg" alt="portfolio_photo_item_5">
-                    </figure>
-                </a>
-                <div class="portfolio__link">
-                    <a tabindex="1" class="portfolio__link-item"
-                       href="https://pavloseniv.github.io/Portfolio/PortfolioTwo/" target="_blank">Portfolio Second - homepage</a>
-                </div>
-
-            </article>
-
-            <article tabindex="1" class="portfolio__info">
-                <a tabindex="1" class="portfolio__link-photo"
-                   href="https://pavloseniv.github.io/ProjectFigma/Project2_Barber/" target="_blank">
-                    <span class="portfolio__text"><h2>Barber</h2></span>
-                    <figure>
-                        <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_6.jpg" alt="portfolio_photo_item_6">
-                    </figure>
-                </a>
-                <div class="portfolio__link">
-                    <a tabindex="1" class="portfolio__link-item"
-                       href="https://pavloseniv.github.io/ProjectFigma/Project2_Barber/" target="_blank">Barber - homepage</a>
-                </div>
-
-            </article>
-
-
-        </div>
-    </section>
-
-    <section class="_container contacts">
-        <div class="contacts__position">
-            <h2 class="contacts__title">Contacts</h2>
-            <p class="contacts__subtitle">Want to know more or just chat? <br> You are welcome</p>
-
-            <div class="contacts_form">
-                <form class="contacts__form-action" method="post">
-                    <div class="contacts__name">
-                        <label for="input__name">Your name:</label>
-                        <input tabindex="1"  type="text" id="input__name" name="name" placeholder="Seniv Pavlo">
-                    </div>
-
-                    <div class="contacts__mail">
-                        <label for="input__mail">Your mail:</label>
-                        <input tabindex="1"  type="text" id="input__mail" name="mail" placeholder="mail@gmail.com">
-                    </div>
-
-
-                    <div class="contacts__message">
-                        <label for="textarea__message">Write your message:</label>
-                        <textarea tabindex="1"  name="message" id="textarea__message" placeholder="Message" cols="30"
-                                  rows="10"></textarea>
-                    </div>
-
-
-                    <button type="submit" class="contacts__button">Send message</button>
-                </form>
             </div>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
 
-@@include('html/_footer.html')
+    @@include('html/_footer.html')
 
-<!------- Main Script ------->
-<script src="js/plugins_spollers_acordeon.js"></script>
-<script src="js/main_script.min.js"></script>
+    <script src="js/plugins_spollers_acordeon.js"></script>
+        <!-- ======== Main Script ======== -->
+    <script src="js/main_script.min.js"></script>
 </body>
+
 </html>

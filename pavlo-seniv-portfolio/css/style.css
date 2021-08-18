@@ -232,10 +232,15 @@ body._pc .menu__list > li:hover .menu__sub-list {
   color: #fff;
 }
 
-._container {
+.__container {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* 
+::-webkit-scrollbar {
+} 
+*/
 
 /*-------- All -------*/
 
