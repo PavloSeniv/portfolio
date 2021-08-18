@@ -401,6 +401,15 @@
         align-items: center;
         width: 100%;
         justify-content: space-between;
+        & .bi-chevron-down {
+            transition: transform 0.5s ease 0s;
+        }
+    }
+
+    .spoiler-skills__block-info-title._active {
+        & .bi-chevron-down {
+            transform: rotate(180deg);
+        }
     }
 
     .spoiler-skills__button-info {
