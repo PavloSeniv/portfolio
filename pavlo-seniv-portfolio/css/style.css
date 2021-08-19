@@ -614,7 +614,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
 }
 
 .skills .spoiler-skills__block-item:focus {
-  box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
 }
 
 .skills .block__info {
@@ -1651,6 +1651,11 @@ body._pc .menu__list > li:hover .menu__sub-list {
   height: 100%;
 }
 
+.portfolio .portfolio__info .portfolio__link .portfolio__link-item:hover:active,
+.portfolio .portfolio__info .portfolio__link .portfolio__link-item:focus:active {
+  color: #b6b3b3;
+}
+
 .portfolio .portfolio__link-photo {
   position: relative;
 }
@@ -1929,8 +1934,15 @@ body._pc .menu__list > li:hover .menu__sub-list {
   border-radius: 20px;
 }
 
-.contacts .contacts__form-action .contacts__button:hover {
+.contacts .contacts__form-action .contacts__button:hover,
+.contacts .contacts__form-action .contacts__button:focus {
   color: #828282;
+}
+
+.contacts .contacts__form-action .contacts__button:active {
+  border: #070707 solid 2px;
+  background-color: #ffffff;
+  color: #070707;
 }
 
 /*-------- Contacts End -------*/
