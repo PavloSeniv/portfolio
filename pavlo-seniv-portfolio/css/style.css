@@ -364,7 +364,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
 /*-------- Home Start -------*/
 
 .home .home__position {
-  padding: 150px 0 50px 0;
+  padding: 160px 0 50px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -588,7 +588,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
   font-size: 34px;
   text-align: center;
   color: #070707;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 
 .skills .skills__subtitle {
@@ -597,7 +597,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
   line-height: 27px;
   text-align: center;
   color: #070707;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .skills .spoiler-skills__block {
@@ -1578,7 +1578,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
   font-family: TitilliumWeb-Bold;
   font-size: 34px;
   color: #070707;
-  margin-bottom: 47px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -1920,7 +1920,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
 .contacts .contacts__form-action .contacts__button {
   grid-area: my-input-button;
   width: 180px;
-  height: 42px;
+  height: 60px;
   background-color: #070707;
   color: #ffffff;
   font-family: TitilliumWeb-SemiBold;
@@ -1961,7 +1961,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
 
 @media (max-width: 1199px) {
   .home .home__position {
-    padding: 150px 30px 50px 30px;
+    padding: 160px 30px 50px 30px;
   }
 
   .about-me .about-me__content {
@@ -2137,6 +2137,14 @@ body._pc .menu__list > li:hover .menu__sub-list {
     display: block;
   }
 
+  .footer__container {
+    padding: 50px 0;
+  }
+
+  .home .home__position {
+    padding: 120px 30px 50px 30px;
+  }
+
   .home .home__info {
     flex: 0 0 100%;
     align-items: unset;
@@ -2172,6 +2180,10 @@ body._pc .menu__list > li:hover .menu__sub-list {
     left: 40px;
   }
 
+  .about-me {
+    padding: 50px 0;
+  }
+
   .about-me .about-me__content .about-me__info .about-me__photo {
     flex: 0 0 100%;
     margin-bottom: 30px;
@@ -2182,8 +2194,24 @@ body._pc .menu__list > li:hover .menu__sub-list {
     padding-left: 0;
   }
 
+  .skills .skills__position {
+    padding: 50px 30px;
+  }
+
+  .portfolio .portfolio__position {
+    padding: 50px 30px;
+  }
+
+  .portfolio .portfolio__info {
+    margin-bottom: 40px;
+  }
+
   .contacts {
     padding: 0 30px;
+  }
+
+  .contacts .contacts__position {
+    padding: 50px 0 0 0;
   }
 }
 

@@ -77,13 +77,16 @@
 /*-------- Home Start -------*/
 .home {
     .home__position {
-        padding: 150px 0 50px 0;
+        padding: 160px 0 50px 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+        @media (max-width: 767px) {
+            padding: 120px 30px 50px 30px;
+        }
         @media (max-width: 1199px) {
-            padding: 150px 30px 50px 30px;
+            padding: 160px 30px 50px 30px;
         }
     }
 
@@ -215,7 +218,9 @@
     display: flex;
     flex-direction: column;
     padding: 100px 0;
-
+    @media (max-width: 767px) {
+        padding: 50px 0;
+    }
     .about-me__content {
         max-width: 1200px;
         margin: 0 auto;
@@ -343,6 +348,9 @@
 .skills {
     .skills__position {
         padding: 100px 0;
+        @media (max-width: 767px) {
+            padding: 50px 30px;
+        }
         @media (max-width: 1199px) {
             padding: 100px 30px;
         }
@@ -353,7 +361,7 @@
         font-size: 34px;
         text-align: center;
         color: #070707;
-        margin-bottom: 30px;
+        margin-bottom: 18px;
     }
 
     .skills__subtitle {
@@ -362,7 +370,7 @@
         line-height: 27px;
         text-align: center;
         color: #070707;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
 
     .spoiler-skills__block {
@@ -583,6 +591,9 @@
 
     .portfolio__position {
         padding: 100px 0;
+        @media (max-width: 767px) {
+            padding: 50px 30px;
+        }
         @media (max-width: 1199px) {
             padding: 100px 30px;
         }
@@ -592,7 +603,7 @@
         font-family: TitilliumWeb-Bold;
         font-size: 34px;
         color: #070707;
-        margin-bottom: 47px;
+        margin-bottom: 50px;
         text-align: center;
     }
 
@@ -600,7 +611,9 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 80px;
-
+        @media (max-width: 767px) {
+            margin-bottom: 40px;
+        }
         &:hover,
         &:focus {
             -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
@@ -735,6 +748,9 @@
 
     .contacts__position {
         padding: 100px 0 0 0;
+        @media (max-width: 767px) {
+            padding: 50px 0 0 0;
+        }
     }
 
     .contacts__title {
@@ -915,7 +931,7 @@
         .contacts__button {
             grid-area: my-input-button;
             width: 180px;
-            height: 42px;
+            height: 60px;
             background-color: #070707;
             color: #ffffff;
             font-family: TitilliumWeb-SemiBold;
