@@ -33,7 +33,8 @@
                     <picture>
                         <source srcset="img/index/home/home_photo_mobile.jpg, img/index/home/home_photo_mobile.webp"
                             media="(max-width:767px)">
-                        <img class="home__photo" src="img/index/home/home_photo_desktop.jpg" srcset="img/index/home/home_photo_desktop.webp" alt="home_photo_mobile">
+                        <img class="home__photo" src="img/index/home/home_photo_desktop.jpg"
+                            srcset="img/index/home/home_photo_desktop.webp" alt="home_photo_mobile">
                     </picture>
                 </div>
                 <div class="home__switch-lang">
@@ -113,7 +114,8 @@
                     <div data-spollers data-one-spoller class="spoiler-skills__block spoiler-skills__block-1">
 
                         <div tabindex="1" class="spoiler-skills__block-item" data-aos="flip-up">
-                            <button tabindex="-1" type="button" data-spoller class="spoiler-skills__block-info-title">
+                            <button tabindex="-1" type="button" data-spoller class="spoiler-skills__block-info-title"
+                                id="spoiler-skills__button-1">
                                 <div class="block__info">
                                     <div class="spoiler-skills__block-title-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
@@ -138,7 +140,7 @@
                                 <div class="spoiler-skills__block-info">
                                     <div class="spoiler-skills__progres-item">
                                         <div class="progress">
-                                            <progress max="100" value="70"></progress>
+                                            <progress id="progres__html" max="100" value="0"></progress>
                                             <div class="progress-value">
                                                 <h2>HTML</h2>
                                             </div>
@@ -147,10 +149,10 @@
                                             </div>
                                         </div>
                                     </div>
-                            
+
                                     <div class="spoiler-skills__progres-item">
                                         <div class="progress">
-                                            <progress max="100" value="60"></progress>
+                                            <progress id="progres__css" max="100" value="0"></progress>
                                             <div class="progress-value">
                                                 <h2>CSS</h2>
                                             </div>
@@ -159,10 +161,10 @@
                                             </div>
                                         </div>
                                     </div>
-                            
+
                                     <div class="spoiler-skills__progres-item">
                                         <div class="progress">
-                                            <progress max="100" value="40"></progress>
+                                            <progress id="progres__js" max="100" value="0"></progress>
                                             <div class="progress-value">
                                                 <h2>JavaScript</h2>
                                             </div>
@@ -172,18 +174,22 @@
                                         </div>
                                     </div>
                                 </div>
-                            
+
                             </div>
                         </div>
 
                         <div tabindex="1" class="spoiler-skills__block-item" data-aos="flip-up">
-                            <button tabindex="-1" type="button" data-spoller class="spoiler-skills__block-info-title">
+                            <button tabindex="-1" type="button" data-spoller class="spoiler-skills__block-info-title"
+                                id="spoiler-skills__button-2">
                                 <div class="block__info">
                                     <div class="spoiler-skills__block-title-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-layout-text-window" viewbox="0 0 16 16">
-                                            <path d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
-                                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1h12zm1 3v10a1 1 0 0 1-1 1h-2V4h3zm-4 0v11H2a1 1 0 0 1-1-1V4h10z"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            fill="currentColor" class="bi bi-layout-text-window" viewbox="0 0 16 16">
+                                            <path
+                                                d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                            <path
+                                                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1h12zm1 3v10a1 1 0 0 1-1 1h-2V4h3zm-4 0v11H2a1 1 0 0 1-1-1V4h10z" />
+                                        </svg>
                                     </div>
                                     <div class="spoiler-skills__button-info">
                                         <p class="spoiler-skills__block-title">Designer</p>
@@ -192,12 +198,12 @@
                                 </div>
 
                                 <div>
-                                <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-chevron-down" viewbox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                                </svg>
-                            </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewbox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                    </svg>
+                                </div>
 
                             </button>
 
@@ -205,7 +211,7 @@
                                 <div class="spoiler-skills__block-info">
                                     <div class="spoiler-skills__progres-item">
                                         <div class="progress">
-                                            <progress max="100" value="65"></progress>
+                                            <progress id="progres__figma" max="100" value="0"></progress>
                                             <div class="progress-value">
                                                 <h2>Figma</h2>
                                             </div>
@@ -214,10 +220,10 @@
                                             </div>
                                         </div>
                                     </div>
-                            
+
                                     <div class="spoiler-skills__progres-item">
                                         <div class="progress">
-                                            <progress max="100" value="30"></progress>
+                                            <progress id="progres__psd" max="100" value="0"></progress>
                                             <div class="progress-value">
                                                 <h2>Photoshop</h2>
                                             </div>
@@ -226,20 +232,24 @@
                                             </div>
                                         </div>
                                     </div>
-                            
+
                                 </div>
-                            
+
                             </div>
                         </div>
 
                         <div tabindex="1" class="spoiler-skills__block-item" data-aos="flip-up">
-                            <button tabindex="-1" type="button" data-spoller class="spoiler-skills__block-info-title">
+                            <button tabindex="-1" type="button" data-spoller class="spoiler-skills__block-info-title"
+                                id="spoiler-skills__button-3">
                                 <div class="block__info">
                                     <div class="spoiler-skills__block-title-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-hdd-network" viewbox="0 0 16 16">
-                                            <path d="M4.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM3 4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
-                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8.5v3a1.5 1.5 0 0 1 1.5 1.5h5.5a.5.5 0 0 1 0 1H10A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5H.5a.5.5 0 0 1 0-1H6A1.5 1.5 0 0 1 7.5 10V7H2a2 2 0 0 1-2-2V4zm1 0v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1zm6 7.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5z"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            fill="currentColor" class="bi bi-hdd-network" viewbox="0 0 16 16">
+                                            <path
+                                                d="M4.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM3 4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                                            <path
+                                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8.5v3a1.5 1.5 0 0 1 1.5 1.5h5.5a.5.5 0 0 1 0 1H10A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5H.5a.5.5 0 0 1 0-1H6A1.5 1.5 0 0 1 7.5 10V7H2a2 2 0 0 1-2-2V4zm1 0v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1zm6 7.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5z" />
+                                        </svg>
                                     </div>
                                     <div class="spoiler-skills__button-info">
                                         <p class="spoiler-skills__block-title">Backend Developer</p>
@@ -257,7 +267,7 @@
                                 <div class="spoiler-skills__block-info">
                                     <div class="spoiler-skills__progres-item">
                                         <div class="progress">
-                                            <progress max="100" value="30"></progress>
+                                            <progress id="progres__php" max="100" value="0"></progress>
                                             <div class="progress-value">
                                                 <h2>PHP</h2>
                                             </div>
@@ -266,10 +276,10 @@
                                             </div>
                                         </div>
                                     </div>
-                            
+
                                     <div class="spoiler-skills__progres-item">
                                         <div class="progress">
-                                            <progress max="100" value="10"></progress>
+                                            <progress id="progres__node-js" max="100" value="0"></progress>
                                             <div class="progress-value">
                                                 <h2>Node.js</h2>
                                             </div>
@@ -278,9 +288,9 @@
                                             </div>
                                         </div>
                                     </div>
-                            
+
                                 </div>
-                            
+
                             </div>
                         </div>
 
@@ -301,7 +311,8 @@
                             <h2>The Glass Huts</h2>
                         </span>
                         <figure>
-                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_1.jpg" alt="portfolio_photo_item_1">
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_1.jpg"
+                                alt="portfolio_photo_item_1">
                         </figure>
                     </a>
                     <div class="portfolio__link">
@@ -319,7 +330,8 @@
                             <h2>Streetster</h2>
                         </span>
                         <figure>
-                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_2.jpg" alt="portfolio_photo_item_2">
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_2.jpg"
+                                alt="portfolio_photo_item_2">
                         </figure>
                     </a>
                     <div class="portfolio__link">
@@ -338,7 +350,8 @@
                             <h2>Portfolio First</h2>
                         </span>
                         <figure>
-                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_3.jpg" alt="portfolio_photo_item_3">
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_3.jpg"
+                                alt="portfolio_photo_item_3">
                         </figure>
                     </a>
                     <div class="portfolio__link">
@@ -356,7 +369,8 @@
                             <h2>Alivio</h2>
                         </span>
                         <figure>
-                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_4.jpg" alt="portfolio_photo_item_4">
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_4.jpg"
+                                alt="portfolio_photo_item_4">
                         </figure>
                     </a>
                     <div class="portfolio__link">
@@ -374,7 +388,8 @@
                             <h2>Portfolio Second</h2>
                         </span>
                         <figure>
-                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_5.jpg" alt="portfolio_photo_item_5">
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_5.jpg"
+                                alt="portfolio_photo_item_5">
                         </figure>
                     </a>
                     <div class="portfolio__link">
@@ -392,7 +407,8 @@
                             <h2>Barber</h2>
                         </span>
                         <figure>
-                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_6.jpg" alt="portfolio_photo_item_6">
+                            <img class="portfolio__photo-item" src="img/index/portfolio/portfolio_photo_item_6.jpg"
+                                alt="portfolio_photo_item_6">
                         </figure>
                     </a>
                     <div class="portfolio__link">
@@ -440,17 +456,18 @@
 
     @@include('html/_footer.html')
 
-        <!-- ======== Spoiler ======== -->
+    <!-- ======== Spoiler ======== -->
     <script src="js/plugins_spollers_acordeon.min.js"></script>
-        <!-- ======== Main Script ======== -->
+    <!-- ======== Main Script ======== -->
     <script src="js/main_script.min.js"></script>
-        <!-- ======== AOS Script ======== -->
+    <!-- ======== AOS Script ======== -->
     <script src="plugins/aos/dist/aos.min.js"></script>
-        <!-- ======== AOS Script Init ======== -->
+    <!-- ======== AOS Script Init ======== -->
     <script src="plugins/aos/js/aos_init.min.js"></script>
-        <!-- ======== Anime Script  ======== -->
+    <!-- ======== Anime Script  ======== -->
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-        <!-- ======== Anime Script Init ======== -->
+    <!-- ======== Anime Script Init ======== -->
     <script src="plugins/anime/anime_init.js"></script>
 </body>
+
 </html>
