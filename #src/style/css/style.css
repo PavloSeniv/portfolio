@@ -9,9 +9,25 @@
   margin: 0 auto;
 }
 
-/* 
 ::-webkit-scrollbar {
-} 
-*/
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f6f6f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #070707;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    color-stop(0.5, rgba(255, 255, 255, 0.25)),
+    color-stop(0.5, transparent),
+    to(transparent)
+  );
+}
 
 /*-------- All -------*/
