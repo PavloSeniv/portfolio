@@ -540,8 +540,9 @@ body._pc .menu__list > li:hover .menu__sub-list {
   font-family: TitilliumWeb-Bold;
   font-size: 25px;
   color: #070707;
-  text-align: center;
+  display: flex;
   margin-bottom: 5px;
+  justify-content: center;
 }
 
 .about-me .about-me__content .about-me__info .about-me__info-text .about-me__experience .about-me__item-expirience .about-me__subtitle-expirience {
