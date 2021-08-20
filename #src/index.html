@@ -13,8 +13,8 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- ======== Style ======== -->
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- ======== Animate.css ======== -->
-    <link rel="stylesheet" href="plugins/animate_css/dist/animate.min.css">
+    <!-- ======== AOS style ======== -->
+    <link rel="stylesheet" href="plugins/aos/dist/aos.min.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                     <h1 class="home__title">Seniv Pavlo</h1>
                     <p class="home__text">Front-end Developer <br> 20 years old, Ukraine</p>
                 </div>
-                <div tabindex="1" class="home__background">
+                <div tabindex="1" class="home__background" data-aos="zoom-in">
                     <!--Адаптивні картинки та заміна зображення відповідно медіа запиту(також можлива заміна відносно моделі телефону(Android - header__logo 1x, iPhone - header__logo 2x - залежність від дисплею))-->
                     <picture>
                         <source srcset="img/index/home/home_photo_mobile.jpg, img/index/home/home_photo_mobile.webp"
@@ -52,7 +52,7 @@
 
                 <div class="about-me__info">
 
-                    <div class="about-me__photo wow bounceInRight" data-wow-duration="2s" data-wow-delay="5s" data-wow-offset="10" data-wow-iteration="10">
+                    <div class="about-me__photo">
                         <img src="img/index/about_me/about_me_photo_desktop.jpg" alt="about_me_photo_desktop">
                     </div>
 
@@ -441,15 +441,11 @@
 
         <!-- ======== Spoiler ======== -->
     <script src="js/plugins_spollers_acordeon.min.js"></script>
-        <!-- ======== WOW ======== -->
-    <script src="plugins/wow/dist/wow.min.js"></script>
-        <!-- ======== WOW Init======== -->
-    <script src="plugins/wow/js/wow_init.min.js"></script>
-        <!-- ======== Anime.js======== -->
-    <script src="plugins/anime/dist/anime.min.js"></script>
         <!-- ======== Main Script ======== -->
     <script src="js/main_script.min.js"></script>
-
+        <!-- ======== AOS Script ======== -->
+    <script src="plugins/aos/dist/aos.min.js"></script>
+        <!-- ======== AOS Script Init ======== -->
+    <script src="plugins/aos/js/aos_init.js"></script>
 </body>
-
 </html>
