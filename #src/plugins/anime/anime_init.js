@@ -26,6 +26,10 @@ const observer = new IntersectionObserver(
         runAnimtion();
         observer.disconnect();
       }
+      if (entry.isIntersecting){
+        runAnimtion();
+        observer.disconnect();
+      }
     });
   },
   {
