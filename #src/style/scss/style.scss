@@ -76,6 +76,8 @@
 
 /*-------- Home Start -------*/
 .home {
+    overflow: hidden;
+
     .home__position {
         padding: 160px 0 50px 0;
         display: flex;
@@ -214,6 +216,7 @@
 
 /*-------- About Me Start -------*/
 .about-me {
+    overflow: hidden;
     background-color: #f6f6f6;
     display: flex;
     flex-direction: column;
@@ -347,6 +350,8 @@
 
 /*-------- Skills Start -------*/
 .skills {
+    overflow: hidden;
+
     .skills__position {
         padding: 100px 0;
         @media (max-width: 767px) {
@@ -588,6 +593,8 @@
 /*-------- Skills End -------*/
 /*-------- Portfolio Start -------*/
 .portfolio {
+    overflow: hidden;
+
     background-color: #f6f6f6;
 
     .portfolio__position {
@@ -742,6 +749,8 @@
 /*-------- Portfolio End -------*/
 /*-------- Contacts Start -------*/
 .contacts {
+    overflow: hidden;
+
     padding: 0 200px;
     @media (max-width: 767px) {
         padding: 0 30px;
