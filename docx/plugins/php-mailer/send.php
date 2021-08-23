@@ -29,15 +29,15 @@ try {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->Host = 'smtp.gmail.com'; // SMTP сервер
-    $mail->Username   = 'Pavlo Seniv'; // Логин на почте
-    $mail->Password   = 'esrbcgxloadwzkti'; // Пароль на почте
+    //$mail->Host = 'smtp.gmail.com'; // SMTP сервер
+    $mail->Username   = 'login'; // Логин на почте
+    $mail->Password   = 'password'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('mail@yandex.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('senivpavlo016@gmail.com');  
+    $mail->addAddress('@gmail.com');  
     //$mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
 //     // Прикрипление файлов к письму
