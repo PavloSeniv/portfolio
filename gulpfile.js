@@ -14,6 +14,7 @@ let path = {
     fonts: project_folder + "/fonts/",
     pluginsJs: project_folder + "/plugins/",
     pluginsCss: project_folder + "/plugins/",
+    pluginsPhp: project_folder + "/plugins/",
     pdf: project_folder + "/pdf/",
   },
   //Папка із початковими файлами
@@ -31,6 +32,7 @@ let path = {
     fonts: source_folder + "/fonts/*.ttf",
     pluginsJs: source_folder + "/plugins/**/*.js",
     pluginsCss: source_folder + "/plugins/**/*.css",
+    pluginsPhp: source_folder + "/plugins/**/*.php",
     pdf: source_folder + "/pdf/**/*.pdf",
   },
   //Об'єкт  для слідкування за файлами в реальному часі(browserSync)
@@ -43,6 +45,7 @@ let path = {
     video: source_folder + "/video/**/*.+(mp4|mp3)",
     pluginsJs: source_folder + "/plugins/**/*.js",
     pluginsCss: source_folder + "/plugins/**/*.css",
+    pluginsPhp: source_folder + "/plugins/**/*.php",
     pdf: source_folder + "/pdf/**/*.pdf",
   },
   clean: "./" + project_folder + "/",
@@ -254,6 +257,12 @@ function pluginsCss(params) {
     .pipe(browsersync.stream());
 }
 
+function pluginsPhp(params) {
+  return src(path.src.pluginsPhp)
+    .pipe(dest(path.build.pluginsPhp))
+    .pipe(browsersync.stream());
+}
+
 function pdf(params) {
   return src(path.src.pdf)
     .pipe(dest(path.build.pdf))
@@ -269,6 +278,7 @@ function watchFiles(params) {
   gulp.watch([path.watch.video], video); // Для video
   gulp.watch([path.watch.pluginsJs], pluginsJs); // Для plugins .js file
   gulp.watch([path.watch.pluginsCss], pluginsCss); // Для plugins .css file
+  gulp.watch([path.watch.pluginsPhp], pluginsPhp); // Для plugins .php file
   gulp.watch([path.watch.pdf], pdf); // Для plugins .css file
 }
 
@@ -288,6 +298,7 @@ let build = gulp.series(
     fonts,
     pluginsJs,
     pluginsCss,
+    pluginsPhp,
     pdf
   ),
   fontsStyle
@@ -295,6 +306,7 @@ let build = gulp.series(
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.pdf = pdf;
+exports.pluginsPhp = pluginsPhp;
 exports.pluginsCss = pluginsCss;
 exports.pluginsJs = pluginsJs;
 exports.video = video;
