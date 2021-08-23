@@ -680,8 +680,8 @@
     .portfolio__link-photo img {
         -webkit-transform: scale(1);
         transform: scale(1);
-        -webkit-transition: 0.5s ease-in-out;
-        transition: 0.5s ease-in-out;
+        -webkit-transition: 0.5s ease;
+        transition: 0.5s ease;
     }
 
     .portfolio__link-photo:hover img,

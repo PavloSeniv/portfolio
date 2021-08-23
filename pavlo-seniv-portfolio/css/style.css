@@ -1671,7 +1671,7 @@ body._pc .menu__list > li:hover .menu__sub-list {
 
 .portfolio .portfolio__link-photo img {
   transform: scale(1);
-  transition: 0.5s ease-in-out;
+  transition: 0.5s ease;
 }
 
 .portfolio .portfolio__link-photo:hover img,
