@@ -45,13 +45,13 @@ if (isMobile.any()) {
 //Меню бургер
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
-const menuButton = document.querySelector(".home__switch-lang");
+//const menuButton = document.querySelector(".home__switch-lang");
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
     document.body.classList.toggle("_lock");
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");
-    menuButton.classList.toggle("_active");
+    //menuButton.classList.toggle("_active");
   });
 }
 
@@ -79,7 +79,7 @@ if (menuLinks.length > 0) {
         document.body.classList.remove("_lock");
         iconMenu.classList.remove("_active");
         menuBody.classList.remove("_active");
-        menuButton.classList.remove("_active");
+        //menuButton.classList.remove("_active");
       }
       //Для плавної прокрутки
       window.scrollTo({
