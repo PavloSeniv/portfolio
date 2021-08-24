@@ -22,7 +22,7 @@ function runAnimtion() {
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.intersectionRatio >= 0.7) {
+      if (entry.intersectionRatio >= 0.4) {
         runAnimtion();
         observer.disconnect();
       }
@@ -33,7 +33,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.7,
+    threshold: 0.4,
   }
 );
 
