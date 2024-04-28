@@ -1,0 +1,82 @@
+Список команд для гіта
+git --version - Перевірка встановлення гіта на компі
+
+git config --global user.name "Seniv Pavlo" }-
+-{ git config --global user.email senivpavlo016@gmail.com - Вказування пошти та логіна (глобально)
+
+git config user.name "Seniv Pavlo" }-
+-{ git config user.email senivpavlo016@gmail.com  - Вказування пошти та логіна (локально для певного проекту)
+
+git init - Ініціалізація гіта в проекті
+
+git status - Первірка статусу проекту
+
+git add . - Додавання всього проекту в репозиторій
+git add index.html - Додавання файлу
+git add FolderName/ - Додавання папки
+git add FolderName/main.js - Додавання файлу із папки
+git add *.html - Додавання тільки файлів із розширенням html
+git add FolderName/* - Додавання всіх файлів із даної папки
+git add FolderName/*.css - Додавання всіх файлів із розширенням css із даної папки
+git add FolderName/**/*.scss - Додавання всіх файлів із розширенням scss із даної папки та дочірніх папок
+git add !css/style.css - Додавання всіх файлів із папки крім файлу style.css
+git add !*.js - Додавання всіх файлів крім тих у яких є розширення js
+
+git rm --cached index.html - Видалення файлу із стадії очікування коміту
+git rm --cached FolderName/ - Те саме для папки
+
+git commit -m "First files" - Додавання коментаря до коміту
+
+git log - Перегляд всіх комітів
+git log --oneline - Зменшений варіант переглду комітів
+
+touch .gitignore - Додавання файлу gitignore(Можна будь-який)
+
+git checkout + id = git checkout 4f4f4f4f - Перегляд будь якого коміту(Вказуємо відповідне id)
+git checkout master - Повернення до основної вітки проекту
+
+git revert + id = git revert 5r5r5r5r - Відміна даного коміту по id(Відкриється редактор vim)
+:wq - Вихід із редактора vim
+
+git reset + id = git reset 3t3t3t - Видалення всіх комітів, які йдуть після коміта з даним id(Видаляється коміт, але файли можуть не помінятися)
+git reset + id --hard = git reset 3t3t3t --hard - Видалення всіх комітів, які йдуть після коміта з даним id(Видаляються також зміни)  
+
+git branch NameBranch - Створення нової гілки(Наприклад для адмін панелі)
+git checkout NameBranch - Перехід на іншу гілку
+git branch -a - Перегляд всіх гілок в проекті
+git checkout -b NameBranch - Створення та перехід на нову гілку
+
+git merge NameBranch - Об'єднання гілки master з гілкою NameBranch(Потрібно бути в даний час на гілці master)
+
+git remote add origin + https з GitHub - Підключення до репозиторія
+git clone + https з github - Копіювання репозиторія з GitHub
+
+git push - Додавання змін на репозиторій
+git push -u origin master - Додавання змін на підключений репозиторій
+
+git pull - Обновлення всіх даних
+
+cd ../ - Перехід вгору
+cd FolderName - Перехід в задану папку
+
+Аліаси для Git
+
+Шлях до файлу для редагування:
+C:\Users\seniv\.gitconfig
+
+Скорочення
+
+s = status --short
+st = status
+lg = log --oneline --graph --decorate --all
+g = log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)'
+br = branch
+co = checkout
+ci = commit
+br = branch
+hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+type = cat-file -t
+dump = cat-file -p
+
+Приклад: 
+git s - Виконається git status --short

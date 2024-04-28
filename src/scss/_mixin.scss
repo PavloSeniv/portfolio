@@ -1,0 +1,10 @@
+// Варіант в css
+// font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320)));
+
+//SCSS Миксин для адаптивного шрифту
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}

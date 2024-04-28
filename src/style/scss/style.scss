@@ -1,0 +1,687 @@
+/*-------- Write Fonts Start -------*/
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+/*-------- Write Fonts End -------*/
+
+/*-------- Import Start -------*/
+@import "_fonts";
+//@import "_libs";
+@import "_media";
+@import "_nullstyle";
+@import "_vars";
+@import "_mixin";
+@import "_vars";
+@import "header/_style_header";
+@import "footer/_style_footer";
+/*-------- Import End -------*/
+
+/*-------- Page Index Start -------*/
+
+/*-------- All Start -------*/
+body {
+  background-color: #000000;
+}
+
+* {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #000;
+}
+
+.__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  @media (max-width: 1199px) {
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #bdbdbd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1f5e37;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    color-stop(0.5, rgba(255, 255, 255, 0.25)),
+    color-stop(0.5, transparent),
+    to(transparent)
+  );
+}
+
+/*-------- All End -------*/
+
+/*-------- Main Start -------*/
+.main {
+  background-color: #e5e5e5;
+  height: 100vh;
+
+  &__bg {
+    max-width: 1440px;
+    width: 100%;
+    background-image: url(../img/index/main/main-bg.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+  }
+}
+
+.eclipse-scene {
+  position: absolute;
+  z-index: 3;
+
+  &__main-1 {
+    left: 48.5%;
+    top: 18.5%;
+  }
+  &__main-2 {
+    right: 5.5%;
+    bottom: 14.7%;
+  }
+
+  &__main-3 {
+    right: 8.1%;
+    top: 10%;
+  }
+
+  &__main-4 {
+    transform: rotate(180deg);
+    bottom: 12%;
+    left: 7.5%;
+  }
+
+  &__big {
+    position: relative;
+    left: -1px;
+  }
+
+  &__big-exploring {
+    position: relative;
+    left: -1px;
+  }
+
+  &__middle {
+    position: relative;
+    top: 8px;
+    left: -1px;
+  }
+
+  &__middle-exploring {
+    position: relative;
+    top: 12px;
+    left: -1px;
+  }
+
+  &__little {
+    position: relative;
+    top: -30px;
+    left: 29px;
+  }
+
+  &__little-exploring {
+    position: relative;
+    top: -34px;
+    left: 39px;
+  }
+}
+
+.wawe-scene {
+  position: absolute;
+  z-index: 3;
+
+  &__one-scene {
+    bottom: 5.1%;
+    left: 49.5%;
+  }
+
+  &__two-scene {
+    top: 24.5%;
+    right: 11.8%;
+  }
+
+  &__one {
+    position: relative;
+  }
+
+  &__two {
+    position: relative;
+    left: 80px;
+    top: -30px;
+  }
+}
+
+.bg-triangle-left {
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 136px solid #e5e5e5;
+  border-right: 660px solid transparent;
+}
+
+.bg-triangle-right {
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 136px solid #e5e5e5;
+  border-left: 660px solid transparent;
+}
+
+.main-scene {
+  margin-top: 138px;
+  padding: 41px 100px;
+  display: flex;
+  position: absolute;
+  z-index: 3;
+
+  &__info {
+    flex: 0 0 50%;
+  }
+
+  &__sub-title {
+    display: flex;
+    width: 227px;
+    height: 50px;
+    left: 100px;
+    top: 179px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  &__title {
+    @include adaptiv-font(55, 23);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 82.5px;
+    color: #fff;
+    margin-top: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  &__sup-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #fff;
+    opacity: 0.5;
+    margin-top: 32px;
+    letter-spacing: 0.9px;
+  }
+
+  &__button {
+    display: flex;
+    width: 263px;
+    height: 91px;
+    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
+    border-radius: 27px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 68px;
+    color: #fefefe;
+    &:hover {
+      background: linear-gradient(100.54deg, #ff7b4e 20.57%, #ff584e 86.03%);
+      cursor: pointer;
+      & a {
+        color: #000;
+      }
+    }
+    & a {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 37px;
+    }
+  }
+
+  &__photo {
+    flex: 0 0 50%;
+    user-select: none;
+  }
+  &__human {
+    left: 5% !important;
+  }
+}
+/*-------- Main End -------*/
+
+/*-------- Slider Start -------*/
+.slider {
+  &__info {
+    flex: 0 0 60%;
+    @media (max-width: 767px) {
+    flex: 0 0 100%;
+    }
+  }
+
+  &__container {
+    display: flex;
+    background-color: #e5e5e5;
+    padding: 0 0 0 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+      @media (max-width: 767px) {
+   flex-wrap: wrap;
+    }
+  }
+}
+
+.info {
+  flex: 0 0 40%;
+  @media (max-width: 767px) {
+    flex: 0 0 100%;
+    }
+  &__title {
+    display: flex;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    color: #0f1f1c;
+    flex-direction: column;
+    margin-top: 123px;
+  }
+
+  &__title-span {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 82px;
+    color: #0f1f1c;
+    letter-spacing: 1px;
+  }
+
+  &__sup-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #0f1f1c;
+    opacity: 0.5;
+    margin-top: 17px;
+    letter-spacing: 0px;
+  }
+
+  &__button {
+    display: flex;
+    width: 223px;
+    height: 79px;
+    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
+    border-radius: 27px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 61px;
+    &:hover {
+      background: linear-gradient(129.54deg, #bd431b 15.57%, #8d150f 95.03%);
+      cursor: pointer;
+
+      & a {
+        color: #000;
+      }
+    }
+
+    & a {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      color: #fefefe;
+    }
+  }
+}
+
+.__container-swiper {
+  margin-top: 110px;
+  max-width: 1408px;
+}
+/*-------- Slider End -------*/
+
+/*-------- Tourists Start -------*/
+.reviews-tourists {
+  background-color: #e5e5e5;
+  display: flex;
+  column-gap: 68px;
+    @media (max-width: 767px) {
+    flex-wrap: wrap;
+    }
+
+  &__container {
+    padding: 143px 100px;
+      @media (max-width: 767px) {
+    padding: 20px 20px;
+    }
+  }
+
+  &__photo {
+    flex: 0 0 38.5%;
+     @media (max-width: 767px) {
+    flex: 0 0 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__info {
+    flex: 0 0 61.5%;
+       @media (max-width: 767px) {
+    flex: 0 0 100%;
+    }
+  }
+
+  &__title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 67px;
+    color: #0f1f1c;
+  }
+
+  &__user-info {
+    margin-top: 38px;
+    display: flex;
+    column-gap: 33px;
+  }
+
+  &__logo {
+    & svg {
+      &:hover {
+        cursor: alias;
+        & g {
+          & rect:nth-child(1) {
+            fill: #e0ad05;
+          }
+        }
+      }
+    }
+  }
+
+  &__info-user {
+    margin-top: 20px;
+  }
+
+  &__name {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 49px;
+    color: #0f1f1c;
+  }
+
+  &__geo {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 37px;
+    color: #0f1f1c;
+    opacity: 0.5;
+    margin-top: 10px;
+  }
+
+  &__subtitle {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    color: #0f1f1c;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    margin-top: 48px;
+  }
+
+  &__rating-area {
+    margin-top: 20px;
+  }
+}
+
+.rating-area {
+  overflow: hidden;
+  width: 335px;
+
+  &:not(:checked) > input {
+    display: none;
+  }
+
+  &:not(:checked) > label {
+    float: right;
+    width: 67px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 69px;
+    line-height: 69px;
+    color: #d3d3d3;
+    text-shadow: 1px 1px #bbb;
+  }
+
+  &:not(:checked) > label:before {
+    content: "★";
+  }
+
+  & > input:checked ~ label {
+    color: gold;
+    text-shadow: 1px 1px #c60;
+  }
+
+  &:not(:checked) > label:hover,
+  &:not(:checked) > label:hover ~ label {
+    color: gold;
+  }
+
+  & > input:checked + label:hover,
+  & > input:checked + label:hover ~ label,
+  & > input:checked ~ label:hover,
+  & > input:checked ~ label:hover ~ label,
+  & > label:hover ~ input:checked ~ label {
+    color: gold;
+    text-shadow: 1px 1px goldenrod;
+  }
+
+  & .rate-area > label:active {
+    position: relative;
+  }
+}
+/*-------- Tourists End -------*/
+
+/*-------- Exploring Start -------*/
+.exploring {
+  background-color: #e5e5e5;
+
+  &__container {
+    padding: 105px 100px;
+      @media (max-width: 767px) {
+    padding: 105px 20px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 60px;
+    padding: 102px 102px 130px 102px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__title {
+        max-width: 519px;
+    width: 100%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 67px;
+    text-align: center;
+    color: #0f1f1c;
+  }
+
+  &__subtitle {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    color: #0f1f1c;
+    opacity: 0.5;
+    margin-top: 33px;
+  }
+
+  &__button {
+    width: 225px;
+    height: 79px;
+    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
+    border-radius: 27px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 57px;
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(129.54deg, #d14618 15.57%, #ad160e 95.03%);
+      & a {
+        color: #000;
+      }
+    }
+  }
+
+  &__link {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+/*-------- Exploring End -------*/
+
+/*-------- Subcripe Start -------*/
+.subscripe {
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    padding: 21px 106px 106px 106px;
+      @media (max-width: 767px) {
+    padding: 21px 20px;
+    }
+  }
+
+  &__title {
+    width: 494px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 82px;
+    text-align: center;
+    color: #0f1f1c;
+  }
+
+  &__block {
+    max-width: 800px;
+    width: 100%;
+    background: linear-gradient(0deg, #ffffff, #ffffff), #c4c4c4;
+    border-radius: 35px;
+    padding: 12px 15px 12px 46px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+
+  &__input {
+    width: 58%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000;
+    opacity: 0.5;
+
+    &::placeholder {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      color: #0f1f1c;
+      opacity: 0.5;
+    }
+
+    &:hover {
+      cursor: pointer;
+      -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+      -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+      box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    }
+  }
+
+  &__button {
+    width: 300px;
+    height: 105px;
+    left: 805px;
+    top: 3416px;
+    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%), #ffffff;
+    border-radius: 35px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 37px;
+    color: #ffffff;
+    &:hover {
+      background: linear-gradient(129.54deg, #d38064 15.57%, #ec261c 95.03%), #ffffff;
+      color: #000000;
+    }
+  }
+}
+/*-------- Subcripe End -------*/

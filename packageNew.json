@@ -1,0 +1,63 @@
+{
+  "name": "gulp-build-2022",
+  "version": "1.0.0",
+  "description": "My gulp-build-2022",
+  "main": "gulpfile.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --build",
+    "zip": "gulp deployZip --build",
+    "ftp": "gulp deployFtp --build",
+    "svgSprite": "gulp svgSprite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavloSeniv/gulp-build-2022.git"
+  },
+  "keywords": [
+    "Gulp"
+  ],
+  "author": "Seniv Pavlo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PavloSeniv/gulp-build-2022/issues"
+  },
+  "homepage": "https://github.com/PavloSeniv/gulp-build-2022#readme",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "del": "^latest",
+    "gulp": "^latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-file-include": "latest",
+    "gulp-fonter": "latest",
+    "gulp-group-css-media-queries": "latest",
+    "gulp-if": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-newer": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-pug": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
+    "gulp-sass": "latest",
+    "gulp-svg-sprite": "latest",
+    "gulp-ttf2woff2": "latest",
+    "gulp-util": "latest",
+    "gulp-version-number": "latest",
+    "gulp-webp": "latest",
+    "gulp-webp-html-nosvg": "latest",
+    "gulp-webpcss": "latest",
+    "gulp-zip": "latest",
+    "sass": "latest",
+    "swiper": "latest",
+    "vinyl-ftp": "latest",
+    "webp-converter": "2.2.3",
+    "webpack": "latest",
+    "webpack-stream": "latest"
+  }
+}
