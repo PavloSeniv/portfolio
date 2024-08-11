@@ -110,7 +110,7 @@ export const fontsStyle = (params) => {
                             //         font-weight: ${fontWeight};
                             //         font-style: normal;
                             // }\r\n`,callBack);
-                            `@font-face {\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../assets/fonts/${fontFileName}.woff") format("woff"), url("../assets/fonts/${fontFileName}.woff2") format("woff2");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n\t}\r\n`,
+                            `@font-face {\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../assets/fonts/${fontFileName}.woff2") format("woff2");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n\t}\r\n`,
                             callBack
                         );
                         newFileOnly = fontFileName;
