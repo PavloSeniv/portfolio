@@ -60,5 +60,8 @@
     "webp-converter": "2.2.3",
     "webpack": "latest",
     "webpack-stream": "latest"
+  },
+  "dependencies": {
+    "bad-words": "^3.0.4"
   }
 }

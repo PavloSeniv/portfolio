@@ -1,6 +1,9 @@
 import * as functionsIsWebp from "./modules/_webp_add_class_to_html.js";
+// import * as functionsFilterBadWords from "./modules/filter in form to bad words.js";
+//
 
 functionsIsWebp.isWebp();
+// functionsFilterBadWords.filterBadWords()
 
 // ---
 const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
@@ -40,3 +43,18 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
     location.href = 'index.html'
 })
+
+import Filter from 'bad-words';
+
+// Ініціалізація фільтра
+const filter = new Filter();
+
+// Додавання слухача подій до форми
+document.getElementById('myForm').addEventListener('submit', function (event) {
+    const textInput = document.getElementById('message').value;
+
+    if (filter.isProfane(textInput)) {
+        event.preventDefault(); // Зупинити відправлення форми
+        alert('Ваша форма містить нецензурні слова. Будь ласка, виправте це.');
+    }
+});
