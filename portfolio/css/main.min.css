@@ -430,6 +430,11 @@ textarea {
   display: block;
   object-fit: cover;
 }
+.projects__row-img-project {
+  width: 83%;
+  display: block;
+  object-fit: cover;
+}
 .projects__row-content {
   padding: 2rem 0;
   display: flex;
@@ -620,6 +625,9 @@ textarea {
 }
 .project-details__showcase-img {
   width: 100%;
+}
+.project-details__showcase-img-project {
+  width: 70%;
 }
 .project-details__content-main {
   width: 100%;
