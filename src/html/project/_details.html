@@ -1,0 +1,49 @@
+<div class="project-details__showcase-img-cont" style="position: relative">
+    <img
+            src="assets/images/components/row-item/project-mockup-example.jpeg"
+            alt="Project Image"
+            class="project-details__showcase-img"
+    />
+
+    <img style="position: absolute;top: 20%; left: 20%"
+         src="assets/images/components/row-item/@@project-details-image"
+         alt="@@project-details-alt"
+         class="project-details__showcase-img"
+    />
+</div>
+
+<div class="project-details__content-main">
+    <div class="project-details__desc">
+        <h3 class="project-details__content-title">Project Overview</h3>
+
+        @@for (var i = 0; i < arrDesc.length; i++) {
+        <p class="project-details__desc-para">
+            `+arrDesc[i]+`
+        </p>
+        }
+
+    </div>
+    <div class="project-details__tools-used">
+        <h3 class="project-details__content-title">Tools Used</h3>
+        <div class="skills">
+
+            @@for (var i = 0; i < arrSkills.length; i++) {
+            <div class="skills__skill"> `+arrSkills[i]+`</div>
+            }
+
+        </div>
+    </div>
+    <div class="project-details__links">
+        <h3 class="project-details__content-title">See Live</h3>
+        <a
+                href="@@project-details-live-link"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank">Live Link
+        </a>
+        <a
+                href="@@project-details-code-link"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank">Code Link
+        </a>
+    </div>
+</div>

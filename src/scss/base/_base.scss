@@ -1,0 +1,102 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 59%; //1 rem =
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 56%; //1 rem =
+  }
+
+  @include respond(big-desktop) {
+    font-size: 65%; //1rem =
+  }
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  line-height: 1.5;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: 'SourceSans3', sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+input:focus,
+button:focus,
+a:focus,
+textarea:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+/*-------- Write Fonts Start -------*/
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+/*-------- Write Fonts End -------*/
+
+::selection {
+  color: #ffffff;
+  background-color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #bdbdbd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  background-image: -webkit-gradient(
+                  linear,
+                  0 0,
+                  0 100%,
+                  color-stop(0.5, rgba(255, 255, 255, 0.25)),
+                  color-stop(0.5, transparent),
+                  to(transparent)
+  );
+}

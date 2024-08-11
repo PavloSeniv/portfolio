@@ -10,45 +10,45 @@ import groupCssMediaQueries from "gulp-group-css-media-queries"; //  Для гр
 const sass = gulpSass(dartSass);
 
 export const scss = () => {
-  return app.gulp
-    .src(app.path.src.scss, { sourcemaps: app.isDev })
-    .pipe(
-      app.plugins.plumber(
-        app.plugins.notify.onError({
-          title: "SCSS",
-          message: "Error: <%= error.message %>",
-        })
-      )
-    )
-    .pipe(app.plugins.replace(/@img\//g, "../img/"))
-    .pipe(
-      //Не потрібно для scss
-      //       .pipe(app.html.fileInclude())
-      sass({
-        outputStyle: "expanded", // Для формування файлу не стисненим
-      })
-    )
-    .pipe(app.plugins.if(app.isBuild, groupCssMediaQueries()))
-    .pipe(app.plugins.if(app.isBuild, 
-      webpcss({
-        webpClass: ".webp",
-        noWebpClass: ".no-webp",
-      })
-    ))
-    .pipe(app.plugins.if(app.isBuild, 
-      autoprefixer({
-        grid: true,
-        overrideBrowserlist: ["last 3 versions"],
-        cascade: true,
-      })
-    ))
-    .pipe(app.gulp.dest(app.path.build.css))
-    .pipe(app.plugins.if(app.isBuild, cleanСss()))
-    .pipe(
-      rename({
-        extname: ".min.css",
-      })
-    )
-    .pipe(app.gulp.dest(app.path.build.css))
-    .pipe(app.plugins.browsersync.stream());
+    return app.gulp
+        .src(app.path.src.scss, {sourcemaps: app.isDev})
+        .pipe(
+            app.plugins.plumber(
+                app.plugins.notify.onError({
+                    title: "SCSS",
+                    message: "Error: <%= error.message %>",
+                })
+            )
+        )
+        .pipe(app.plugins.replace(/@img\//g, "../img/"))
+        .pipe(
+            //Не потрібно для scss
+            //       .pipe(app.html.fileInclude())
+            sass({
+                outputStyle: "expanded", // Для формування файлу не стисненим
+            })
+        )
+        .pipe(app.plugins.if(app.isBuild, groupCssMediaQueries()))
+        .pipe(app.plugins.if(app.isBuild,
+            webpcss({
+                webpClass: ".webp",
+                noWebpClass: ".no-webp",
+            })
+        ))
+        .pipe(app.plugins.if(app.isBuild,
+            autoprefixer({
+                grid: true,
+                overrideBrowserlist: ["last 3 versions"],
+                cascade: true,
+            })
+        ))
+        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.plugins.if(app.isBuild, cleanСss()))
+        .pipe(
+            rename({
+                extname: ".min.css",
+            })
+        )
+        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.plugins.browsersync.stream());
 };

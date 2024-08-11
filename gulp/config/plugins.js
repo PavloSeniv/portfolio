@@ -7,10 +7,10 @@ import ifPlugin from "gulp-if"; // Умовний оператор
 
 // Ескспорт об'єкту
 export const plugins = {
-  replace: replace,
-  plumber: plumber,
-  notify: notify,
-  browsersync: browsersync,
-  newer: newer,
-  if: ifPlugin,
+    replace: replace,
+    plumber: plumber,
+    notify: notify,
+    browsersync: browsersync,
+    newer: newer,
+    if: ifPlugin,
 };
