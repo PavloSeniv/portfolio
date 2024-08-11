@@ -42,7 +42,7 @@ export const path = {
         files: `${srcFolder}/assets/files/**/*.*+(mp4|mp3|pdf)`,
         html: `${srcFolder}/**/*.html`,
         // html: `${srcFolder}/*.pug`, // Для pug
-        scss: `${srcFolder}/scss/main.scss`,
+        scss: `${srcFolder}/scss/**/*.scss`,
         // css: `${srcFolder}/style/**/*.{css,scss,less,sass}`,
         js: [`${srcFolder}/assets/js/**/*.js`],
         images: `${srcFolder}/assets/**/*.+(png|PNG|jpg|JPG|gif|ico|svg|webp)`,
