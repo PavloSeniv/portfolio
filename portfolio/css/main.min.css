@@ -122,8 +122,8 @@ textarea {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #000;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(232, 23, 23, 0.7)), color-stop(0.5, transparent), to(transparent));
+  background-color: #040303;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(232, 23, 23, 0.8)), color-stop(0.5, transparent), to(transparent));
 }
 
 /*-------- Write Fonts Start -------*/
