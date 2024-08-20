@@ -1,6 +1,7 @@
 .skills {
   display: flex;
   flex-wrap: wrap;
+
   &__skill {
     padding: 1rem 2rem;
     margin-bottom: 1.5rem;
@@ -10,5 +11,220 @@
     border-radius: $commonBorderRadius;
     font-weight: 600;
     color: #777;
+  }
+
+  .spoiler-skills__block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .spoiler-skills__block-item {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+
+    &:focus {
+      -webkit-box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 991px) {
+      flex: 0 0 100%;
+    }
+  }
+
+  .block__info {
+    display: flex;
+    align-items: center;
+  }
+
+  .spoiler-skills__block-title-icon {
+    margin-right: 20px;
+  }
+
+  .spoiler-skills__block-info-title {
+    display: flex;
+    background-color: unset;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    & .bi-chevron-down {
+      transition: transform 0.5s ease 0s;
+    }
+  }
+
+  .spoiler-skills__block-info-title._active {
+    & .bi-chevron-down {
+      transform: rotate(180deg);
+    }
+  }
+
+  .spoiler-skills__button-info {
+    .spoiler-skills__block-title {
+      font-size: 34px;
+      color: #070707;
+      text-align: left;
+    }
+
+    .spoiler-skills__block-subtitle {
+      font-size: 18px;
+      line-height: 27px;
+      color: #070707;
+      text-align: left;
+    }
+  }
+
+  .spoiler-skills__block-content {
+    padding: 30px 0;
+  }
+
+  .spoiler-skills__block-info {
+    padding: 0 0 0 60px;
+  }
+
+  .spoiler-skills__progres-item {
+    margin-bottom: 20px;
+  }
+
+  //Scroll Bar
+
+  @for $i from 0 through 100 {
+    .progress progress[value="#{$i}"] {
+      & + .progress-value:before {
+        content: "#{$i}%";
+      }
+
+      & ~ .progress-bg .progress-bar {
+        width: $i * 1%;
+      }
+    }
+  }
+
+  .progress {
+    width: 100%;
+    font: 12px Arial, Tahoma, sans-serif;
+    position: relative;
+    overflow: hidden;
+
+    progress {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      left: -777px;
+    }
+  }
+
+  .progress-value {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 8px;
+    color: #070707;
+    justify-content: space-between;
+
+    & h2 {
+      font-size: 18px;
+      color: #070707;
+    }
+  }
+
+  .progress-bg {
+    background: #f6f6f6;
+    position: relative;
+    height: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  @-webkit-keyframes progress_bar {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -40px 0;
+    }
+  }
+  @-moz-keyframes progress_bar {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -40px 0;
+    }
+  }
+  @keyframes progress_bar {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -40px 0;
+    }
+  }
+
+  .progress-bar {
+    overflow: hidden;
+    background: #070707;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    -webkit-transition: width 1s linear;
+    -moz-transition: width 1s linear;
+    -ms-transition: width 1s linear;
+    transition: width 1s linear;
+
+    &:after {
+      -webkit-animation: progress_bar 0.8s linear infinite;
+      -moz-animation: progress_bar 0.8s linear infinite;
+      -ms-animation: progress_bar 0.8s linear infinite;
+      -o-animation: progress_bar 0.8s linear infinite;
+      animation: progress_bar 0.8s linear infinite;
+
+      background-image: -webkit-linear-gradient(
+                      45deg,
+                      rgba(255, 255, 255, 0.15) 25%,
+                      transparent 25%,
+                      transparent 50%,
+                      rgba(255, 255, 255, 0.15) 50%,
+                      rgba(255, 255, 255, 0.15) 75%,
+                      transparent 75%,
+                      transparent
+      );
+      background-image: -o-linear-gradient(
+                      45deg,
+                      rgba(255, 255, 255, 0.15) 25%,
+                      transparent 25%,
+                      transparent 50%,
+                      rgba(255, 255, 255, 0.15) 50%,
+                      rgba(255, 255, 255, 0.15) 75%,
+                      transparent 75%,
+                      transparent
+      );
+      background-image: linear-gradient(
+                      45deg,
+                      rgba(255, 255, 255, 0.15) 25%,
+                      transparent 25%,
+                      transparent 50%,
+                      rgba(255, 255, 255, 0.15) 50%,
+                      rgba(255, 255, 255, 0.15) 75%,
+                      transparent 75%,
+                      transparent
+      );
+      -webkit-background-size: 40px 40px;
+      background-size: 40px 40px;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
