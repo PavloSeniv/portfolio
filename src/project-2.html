@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title": "Me 2024",
+"desc": "Me in 2024",
+})
+
+<body>
+
+@@include('html/_header.html')
+
+<section class="project-cs-hero">
+    @@include('html/project/_hero.html',{
+    "project-name": "Project 2",
+    "project-desc": "Project 2 desc",
+    "project-link": "#",
+    })
+</section>
+
+<section class="project-details">
+    <div class="main-container">
+        <div class="project-details__content">
+            @@include('html/project/_details.html',{
+            "project-details-image": "row_item_1.jpg",
+            "project-details-alt": "Project 1 alt",
+            arrDesc: ['test1', 'test2'],
+            arrSkills: ['HTML', 'CSS', 'JavaScript', 'React', 'SASS', 'GIT', 'Gulp'],
+            "project-details-live-link": "#",
+            "project-details-code-link": "#",
+            })
+        </div>
+
+    </div>
+</section>
+
+@@include('html/_footer.html')
+
+@@include('html/scripts.html')
+
+</body>
+</html>
