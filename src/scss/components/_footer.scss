@@ -37,6 +37,18 @@
 
   &__social-cont {
     margin-top: 2rem;
+
+    & a:hover img {
+      transform: scale(1.2);
+    }
+
+    & a:focus svg {
+      transform: scale(1.2);
+    }
+
+    & svg:active {
+      fill: #828282;
+    }
   }
 
   &__icon {
