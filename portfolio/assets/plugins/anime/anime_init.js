@@ -1,5 +1,3 @@
-
-//todo React SASS GIT
 function runAnimation() {
     let numberOne = document.querySelector("#about-me__number-1");
     let numberTwo = document.querySelector("#about-me__number-2");
@@ -28,7 +26,7 @@ const observer = new IntersectionObserver(
                 runAnimation();
                 observer.disconnect();
             }
-            if (entry.isIntersecting){
+            if (entry.isIntersecting) {
                 runAnimation();
                 observer.disconnect();
             }
