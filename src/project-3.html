@@ -2,19 +2,21 @@
 <html lang="en">
 
 @@include('html/head.html',{
-"title": "Me 2024",
-"desc": "Me in 2024",
+"title": "Project 3",
+"desc": "My portfolio",
 })
 
 <body>
 
-@@include('html/_header.html')
+@@include('html/_header.html', {
+'page': 'project'
+})
 
 <section class="project-cs-hero">
     @@include('html/project/_hero.html',{
     "project-name": "Project 3",
     "project-desc": "Project 3 desc",
-    "project-link": "#",
+    "project-link": "https://pavloseniv.github.io/ProjectFigma/Project1/",
     })
 </section>
 
@@ -26,8 +28,8 @@
             "project-details-alt": "Project 1 alt",
             arrDesc: ['test1', 'test2'],
             arrSkills: ['HTML', 'CSS', 'JavaScript', 'React', 'SASS', 'GIT', 'Gulp'],
-            "project-details-live-link": "#",
-            "project-details-code-link": "#",
+            "project-details-live-link": "https://pavloseniv.github.io/ProjectFigma/Project1/",
+            "project-details-code-link": "https://github.com/PavloSeniv/ProjectFigma/tree/master/Project1",
             })
         </div>
 
