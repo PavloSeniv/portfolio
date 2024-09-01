@@ -12,7 +12,7 @@ https://pavloseniv.github.io/portfolio/portfolio/index.html
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/user-attachments/assets/67b79b12-1f25-4496-9617-8fcd5ef0203e)
 
 ## Run Locally
 
