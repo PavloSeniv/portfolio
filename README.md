@@ -1,6 +1,6 @@
-# Project Name(gulp-build-2022)
+# Portfolio
 
-My gulp-build-2022
+My base portfolio
 
 ## Authors
 
@@ -8,7 +8,7 @@ My gulp-build-2022
 
 ## Demo
 
-https://pavloseniv.github.io/gulp-build-2022/gulp-build-2022/index.html
+https://pavloseniv.github.io/portfolio/portfolio/index.html
 
 ## Screenshots
 
@@ -19,23 +19,19 @@ https://pavloseniv.github.io/gulp-build-2022/gulp-build-2022/index.html
 Clone the project
 
 ```bash
-  git clone https://github.com/PavloSeniv/gulp-build-2022.git
+  git clone https://github.com/PavloSeniv/portfolio.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd gulp-build-2022
+  cd portfolio
 ```
 
 Install dependencies
 
 ```bash
   npm install
-```
-
-```bash
-  npm install del@6
 ```
 
 Start the gulp developer
