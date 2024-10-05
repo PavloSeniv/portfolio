@@ -336,11 +336,11 @@
             <span class="heading-sec__main heading-sec__main--lt">Contact</span>
             <span class="heading-sec__sub heading-sec__sub--lt">
             If you have any questions, write them
-          </span>
+            </span>
         </h2>
         <div class="contact__form-container">
 
-            <form action="https://formspree.io/f/mnqlowyy" method="post" id="myForm" class="contact__form">
+            <form id="myForm" class="contact__form">
                 <div class="contact__form-field" data-aos="fade-left">
                     <label class="contact__form-label" for="name">Name</label>
                     <input
@@ -379,6 +379,9 @@
                     Submit
                 </button>
             </form>
+            <p id="responseMessage" style="display:none;" class="heading-sec__sub">
+                The form has been sent!
+            </p>
         </div>
     </div>
 </section>

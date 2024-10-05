@@ -3,9 +3,12 @@ import * as functionHeaderMenuBtnClick from "./modules/headerMenuBtnClick.js";
 
 import {filterBadWords} from "./modules/filterBadWords.js";
 import {spoiler} from "./modules/plugins_spollers_acordeon.js";
+import {sendCustomFormToPost} from "./modules/sendCustomFormToPost.js";
+
 
 functionsIsWebp.isWebp();
 functionHeaderMenuBtnClick.headerMenuBtnClick()
 
 filterBadWords('myForm', 'message')
 spoiler()
+sendCustomFormToPost()
