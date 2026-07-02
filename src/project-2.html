@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 @@include('html/head.html',{
-"title": "Project 2",
-"desc": "My portfolio",
+"title": "Wareflow — Pavlo Seniv",
+"desc": "Enterprise Warehouse Management System",
 })
 
 <body>
@@ -13,26 +13,61 @@
 })
 
 <section class="project-cs-hero">
-    @@include('html/project/_hero.html',{
-    "project-name": "Project 2",
-    "project-desc": "Streeetster",
-    "project-link": "https://pavloseniv.github.io/Frontend_Project/Project_Bicycle_Shop/",
-    })
+    <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Wareflow</h1>
+        <div class="project-cs-hero__info">
+            <p class="text-primary">Enterprise Warehouse Management System</p>
+        </div>
+        <div class="project-cs-hero__cta">
+            <a href="https://www.wareflow.ai/en/" class="btn btn--bg" target="_blank" rel="noreferrer">Visit Site</a>
+        </div>
+    </div>
 </section>
 
 <section class="project-details">
     <div class="main-container">
         <div class="project-details__content">
-            @@include('html/project/_details.html',{
-            "project-details-image": "row_item_2.jpg",
-            "project-details-alt": "Project 1 alt",
-            arrDesc: ['The "Streetster" project is an e-commerce website for a bicycle shop specializing in various bike categories like city, home, offroad, road, and street series. The homepage highlights key bike features and models with visually appealing banners and promotional sections.', 'Each category page provides detailed information on the different types of bikes available, helping customers choose the best option for their needs. The site also includes contact information, a newsletter signup form, and links to social media for easy connection with the shop.'],
-            arrSkills: ['HTML', 'CSS', 'JavaScript', 'GIT', 'Gulp'],
-            "project-details-live-link": "https://pavloseniv.github.io/Frontend_Project/Project_Bicycle_Shop/",
-            "project-details-code-link": "https://github.com/PavloSeniv/Frontend_Project",
-            })
-        </div>
+            <div class="project-details__showcase-img-cont" style="position: relative">
+                <img
+                        src="assets/images/components/row-item/project-mockup-example.jpeg"
+                        alt="Device mockup"
+                        class="project-details__showcase-img"
+                />
+                <img style="position: absolute; top: 12%; left: 15%"
+                     src="assets/images/components/row-item/wareflow.jpg"
+                     alt="Wareflow"
+                     class="project-details__showcase-img-project"
+                />
+            </div>
 
+            <div class="project-details__content-main">
+                <div class="project-details__desc">
+                    <h3 class="project-details__content-title">Project Overview</h3>
+                <p class="project-details__desc-para">Wareflow is a production-grade enterprise WMS covering inventory, logistics and multi-company warehouse operations. It spans a Laravel / PostgreSQL backend, a Next.js web SPA and a dedicated mobile terminal app (Wareflow Mobile) for barcode scanning on the warehouse floor.</p>
+                <p class="project-details__desc-para">It features a 3D warehouse map, real-time updates and role-based access. As a commercial product it runs behind authentication for client companies — you can explore what it does on the product site.</p>
+                </div>
+                <div class="project-details__tools-used">
+                    <h3 class="project-details__content-title">Tools Used</h3>
+                    <div class="skills">
+                    <div class="skills__skill">Next.js</div>
+                    <div class="skills__skill">React</div>
+                    <div class="skills__skill">TypeScript</div>
+                    <div class="skills__skill">Laravel</div>
+                    <div class="skills__skill">PHP</div>
+                    <div class="skills__skill">PostgreSQL</div>
+                    <div class="skills__skill">Redis</div>
+                    <div class="skills__skill">Three.js</div>
+                    <div class="skills__skill">Ionic</div>
+                    </div>
+                </div>
+            <div class="project-details__links">
+                <h3 class="project-details__content-title">Availability</h3>
+                <p class="project-details__desc-para">This is a commercial product and the app runs behind login, so there is no public repository. You can explore what it does on the product site, or request a guided demo.</p>
+                <a href="https://www.wareflow.ai/en/" class="btn btn--med btn--theme project-details__links-btn" target="_blank" rel="noreferrer">Visit Site</a>
+                <a href="index.html#contact" class="btn btn--med btn--theme-inv project-details__links-btn">Request a demo</a>
+            </div>
+            </div>
+        </div>
     </div>
 </section>
 

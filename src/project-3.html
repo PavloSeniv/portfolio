@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 @@include('html/head.html',{
-"title": "Project 3",
-"desc": "My portfolio",
+"title": "Wareflow Mobile — Pavlo Seniv",
+"desc": "Warehouse terminal app — companion to Wareflow",
 })
 
 <body>
@@ -13,26 +13,58 @@
 })
 
 <section class="project-cs-hero">
-    @@include('html/project/_hero.html',{
-    "project-name": "Project 3",
-    "project-desc": "Alivio",
-    "project-link": "https://pavloseniv.github.io/ProjectFigma/Project1/",
-    })
+    <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Wareflow Mobile</h1>
+        <div class="project-cs-hero__info">
+            <p class="text-primary">Warehouse terminal app — companion to Wareflow</p>
+        </div>
+        <div class="project-cs-hero__cta">
+            <a href="https://www.wareflow.ai/en/" class="btn btn--bg" target="_blank" rel="noreferrer">Visit Site</a>
+        </div>
+    </div>
 </section>
 
 <section class="project-details">
     <div class="main-container">
         <div class="project-details__content">
-            @@include('html/project/_details.html',{
-            "project-details-image": "row_item_3.jpg",
-            "project-details-alt": "Project 1 alt",
-            arrDesc: ['The "Alivio" project is a wellness platform designed to help users manage and overcome stress through personalized journaling. It offers a guided experience where users complete a survey to personalize their journal, then engage in writing and reflection exercises tailored to their specific stressors.', 'The platform addresses various emotions, such as anxiety, anger, or sadness, and provides tools to help users become aware of and manage their stress. The website also features success stories to demonstrate its effectiveness.'],
-            arrSkills: ['HTML', 'CSS', 'JavaScript', 'GIT', 'Gulp'],
-            "project-details-live-link": "https://pavloseniv.github.io/ProjectFigma/Project1/",
-            "project-details-code-link": "https://github.com/PavloSeniv/ProjectFigma/tree/master/Project1",
-            })
-        </div>
+            <div class="project-details__showcase-img-cont" style="position: relative">
+                <img
+                        src="assets/images/components/row-item/project-mockup-example.jpeg"
+                        alt="Device mockup"
+                        class="project-details__showcase-img"
+                />
+                <img style="position: absolute; top: 12%; left: 15%"
+                     src="assets/images/components/row-item/wareflow-mobile.svg"
+                     alt="Wareflow Mobile"
+                     class="project-details__showcase-img-project"
+                />
+            </div>
 
+            <div class="project-details__content-main">
+                <div class="project-details__desc">
+                    <h3 class="project-details__content-title">Project Overview</h3>
+                <p class="project-details__desc-para">Wareflow Mobile is the on-floor terminal app for the Wareflow WMS. This cross-platform (iOS + Android) app turns a phone or handheld device into a warehouse scanner for receiving, picking, inventory counts and stock movements, syncing in real time with the Wareflow backend.</p>
+                <p class="project-details__desc-para">Built with Ionic and Capacitor, it pairs with the Wareflow platform — explore it on the product site.</p>
+                </div>
+                <div class="project-details__tools-used">
+                    <h3 class="project-details__content-title">Tools Used</h3>
+                    <div class="skills">
+                    <div class="skills__skill">Ionic</div>
+                    <div class="skills__skill">Capacitor</div>
+                    <div class="skills__skill">TypeScript</div>
+                    <div class="skills__skill">Vite</div>
+                    <div class="skills__skill">TanStack Router</div>
+                    <div class="skills__skill">react-intl</div>
+                    </div>
+                </div>
+            <div class="project-details__links">
+                <h3 class="project-details__content-title">Availability</h3>
+                <p class="project-details__desc-para">This is a commercial product and the app runs behind login, so there is no public repository. You can explore what it does on the product site, or request a guided demo.</p>
+                <a href="https://www.wareflow.ai/en/" class="btn btn--med btn--theme project-details__links-btn" target="_blank" rel="noreferrer">Visit Site</a>
+                <a href="index.html#contact" class="btn btn--med btn--theme-inv project-details__links-btn">Request a demo</a>
+            </div>
+            </div>
+        </div>
     </div>
 </section>
 

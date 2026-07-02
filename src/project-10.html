@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title": "Alivio — Pavlo Seniv",
+"desc": "Wellness journaling landing page",
+})
+
+<body>
+
+@@include('html/_header.html', {
+'page': 'project'
+})
+
+<section class="project-cs-hero">
+    <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Alivio</h1>
+        <div class="project-cs-hero__info">
+            <p class="text-primary">Wellness journaling landing page</p>
+        </div>
+        <div class="project-cs-hero__cta">
+            <a href="https://pavloseniv.github.io/ProjectFigma/Alivio/" class="btn btn--bg" target="_blank" rel="noreferrer">Live Link</a>
+        </div>
+    </div>
+</section>
+
+<section class="project-details">
+    <div class="main-container">
+        <div class="project-details__content">
+            <div class="project-details__showcase-img-cont" style="position: relative">
+                <img
+                        src="assets/images/components/row-item/project-mockup-example.jpeg"
+                        alt="Device mockup"
+                        class="project-details__showcase-img"
+                />
+                <img style="position: absolute; top: 12%; left: 15%"
+                     src="assets/images/components/row-item/alivio.jpg"
+                     alt="Alivio"
+                     class="project-details__showcase-img-project"
+                />
+            </div>
+
+            <div class="project-details__content-main">
+                <div class="project-details__desc">
+                    <h3 class="project-details__content-title">Project Overview</h3>
+                <p class="project-details__desc-para">Alivio is a multi-page landing site for a stress-management journaling app, hand-coded from a Figma design. It guides users from a personalization survey into reflection exercises tailored to specific stressors like anxiety, anger or sadness.</p>
+                <p class="project-details__desc-para">Built with HTML, CSS and Bootstrap 5, deployed via GitHub Pages.</p>
+                </div>
+                <div class="project-details__tools-used">
+                    <h3 class="project-details__content-title">Tools Used</h3>
+                    <div class="skills">
+                    <div class="skills__skill">HTML5</div>
+                    <div class="skills__skill">CSS3</div>
+                    <div class="skills__skill">Bootstrap 5</div>
+                    <div class="skills__skill">JavaScript</div>
+                    <div class="skills__skill">Figma</div>
+                    </div>
+                </div>
+            <div class="project-details__links">
+                <h3 class="project-details__content-title">See Live</h3>
+                <a href="https://pavloseniv.github.io/ProjectFigma/Alivio/" class="btn btn--med btn--theme project-details__links-btn" target="_blank" rel="noreferrer">Live Link</a>
+                <a href="https://github.com/PavloSeniv/ProjectFigma" class="btn btn--med btn--theme-inv project-details__links-btn" target="_blank" rel="noreferrer">Code Link</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('html/_footer.html')
+
+@@include('html/scripts.html')
+
+</body>
+</html>

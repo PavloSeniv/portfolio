@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .project-cs-hero {
   color: #fff;
   background: linear-gradient(
@@ -37,6 +40,19 @@
   &__cta {
     margin-top: 5rem;
     text-align: center;
+  }
+
+  // Бейдж для приватних / комерційних проєктів (замість Live-кнопки)
+  &__badge {
+    display: inline-block;
+    padding: 1.4rem 3rem;
+    border: 2px solid rgba(#fff, 0.6);
+    border-radius: 100px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 }
 

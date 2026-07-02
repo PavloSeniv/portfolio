@@ -1,0 +1,12 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1440' height='900' viewBox='0 0 1440 900'>
+  <defs>
+    <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0' stop-color='#141414'/><stop offset='1' stop-color='#c40000'/>
+    </linearGradient>
+  </defs>
+  <rect width='1440' height='900' fill='url(#g)'/>
+  <rect x='40' y='40' width='1360' height='820' fill='none' stroke='rgba(255,255,255,.15)' stroke-width='2'/>
+  <text x='720' y='430' fill='#ffffff' font-family='Arial, Helvetica, sans-serif' font-size='104' font-weight='800' text-anchor='middle'>Video Compressor</text>
+  <text x='720' y='520' fill='rgba(255,255,255,.8)' font-family='Arial, Helvetica, sans-serif' font-size='34' font-weight='600' letter-spacing='4' text-anchor='middle'>Next.js · FFmpeg · HLS</text>
+  <text x='720' y='596' fill='rgba(255,255,255,.5)' font-family='Arial, Helvetica, sans-serif' font-size='24' letter-spacing='6' text-anchor='middle'>COMMERCIAL · PRIVATE</text>
+</svg>

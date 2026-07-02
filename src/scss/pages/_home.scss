@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 .home-hero {
   color: #fff;
   background: linear-gradient(
@@ -154,7 +157,15 @@
     }
 
     &-img-cont {
-      overflow: hidden;
+      display: block;
+      transition: transform 0.45s ease;
+      transform-origin: center;
+      will-change: transform;
+
+      // Наводимо — збільшується весь ноут (мокап) РАЗОМ зі скріном як єдине ціле
+      &:hover {
+        transform: scale(1.06);
+      }
     }
 
     &-img {
@@ -206,108 +217,177 @@
 .contact {
   background: linear-gradient(
                   to right,
-                  rgba(#000, 0.8),
-                  rgba($themeClrPrimary, 0.8)
+                  rgba(#000, 0.85),
+                  rgba($themeClrPrimary, 0.85)
   ),
   url(../../assets/icons/index/common-bg.svg);
   background-size: cover;
   background-position: center;
 
   &__form-container {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: rgba(#fff, 2);
-    padding: 4rem;
-    margin-top: 6rem;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+    background: #fff;
+    padding: 5rem 4rem;
     max-width: 80rem;
-    text-align: right;
     width: 95%;
     border-radius: $commonBorderRadius;
-
     margin: 5rem auto 0 auto;
+
     @include respond(phone) {
-      padding: 3rem;
+      padding: 3rem 2rem;
     }
   }
 
+  // Кожне поле — контейнер для input + плаваючого лейбла
   &__form-field {
-    margin-bottom: 4rem;
-    @include respond(phone) {
-      margin-bottom: 3rem;
-    }
-  }
+    position: relative;
+    margin-bottom: 3rem;
 
-  &__form-label {
-    color: #666;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    display: block;
-    text-align: left;
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
   }
 
   &__form-input {
     color: #333;
-    padding: 2rem;
+    padding: 1.9rem 1.6rem;
     width: 100%;
-    border: 1px solid rgb(235, 235, 235);
+    border: 2px solid rgb(230, 230, 230);
     font-size: 1.6rem;
-    letter-spacing: 0px;
-    background: rgba(rgb(240, 240, 240), 1);
-    border-radius: $commonBorderRadius;
     font-weight: 600;
-    /* Code for Modern Browsers */
+    background: #fff;
+    border-radius: $commonBorderRadius;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+    &--area {
+      min-height: 14rem;
+      resize: vertical;
+    }
+
+    // Плейсхолдер-пробіл потрібен для :placeholder-shown, але його ховаємо
     &::placeholder {
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem;
+      color: transparent;
     }
 
-    /* Code for WebKit, Blink, Edge */
-    &::-webkit-input-placeholder {
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem;
-    }
-
-    /* Code for Internet Explorer 10-11 */
-    &:-ms-input-placeholder {
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem;
-    }
-
-    /* Code for Microsoft Edge */
-    &::-ms-input-placeholder {
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem;
-    }
-
-    /* Code for Mozilla Firefox 4 to 18 */
-    &:-moz-placeholder {
-      opacity: 1;
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem;
-    }
-
-    /* Code for Mozilla Firefox 19+ */
-    &::-moz-placeholder {
-      opacity: 1;
-      color: #999;
-      font-weight: 600;
-      font-size: 1.6rem;
+    &:focus {
+      border-color: $themeClrPrimary;
+      box-shadow: 0 0 0 4px rgba($themeClrPrimary, 0.15);
     }
   }
 
-  &__btn {
-    width: 30%;
-
-    padding: 2rem 4rem;
+  &__form-label {
+    position: absolute;
+    left: 1.4rem;
+    top: 2rem;
+    padding: 0 0.6rem;
+    background: #fff;
+    color: #999;
     font-size: 1.6rem;
-    @include respond(phone) {
-      width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    pointer-events: none;
+    transform-origin: left center;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  // Floating label: лейбл підіймається на фокусі або коли поле заповнене
+  &__form-input:focus + &__form-label,
+  &__form-input:not(:placeholder-shown) + &__form-label {
+    transform: translateY(-2.9rem) scale(0.86);
+    color: $themeClrPrimary;
+    font-weight: 700;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 1.9rem 4rem;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
     }
+  }
+}
+
+/* ===== About: сітка скілів (тег-чипи) ===== */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  &__group-title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $themeClrPrimary;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__chip {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    background: #f2f2f2;
+    padding: 0.8rem 1.6rem;
+    border-radius: 100px;
+    border: 1px solid #e6e6e6;
+    cursor: default;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      background: $themeClrPrimary;
+      color: #fff;
+      border-color: $themeClrPrimary;
+    }
+  }
+}
+
+/* ===== Кнопка "нагору" (зʼявляється при скролі) ===== */
+.scroll-top {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  z-index: 50;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: $themeClrPrimary;
+  color: #fff;
+  box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1.5rem);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &--visible:hover {
+    transform: translateY(-3px);
+  }
+
+  @include respond(phone) {
+    right: 1.6rem;
+    bottom: 1.6rem;
+    width: 4.4rem;
+    height: 4.4rem;
   }
 }

@@ -1,15 +1,15 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+// Abstracts (variables/mixins) are pulled in by the partials that need them.
+// main.scss only loads the partials that actually emit CSS, in cascade order.
 
-@import 'base/fonts';
-@import 'base/base';
+@use 'base/fonts';
+@use 'base/base';
 
-@import 'abstracts/utilities';
+@use 'abstracts/utilities';
 
-@import 'pages/home';
-@import 'pages/project-case-study';
+@use 'pages/home';
+@use 'pages/project-case-study';
 
-@import 'components/header';
-@import 'components/footer';
-@import 'components/skills';
-@import 'components/mouse-scroll';
+@use 'components/header';
+@use 'components/footer';
+@use 'components/skills';
+@use 'components/mouse-scroll';

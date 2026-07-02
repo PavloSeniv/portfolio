@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 *,
 *::after,
 *::before {
@@ -65,27 +67,6 @@ textarea {
 ::selection {
   color: #ffffff;
   background-color: #040303;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
-  background-color: #ffffff;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #040303;
-  background-image: -webkit-gradient(
-                  linear,
-                  0 0,
-                  0 100%,
-                  color-stop(0.5, rgba(250, 250, 250, 0.85)),
-                  color-stop(0.5, transparent),
-                  to(transparent)
-  );
 }
 
 /*-------- Write Fonts Start -------*/
