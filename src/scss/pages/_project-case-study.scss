@@ -47,9 +47,9 @@
     display: inline-block;
     padding: 1.4rem 3rem;
     border: 2px solid rgba(#fff, 0.6);
-    border-radius: 100px;
+    border-radius: $radius-pill;
     color: #fff;
-    font-size: 1.6rem;
+    font-size: $fs-base;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -75,6 +75,7 @@
   &__showcase-img-cont {
     width: 100%;
     margin-bottom: 6rem;
+    position: relative;
   }
 
   &__showcase-img {
@@ -83,6 +84,9 @@
 
   &__showcase-img-project {
     width: 70%;
+    position: absolute;
+    top: 12%;
+    left: 15%;
   }
 
   &__content-main {
@@ -95,9 +99,9 @@
     margin: 0 0 7rem 0;
 
     &-para {
-      font-size: 1.8rem;
+      font-size: $fs-md;
       line-height: 1.7;
-      color: grey;
+      color: $clr-text-muted;
       margin-bottom: 2rem;
     }
   }

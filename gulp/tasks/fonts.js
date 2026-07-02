@@ -1,31 +1,5 @@
 import fs from "fs";
-import fonter from "gulp-fonter"; // Конвертація шрифтів з otf формату
 import ttf2woff2 from "gulp-ttf2woff2"; // Конвертація шрифтів у woff2
-
-// OTF → TTF (виконується лише якщо у папці є вихідні .otf шрифти)
-export const otfToTtf = (params) => {
-    // Шукаємо файли шрифтів .otf
-    return (
-        app.gulp
-            .src(`${app.path.srcFolder}/assets/fonts/*.otf`, {allowEmpty: true, encoding: false})
-            .pipe(
-                app.plugins.plumber(
-                    app.plugins.notify.onError({
-                        title: "FONTS OTF",
-                        message: "Error: <%= error.message %>",
-                    })
-                )
-            )
-            // Конвертуємо в .ttf
-            .pipe(
-                fonter({
-                    formats: ["ttf"],
-                })
-            )
-            // Вивантажуємо у вихідну папку
-            .pipe(app.gulp.dest(`${app.path.srcFolder}/assets/fonts/`))
-    );
-};
 
 // TTF → WOFF2 (єдиний сучасний формат — підтримується всіма браузерами з 2020)
 export const ttfToWoff2 = (params) => {

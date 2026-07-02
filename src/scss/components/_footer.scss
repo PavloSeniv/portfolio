@@ -1,7 +1,8 @@
+@use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
 .main-footer {
-  background: #000;
+  background: $clr-dark;
   color: #fff;
   &__upper {
     display: flex;
@@ -33,29 +34,34 @@
   &__short-desc {
     margin-top: 2rem;
     color: #eee;
-    font-size: 1.5rem;
+    font-size: $fs-sm;
     line-height: 1.7;
   }
 
   &__social-cont {
     margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
 
-    & a:hover img {
-      transform: scale(1.2);
-    }
+    // ≥44px tap target without enlarging the icon
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 4.4rem;
+      min-height: 4.4rem;
+      border-radius: $radius-sm;
+      transition: transform 0.3s ease;
 
-    & a:focus svg {
-      transform: scale(1.2);
-    }
-
-    & svg:active {
-      fill: #828282;
+      &:hover img {
+        transform: scale(1.2);
+      }
     }
   }
 
   &__icon {
-    margin-right: 1rem;
     width: 2.5rem;
+    transition: transform 0.3s ease;
     &--mr-none {
       margin-right: 0;
     }
@@ -65,8 +71,7 @@
     padding: 4rem 0;
     border-top: 1px solid #444;
     color: #eee;
-    font-size: 1.2rem;
-    text-align: left;
+    font-size: $fs-xs;
     text-align: center;
     a {
       text-decoration: underline;

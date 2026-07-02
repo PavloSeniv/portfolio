@@ -1,35 +1,60 @@
+import Filter from "bad-words";
+
+const ENDPOINT =
+    "https://script.google.com/macros/s/AKfycbzpxb6Ysi-DUhdg3C1Kma6FrNF_cJWAkxCR-059Gib5fXYnuvkXkRyTkuCosNfFMr3X/exec";
+
 export function sendCustomFormToPost() {
+    const form = document.getElementById("myForm");
+    if (!form) return; // форма є лише на головній сторінці
 
-    document.getElementById("myForm").addEventListener("submit", function (event) {
-        event.preventDefault(); // Запобігаємо стандартній поведінці форми
+    const responseEl = document.getElementById("responseMessage");
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const filter = new Filter();
 
-        // Збираємо дані з форми
-        const formData = new FormData(this);
+    const showResponse = (text, ok) => {
+        if (!responseEl) return;
+        responseEl.textContent = text;
+        responseEl.className =
+            "contact__response " +
+            (ok ? "contact__response--success" : "contact__response--error");
+        responseEl.style.display = "block";
+    };
 
-        // Відправляємо форму через fetch
-        fetch("https://script.google.com/macros/s/AKfycbzpxb6Ysi-DUhdg3C1Kma6FrNF_cJWAkxCR-059Gib5fXYnuvkXkRyTkuCosNfFMr3X/exec", {
-            method: "POST",
-            body: formData,
-        })
-            .then(response => response.text())
-            .then(data => {
-                // Відображаємо повідомлення про успішну відправку
-                const responseMessage = document.getElementById("responseMessage");
-                responseMessage.style.display = "block";
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-                // Приховуємо форму
-                document.getElementById("myForm").style.display = "none";
+        // Honeypot: боти заповнюють приховане поле — тихо ігноруємо
+        if (form.website && form.website.value.trim() !== "") return;
 
-                // Прибираємо повідомлення через 15 секунд
-                setTimeout(() => {
-                    responseMessage.style.display = "none";
-                    document.getElementById("myForm").style.display = "block";
-                    document.getElementById("myForm").reset(); // Очищуємо форму
-                }, 15000);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Something went wrong! Try again.');
+        // Фільтр лайки (тепер реально блокує відправку)
+        const message = form.message ? form.message.value : "";
+        if (message && filter.isProfane(message)) {
+            showResponse("Please remove profanity from your message.", false);
+            return;
+        }
+
+        if (submitBtn) submitBtn.disabled = true;
+
+        try {
+            const res = await fetch(ENDPOINT, {
+                method: "POST",
+                body: new FormData(form),
             });
+            if (!res.ok) throw new Error("HTTP " + res.status);
+
+            form.style.display = "none";
+            showResponse("The form has been sent!", true);
+
+            setTimeout(() => {
+                if (responseEl) responseEl.style.display = "none";
+                form.style.display = "block";
+                form.reset();
+            }, 15000);
+        } catch (err) {
+            console.error("Form submit failed:", err);
+            showResponse("Something went wrong. Please try again.", false);
+        } finally {
+            if (submitBtn) submitBtn.disabled = false;
+        }
     });
 }

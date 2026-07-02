@@ -2,15 +2,17 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://script.google.com https://script.googleusercontent.com; font-src 'self'; base-uri 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="author" content="Seniv Pavlo, https://github.com/PavloSeniv">
     <meta name="copyright" content="Seniv Pavlo">
     <title>@@title</title>
     <meta name="description" content="@@desc"/>
 
-    <!-- ======== Попереднє завантаження фото ======== -->
-    <!-- <link rel="preload" as="image" href="img/index/main_man-bg.png" imagesrcset="img/index/main_man-bg.webp"
-      imagesizes="50vw">  -->
+    <!-- ======== Попереднє завантаження шрифтів (менше swap-флешу в hero) ======== -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/SourceSans3-Regular.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/SourceSans3-Bold.woff2">
 
     <!-- ======== Іконка ======== -->
     <link rel="icon" href="assets/icons/logo/favicon.ico">

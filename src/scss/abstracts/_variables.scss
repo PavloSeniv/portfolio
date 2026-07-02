@@ -1,3 +1,48 @@
+// ===== Design tokens =====
+
+// Brand
 $themeClrPrimary: #c40000;
 
-$commonBorderRadius: 5px;
+// Text (all AA-contrast on light surfaces)
+$clr-text: #1a1a1a; // headings / strong text
+$clr-text-muted: #595959; // body copy  (~7:1 on #fff)
+$clr-text-subtle: #6b6b6b; // labels / captions (~5.7:1 on #fff)
+
+// Surfaces & borders
+$clr-surface: #fff;
+$clr-surface-alt: #fafafa;
+$clr-chip: #f2f2f2;
+$clr-border: #e6e6e6;
+$clr-dark: #000;
+
+// Radius
+$commonBorderRadius: 5px; // kept for backwards-compat
+$radius-sm: 5px;
+$radius-pill: 100px;
+$radius-full: 50%;
+
+// Elevation (consistent rem ramp)
+$shadow-sm: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.08);
+$shadow-md: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 1rem 4rem rgba(0, 0, 0, 0.22);
+
+// Spacing scale (root 1rem = 10px, so this is an 8px-ish rhythm)
+$space-1: 0.8rem;
+$space-2: 1.6rem;
+$space-3: 2.4rem;
+$space-4: 3.2rem;
+$space-5: 4rem;
+$space-6: 4.8rem;
+$space-8: 6.4rem;
+$space-10: 8rem;
+$space-12: 9.6rem;
+
+// Type scale (rem)
+$fs-xs: 1.2rem;
+$fs-sm: 1.5rem;
+$fs-base: 1.6rem;
+$fs-md: 1.8rem;
+$fs-lg: 2.2rem;
+$fs-xl: 2.8rem;
+$fs-2xl: 4rem;
+$fs-hero: 6rem;

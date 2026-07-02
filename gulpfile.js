@@ -22,7 +22,7 @@ import {server} from "./gulp/tasks/server.js";
 import {scss} from "./gulp/tasks/scss.js";
 import {js} from "./gulp/tasks/js.js";
 import {images} from "./gulp/tasks/images.js";
-import {otfToTtf, ttfToWoff2, fontsStyle} from "./gulp/tasks/fonts.js";
+import {ttfToWoff2, fontsStyle} from "./gulp/tasks/fonts.js";
 import {svgSprite} from "./gulp/tasks/svgSprite.js";
 import {zip} from "./gulp/tasks/zip.js";
 import {ftp} from "./gulp/tasks/ftp.js";
@@ -46,7 +46,7 @@ function watcher(params) {
 // Послідовна обробка плагінів
 const pluginsFiles = gulp.series(pluginsJs, pluginsCss, pluginsPhp);
 // Послідовна обробка шрифтів
-const fonts = gulp.series(otfToTtf, ttfToWoff2, fontsStyle);
+const fonts = gulp.series(ttfToWoff2, fontsStyle);
 // Основі завдання
 const mainTasks = gulp.series(
     fonts,

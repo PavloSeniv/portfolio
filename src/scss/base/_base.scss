@@ -1,3 +1,4 @@
+@use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
 *,
@@ -13,6 +14,7 @@ html {
   // This defines what 1rem is
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
   scroll-behavior: smooth;
+  scroll-padding-top: 9rem; // clear the fixed header on anchor navigation
 
   @include respond(tab-land) {
     // width < 1200?
@@ -36,7 +38,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   font-family: 'SourceSans3', sans-serif;
-
+  color: $clr-text;
 }
 
 a {
@@ -48,11 +50,33 @@ li {
   list-style: none;
 }
 
-input:focus,
-button:focus,
-a:focus,
-textarea:focus {
+// <picture> is layout-transparent, so wrapping <img> for webp needs no CSS changes
+picture {
+  display: contents;
+}
+
+// Keep the outline off for mouse users, but restore a clear, on-brand
+// focus ring for keyboard users on every interactive element.
+// NB: the :not(:focus-visible) guard is essential — a plain `a:focus{outline:none}`
+// (specificity 0,1,1) would otherwise outrank the `:focus-visible` ring (0,1,0).
+input:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
   outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid $themeClrPrimary;
+  outline-offset: 3px;
+  border-radius: $radius-sm;
+}
+
+// On the dark hero / project hero a light ring reads better. (Contact form
+// controls sit on a white card, so they keep the default theme ring.)
+.home-hero :focus-visible,
+.project-cs-hero :focus-visible {
+  outline-color: #fff;
 }
 
 button {
@@ -67,6 +91,23 @@ textarea {
 ::selection {
   color: #ffffff;
   background-color: #040303;
+}
+
+// Respect users who ask for less motion: kill smooth scroll, AOS-style
+// transitions, hover transforms and the looping mouse indicator.
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /*-------- Write Fonts Start -------*/

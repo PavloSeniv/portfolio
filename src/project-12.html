@@ -27,27 +27,19 @@
 <section class="project-details">
     <div class="main-container">
         <div class="project-details__content">
-            <div class="project-details__showcase-img-cont" style="position: relative">
-                <img
-                        src="assets/images/components/row-item/project-mockup-example.jpeg"
-                        alt="Device mockup"
-                        class="project-details__showcase-img"
-                />
-                <img style="position: absolute; top: 12%; left: 15%"
-                     src="assets/images/components/row-item/video.svg"
-                     alt="Video Compressor"
-                     class="project-details__showcase-img-project"
-                />
+            <div class="project-details__showcase-img-cont">
+                <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="project-details__showcase-img" loading="lazy"/></picture>
+                <img src="assets/images/components/row-item/video.svg" alt="Video Compressor screenshot" class="project-details__showcase-img-project" loading="lazy"/>
             </div>
 
             <div class="project-details__content-main">
                 <div class="project-details__desc">
-                    <h3 class="project-details__content-title">Project Overview</h3>
+                    <h2 class="project-details__content-title">Project Overview</h2>
                 <p class="project-details__desc-para">A full-stack Next.js app for compressing and transcoding video. Users upload directly to AWS S3 via presigned URLs, then the server processes files with FFmpeg using selectable profiles (universal, desktop, mobile MP4 or HLS), streaming live progress over server-sent events.</p>
                 <p class="project-details__desc-para">Finished videos download as MP4 or play in-browser via an HLS.js player. It is a private / internal tool, available for a walkthrough on request.</p>
                 </div>
                 <div class="project-details__tools-used">
-                    <h3 class="project-details__content-title">Tools Used</h3>
+                    <h2 class="project-details__content-title">Tools Used</h2>
                     <div class="skills">
                     <div class="skills__skill">Next.js</div>
                     <div class="skills__skill">React</div>
@@ -59,7 +51,7 @@
                     </div>
                 </div>
             <div class="project-details__links">
-                <h3 class="project-details__content-title">Availability</h3>
+                <h2 class="project-details__content-title">Availability</h2>
                 <p class="project-details__desc-para">This is a private / internal project, so there is no public repository or open demo. A guided walkthrough is available on request.</p>
                 <a href="index.html#contact" class="btn btn--med btn--theme-inv project-details__links-btn">Request a demo</a>
             </div>

@@ -9,11 +9,17 @@ export function headerMenuBtnClick() {
     )
     const headerSmallMenuLinks = document.querySelectorAll('.header__sm-menu-link')
 
+    if (!hamMenuBtn || !smallMenu) return
+
+    const setExpanded = (open) => hamMenuBtn.setAttribute('aria-expanded', open ? 'true' : 'false')
+
     hamMenuBtn.addEventListener('click', () => {
         if (smallMenu.classList.contains('header__sm-menu--active')) {
             smallMenu.classList.remove('header__sm-menu--active')
+            setExpanded(false)
         } else {
             smallMenu.classList.add('header__sm-menu--active')
+            setExpanded(true)
         }
         if (headerHamMenuBtn.classList.contains('d-none')) {
             headerHamMenuBtn.classList.remove('d-none')
@@ -29,6 +35,7 @@ export function headerMenuBtnClick() {
             smallMenu.classList.remove('header__sm-menu--active')
             headerHamMenuBtn.classList.remove('d-none')
             headerHamMenuCloseBtn.classList.add('d-none')
+            setExpanded(false)
         })
     }
 }

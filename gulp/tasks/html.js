@@ -1,7 +1,8 @@
 //Копіювання index.html з src до dist(якщо папки немає, gulp створить сам)
 import fileInclude from "gulp-file-include"; // Для об'єднання декількох html файлів в єдиний index.html
-import webpHtmlNoSvg from "gulp-webp-html-nosvg"; //Інтеграція webp в html
-import versionNumber from "gulp-version-number";
+
+// Мітка версії для кеш-бастингу (одна на збірку)
+const versionStamp = Date.now();
 
 export const html = () => {
     return (
@@ -16,31 +17,16 @@ export const html = () => {
                 )
             )
             .pipe(fileInclude())
-            // // Для pug
-            // .pipe(
-            //   pug({
-            //     // Стиснення HTML файла
-            //     pretty: true,
-            //     // Показування в терміналі який файл оброблено
-            //     verbose: true,
-            //   })
-            // )
             .pipe(app.plugins.replace(/@img\//g, "img/"))
-            .pipe(app.plugins.if(app.isBuild, webpHtmlNoSvg()))
+            // Кеш-бастинг: додаємо ?_v=<stamp> до css/js посилань (лише на білді).
+            // Замінює вразливий gulp-version-number (fs-path) простим replace.
             .pipe(
                 app.plugins.if(
                     app.isBuild,
-                    versionNumber({
-                        value: "%DT%",
-                        append: {
-                            key: "_v",
-                            cover: 0,
-                            to: ["css", "js"],
-                        },
-                        output: {
-                            file: "gulp/version.json",
-                        },
-                    })
+                    app.plugins.replace(
+                        /(href|src)="([^"]+\.(?:css|js))"/g,
+                        `$1="$2?_v=${versionStamp}"`
+                    )
                 )
             )
             .pipe(app.gulp.dest(app.path.build.html))

@@ -4,7 +4,7 @@
             <div class="header__logo-img-cont">
                 <img
                         src="assets/images/components/header/me-logo.jpg"
-                        alt="Me Logo Image"
+                        alt="Pavlo Seniv logo"
                         class="header__logo-img"
                 />
             </div>
@@ -29,21 +29,24 @@
                 </li>
                 }
             </ul>
-            <div class="header__main-ham-menu-cont">
+            <button type="button" class="header__main-ham-menu-cont" aria-label="Open menu"
+                    aria-expanded="false" aria-controls="smMenu">
                 <img
                         src="assets/icons/components/header/ham-menu.svg"
-                        alt="hamburger menu"
+                        alt=""
+                        aria-hidden="true"
                         class="header__main-ham-menu"
                 />
                 <img
                         src="assets/icons/components/header/ham-menu-close.svg"
-                        alt="hamburger menu close"
+                        alt=""
+                        aria-hidden="true"
                         class="header__main-ham-menu-close d-none"
                 />
-            </div>
+            </button>
         </div>
     </div>
-    <div class="header__sm-menu">
+    <div class="header__sm-menu" id="smMenu">
         <div class="header__sm-menu-content">
             <ul class="header__sm-menu-links">
                 <li class="header__sm-menu-link">

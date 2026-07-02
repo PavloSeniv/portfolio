@@ -5,24 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://script.google.com https://script.googleusercontent.com; font-src 'self'; base-uri 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="author" content="Seniv Pavlo, https://github.com/PavloSeniv">
     <meta name="copyright" content="Seniv Pavlo">
     <title>Is ForEver</title>
     <meta name="description" content="My portfolio"/>
 
-    <!-- ======== Попереднє завантаження фото ======== -->
-    <!-- <link rel="preload" as="image" href="img/index/main_man-bg.png" imagesrcset="img/index/main_man-bg.webp"
-      imagesizes="50vw">  -->
+    <!-- ======== Попереднє завантаження шрифтів (менше swap-флешу в hero) ======== -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/SourceSans3-Regular.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/SourceSans3-Bold.woff2">
 
     <!-- ======== Іконка ======== -->
     <link rel="icon" href="assets/icons/logo/favicon.ico">
 
     <!-- ======== AOS style ======== -->
-    <link rel="stylesheet" href="assets/plugins/aos/dist/aos.min.css?_v=20260703014115">
+    <link rel="stylesheet" href="assets/plugins/aos/dist/aos.min.css?_v=1783035393922">
 
     <!-- ======== Style ======== -->
-    <link rel="stylesheet" href="css/main.min.css?_v=20260703014115">
+    <link rel="stylesheet" href="css/main.min.css?_v=1783035393922">
 
 </head>
 
@@ -35,7 +37,7 @@
             <div class="header__logo-img-cont">
                 <img
                         src="assets/images/components/header/me-logo.jpg"
-                        alt="Me Logo Image"
+                        alt="Pavlo Seniv logo"
                         class="header__logo-img"
                 />
             </div>
@@ -60,21 +62,24 @@
                 </li>
                 
             </ul>
-            <div class="header__main-ham-menu-cont">
+            <button type="button" class="header__main-ham-menu-cont" aria-label="Open menu"
+                    aria-expanded="false" aria-controls="smMenu">
                 <img
                         src="assets/icons/components/header/ham-menu.svg"
-                        alt="hamburger menu"
+                        alt=""
+                        aria-hidden="true"
                         class="header__main-ham-menu"
                 />
                 <img
                         src="assets/icons/components/header/ham-menu-close.svg"
-                        alt="hamburger menu close"
+                        alt=""
+                        aria-hidden="true"
                         class="header__main-ham-menu-close d-none"
                 />
-            </div>
+            </button>
         </div>
     </div>
-    <div class="header__sm-menu">
+    <div class="header__sm-menu" id="smMenu">
         <div class="header__sm-menu-content">
             <ul class="header__sm-menu-links">
                 <li class="header__sm-menu-link">
@@ -112,27 +117,30 @@
     </div>
     <div class="home-hero__socials">
         <div class="home-hero__social">
-            <a href="https://www.linkedin.com/in/pavlo-seniv/" target="_blank"
-               class="home-hero__social-icon-link">
+            <a href="https://www.linkedin.com/in/pavlo-seniv/" target="_blank" rel="noopener noreferrer"
+               aria-label="Pavlo Seniv on LinkedIn" class="home-hero__social-icon-link">
                 <img
                         src="assets/images/components/footer/linkedin-ico.png"
-                        alt="icon"
+                        alt=""
+                        aria-hidden="true"
                         class="home-hero__social-icon"
                 />
             </a>
         </div>
         <div class="home-hero__social">
-            <a href="https://github.com/PavloSeniv" target="_blank" class="home-hero__social-icon-link">
+            <a href="https://github.com/PavloSeniv" target="_blank" rel="noopener noreferrer"
+               aria-label="Pavlo Seniv on GitHub" class="home-hero__social-icon-link">
                 <img
                         src="assets/images/components/footer/github-ico.png"
-                        alt="icon"
+                        alt=""
+                        aria-hidden="true"
                         class="home-hero__social-icon"
                 />
             </a>
         </div>
 
     </div>
-    <div class="home-hero__mouse-scroll-cont">
+    <div class="home-hero__mouse-scroll-cont" aria-hidden="true">
         <div class="mouse"></div>
     </div>
 </section>
@@ -173,7 +181,7 @@
                         for a quick introduction.
                     </p>
                 </div>
-                <a href="#contact" class="btn btn--med btn--theme dynamicBgClr">Contact</a>
+                <a href="#contact" class="btn btn--med btn--theme">Contact</a>
             </div>
             <div class="about__content-skills">
                 <h3 class="about__content-title">My Skills</h3>
@@ -234,290 +242,170 @@
         <div class="projects__content">
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-1.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/maryline.jpg"
-                                alt="Maryline"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-1.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <picture><source type="image/webp" srcset="assets/images/components/row-item/maryline.webp"><img src="assets/images/components/row-item/maryline.jpg" alt="Maryline screenshot" class="projects__row-img-project" loading="lazy"/></picture>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Maryline</h3>
                     <p class="projects__row-content-desc">Full-stack fashion e-commerce (Next.js + Strapi)</p>
-                    <a href="./project-1.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-1.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-2.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/wareflow.jpg"
-                                alt="Wareflow"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-2.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <picture><source type="image/webp" srcset="assets/images/components/row-item/wareflow.webp"><img src="assets/images/components/row-item/wareflow.jpg" alt="Wareflow screenshot" class="projects__row-img-project" loading="lazy"/></picture>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Wareflow</h3>
                     <p class="projects__row-content-desc">Enterprise Warehouse Management System</p>
-                    <a href="./project-2.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-2.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-3.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/wareflow-mobile.svg"
-                                alt="Wareflow Mobile"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-3.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <img src="assets/images/components/row-item/wareflow-mobile.svg" alt="Wareflow Mobile screenshot" class="projects__row-img-project" loading="lazy"/>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Wareflow Mobile</h3>
                     <p class="projects__row-content-desc">Warehouse terminal app — companion to Wareflow</p>
-                    <a href="./project-3.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-3.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-4.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/consolid.jpg"
-                                alt="Consolid Pro"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-4.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <picture><source type="image/webp" srcset="assets/images/components/row-item/consolid.webp"><img src="assets/images/components/row-item/consolid.jpg" alt="Consolid Pro screenshot" class="projects__row-img-project" loading="lazy"/></picture>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Consolid Pro</h3>
                     <p class="projects__row-content-desc">Freight transportation management platform</p>
-                    <a href="./project-4.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-4.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-5.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/tracker.svg"
-                                alt="Consolid Tracker"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-5.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <img src="assets/images/components/row-item/tracker.svg" alt="Consolid Tracker screenshot" class="projects__row-img-project" loading="lazy"/>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Consolid Tracker</h3>
                     <p class="projects__row-content-desc">Driver GPS app — companion to Consolid Pro</p>
-                    <a href="./project-5.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-5.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-6.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/glass-huts.jpg"
-                                alt="The Glass Huts"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-6.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <picture><source type="image/webp" srcset="assets/images/components/row-item/glass-huts.webp"><img src="assets/images/components/row-item/glass-huts.jpg" alt="The Glass Huts screenshot" class="projects__row-img-project" loading="lazy"/></picture>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">The Glass Huts</h3>
                     <p class="projects__row-content-desc">Multilingual retreat landing site</p>
-                    <a href="./project-6.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-6.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-7.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/go-surf.jpg"
-                                alt="Go Surf"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-7.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <picture><source type="image/webp" srcset="assets/images/components/row-item/go-surf.webp"><img src="assets/images/components/row-item/go-surf.jpg" alt="Go Surf screenshot" class="projects__row-img-project" loading="lazy"/></picture>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Go Surf</h3>
                     <p class="projects__row-content-desc">Responsive surf landing page</p>
-                    <a href="./project-7.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-7.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-8.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/streeetster.jpg"
-                                alt="Streeetster"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-8.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <picture><source type="image/webp" srcset="assets/images/components/row-item/streeetster.webp"><img src="assets/images/components/row-item/streeetster.jpg" alt="Streeetster screenshot" class="projects__row-img-project" loading="lazy"/></picture>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Streeetster</h3>
                     <p class="projects__row-content-desc">Bicycle shop e-commerce site</p>
-                    <a href="./project-8.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-8.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-9.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/go-trip.jpg"
-                                alt="GoTrip"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-9.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <picture><source type="image/webp" srcset="assets/images/components/row-item/go-trip.webp"><img src="assets/images/components/row-item/go-trip.jpg" alt="GoTrip screenshot" class="projects__row-img-project" loading="lazy"/></picture>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">GoTrip</h3>
                     <p class="projects__row-content-desc">Multi-page travel agency website</p>
-                    <a href="./project-9.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-9.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-10.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/alivio.jpg"
-                                alt="Alivio"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-10.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <picture><source type="image/webp" srcset="assets/images/components/row-item/alivio.webp"><img src="assets/images/components/row-item/alivio.jpg" alt="Alivio screenshot" class="projects__row-img-project" loading="lazy"/></picture>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Alivio</h3>
                     <p class="projects__row-content-desc">Wellness journaling landing page</p>
-                    <a href="./project-10.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-10.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-11.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/barber.jpg"
-                                alt="Barber"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-11.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <picture><source type="image/webp" srcset="assets/images/components/row-item/barber.webp"><img src="assets/images/components/row-item/barber.jpg" alt="Barber screenshot" class="projects__row-img-project" loading="lazy"/></picture>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Barber</h3>
                     <p class="projects__row-content-desc">Barbershop landing page</p>
-                    <a href="./project-11.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-11.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
             <div class="projects__row" data-aos="fade-up">
-                <a href="./project-12.html" class="projects__row-img-cont" style="position: relative">
-                    <img
-                            src="assets/images/components/row-item/project-mockup-example.jpeg"
-                            alt="Device mockup"
-                            class="projects__row-img"
-                            loading="lazy"
-                    />
-                    <div style="position: absolute; top: 14%; left: 15%;">
-                        <img
-                                src="assets/images/components/row-item/video.svg"
-                                alt="Video Compressor"
-                                class="projects__row-img-project"
-                                loading="lazy"
-                        />
+                <a href="./project-12.html" class="projects__row-img-cont">
+                    <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="projects__row-img" loading="lazy"/></picture>
+                    <div class="projects__row-img-screen">
+                        <img src="assets/images/components/row-item/video.svg" alt="Video Compressor screenshot" class="projects__row-img-project" loading="lazy"/>
                     </div>
                 </a>
                 <div class="projects__row-content">
                     <h3 class="projects__row-content-title">Video Compressor</h3>
                     <p class="projects__row-content-desc">Full-stack video processing app</p>
-                    <a href="./project-12.html" class="btn btn--med btn--theme dynamicBgClr">Case Study</a>
+                    <a href="./project-12.html" class="btn btn--med btn--theme">Case Study</a>
                 </div>
             </div>
 
@@ -525,7 +413,7 @@
     </div>
 </section>
 
-<section id="contact" class="contact sec-pad dynamicBg">
+<section id="contact" class="contact sec-pad">
     <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
             <span class="heading-sec__main heading-sec__main--lt">Contact</span>
@@ -536,9 +424,15 @@
         <div class="contact__form-container" data-aos="fade-up">
 
             <form id="myForm" class="contact__form">
+                <!-- Honeypot: приховане поле для ботів -->
+                <div class="contact__hp" aria-hidden="true">
+                    <label for="website">Website</label>
+                    <input type="text" name="website" id="website" tabindex="-1" autocomplete="off"/>
+                </div>
                 <div class="contact__form-field">
                     <input
                             required
+                            maxlength="80"
                             placeholder=" "
                             type="text"
                             class="contact__form-input"
@@ -550,6 +444,7 @@
                 <div class="contact__form-field">
                     <input
                             required
+                            maxlength="120"
                             placeholder=" "
                             type="email"
                             class="contact__form-input"
@@ -561,6 +456,7 @@
                 <div class="contact__form-field">
                     <textarea
                             required
+                            maxlength="2000"
                             placeholder=" "
                             rows="6"
                             class="contact__form-input contact__form-input--area"
@@ -573,7 +469,7 @@
                     Submit
                 </button>
             </form>
-            <p id="responseMessage" style="display:none;" class="heading-sec__sub">
+            <p id="responseMessage" style="display:none;" class="contact__response contact__response--success">
                 The form has been sent!
             </p>
         </div>
@@ -584,28 +480,32 @@
     <div class="main-container">
         <div class="main-footer__upper">
             <div class="main-footer__row main-footer__row-1">
-                <h2 class="heading heading-sm main-footer__heading-sm">
+                <h3 class="heading heading-sm main-footer__heading-sm">
                     <span>Social</span>
-                </h2>
+                </h3>
                 <div class="main-footer__social-cont">
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/pavlo-seniv/">
+                    <a target="_blank" rel="noopener noreferrer" aria-label="Pavlo Seniv on LinkedIn"
+                       href="https://www.linkedin.com/in/pavlo-seniv/">
                         <img
                                 class="main-footer__icon"
                                 src="assets/images/components/footer/linkedin-ico.png"
-                                alt="icon"
+                                alt=""
+                                aria-hidden="true"
                         />
                     </a>
-                    <a target="_blank" rel="noreferrer" href="https://github.com/PavloSeniv">
+                    <a target="_blank" rel="noopener noreferrer" aria-label="Pavlo Seniv on GitHub"
+                       href="https://github.com/PavloSeniv">
                         <img
                                 class="main-footer__icon"
                                 src="assets/images/components/footer/github-ico.png"
-                                alt="icon"
+                                alt=""
+                                aria-hidden="true"
                         />
                     </a>
                 </div>
             </div>
             <div class="main-footer__row main-footer__row-2">
-                <h4 class="heading heading-sm text-lt">Pavlo Seniv</h4>
+                <h3 class="heading heading-sm text-lt">Pavlo Seniv</h3>
                 <p class="main-footer__short-desc">
                     I’m not always motivated, but I’m always disciplined
                 </p>
@@ -627,13 +527,14 @@
 
 
 <!-- ======== AOS Script ======== -->
-<script src="assets/plugins/aos/dist/aos.min.js?_v=20260703014115"></script>
+<script defer src="assets/plugins/aos/dist/aos.min.js?_v=1783035393922"></script>
 
 <!-- ======== AOS Script Init ======== -->
-<script src="assets/plugins/aos/js/aos_init.min.js?_v=20260703014115"></script>
+<script defer src="assets/plugins/aos/js/aos_init.min.js?_v=1783035393922"></script>
 
 <!-- ======== Main Script ======== -->
-<script src="assets/js/app.min.js?_v=20260703014115"></script>
+<script defer src="assets/js/app.min.js?_v=1783035393922"></script>
+
 
 </body>
 

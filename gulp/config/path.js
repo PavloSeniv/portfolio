@@ -2,8 +2,8 @@ import * as nodePath from "path";
 
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-// const buildFolder = `./dist`; // Можна використовувати rootFolder
-const buildFolder = rootFolder;
+// Фіксована папка збірки (не залежить від назви каталогу checkout-у — стабільно для GitHub Pages)
+const buildFolder = `./portfolio`;
 
 const srcFolder = `./src`;
 

@@ -5,24 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://script.google.com https://script.googleusercontent.com; font-src 'self'; base-uri 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="author" content="Seniv Pavlo, https://github.com/PavloSeniv">
     <meta name="copyright" content="Seniv Pavlo">
     <title>Streeetster — Pavlo Seniv</title>
     <meta name="description" content="Bicycle shop e-commerce site"/>
 
-    <!-- ======== Попереднє завантаження фото ======== -->
-    <!-- <link rel="preload" as="image" href="img/index/main_man-bg.png" imagesrcset="img/index/main_man-bg.webp"
-      imagesizes="50vw">  -->
+    <!-- ======== Попереднє завантаження шрифтів (менше swap-флешу в hero) ======== -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/SourceSans3-Regular.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/SourceSans3-Bold.woff2">
 
     <!-- ======== Іконка ======== -->
     <link rel="icon" href="assets/icons/logo/favicon.ico">
 
     <!-- ======== AOS style ======== -->
-    <link rel="stylesheet" href="assets/plugins/aos/dist/aos.min.css?_v=20260703014115">
+    <link rel="stylesheet" href="assets/plugins/aos/dist/aos.min.css?_v=1783035393922">
 
     <!-- ======== Style ======== -->
-    <link rel="stylesheet" href="css/main.min.css?_v=20260703014115">
+    <link rel="stylesheet" href="css/main.min.css?_v=1783035393922">
 
 </head>
 
@@ -35,7 +37,7 @@
             <div class="header__logo-img-cont">
                 <img
                         src="assets/images/components/header/me-logo.jpg"
-                        alt="Me Logo Image"
+                        alt="Pavlo Seniv logo"
                         class="header__logo-img"
                 />
             </div>
@@ -48,21 +50,24 @@
                 </li>
                 
             </ul>
-            <div class="header__main-ham-menu-cont">
+            <button type="button" class="header__main-ham-menu-cont" aria-label="Open menu"
+                    aria-expanded="false" aria-controls="smMenu">
                 <img
                         src="assets/icons/components/header/ham-menu.svg"
-                        alt="hamburger menu"
+                        alt=""
+                        aria-hidden="true"
                         class="header__main-ham-menu"
                 />
                 <img
                         src="assets/icons/components/header/ham-menu-close.svg"
-                        alt="hamburger menu close"
+                        alt=""
+                        aria-hidden="true"
                         class="header__main-ham-menu-close d-none"
                 />
-            </div>
+            </button>
         </div>
     </div>
-    <div class="header__sm-menu">
+    <div class="header__sm-menu" id="smMenu">
         <div class="header__sm-menu-content">
             <ul class="header__sm-menu-links">
                 <li class="header__sm-menu-link">
@@ -93,7 +98,7 @@
             <p class="text-primary">Bicycle shop e-commerce site</p>
         </div>
         <div class="project-cs-hero__cta">
-            <a href="https://pavloseniv.github.io/Frontend_Project/Project_Bicycle_Shop/" class="btn btn--bg" target="_blank" rel="noreferrer">Live Link</a>
+            <a href="https://pavloseniv.github.io/Frontend_Project/Project_Bicycle_Shop/" class="btn btn--bg" target="_blank" rel="noopener noreferrer">Live Link</a>
         </div>
     </div>
 </section>
@@ -101,27 +106,19 @@
 <section class="project-details">
     <div class="main-container">
         <div class="project-details__content">
-            <div class="project-details__showcase-img-cont" style="position: relative">
-                <img
-                        src="assets/images/components/row-item/project-mockup-example.jpeg"
-                        alt="Device mockup"
-                        class="project-details__showcase-img"
-                />
-                <img style="position: absolute; top: 12%; left: 15%"
-                     src="assets/images/components/row-item/streeetster.jpg"
-                     alt="Streeetster"
-                     class="project-details__showcase-img-project"
-                />
+            <div class="project-details__showcase-img-cont">
+                <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="project-details__showcase-img" loading="lazy"/></picture>
+                <picture><source type="image/webp" srcset="assets/images/components/row-item/streeetster.webp"><img src="assets/images/components/row-item/streeetster.jpg" alt="Streeetster screenshot" class="project-details__showcase-img-project" loading="lazy"/></picture>
             </div>
 
             <div class="project-details__content-main">
                 <div class="project-details__desc">
-                    <h3 class="project-details__content-title">Project Overview</h3>
+                    <h2 class="project-details__content-title">Project Overview</h2>
                 <p class="project-details__desc-para">Streeetster is an e-commerce website for a bicycle shop with categories for city, home, offroad, road and street series bikes. The homepage highlights key models with promotional banners, while category pages help customers compare options.</p>
                 <p class="project-details__desc-para">It includes contact information, a newsletter signup and social links, built with a Gulp + SCSS workflow.</p>
                 </div>
                 <div class="project-details__tools-used">
-                    <h3 class="project-details__content-title">Tools Used</h3>
+                    <h2 class="project-details__content-title">Tools Used</h2>
                     <div class="skills">
                     <div class="skills__skill">HTML5</div>
                     <div class="skills__skill">CSS</div>
@@ -131,9 +128,9 @@
                     </div>
                 </div>
             <div class="project-details__links">
-                <h3 class="project-details__content-title">See Live</h3>
-                <a href="https://pavloseniv.github.io/Frontend_Project/Project_Bicycle_Shop/" class="btn btn--med btn--theme project-details__links-btn" target="_blank" rel="noreferrer">Live Link</a>
-                <a href="https://github.com/PavloSeniv/Frontend_Project" class="btn btn--med btn--theme-inv project-details__links-btn" target="_blank" rel="noreferrer">Code Link</a>
+                <h2 class="project-details__content-title">See Live</h2>
+                <a href="https://pavloseniv.github.io/Frontend_Project/Project_Bicycle_Shop/" class="btn btn--med btn--theme project-details__links-btn" target="_blank" rel="noopener noreferrer">Live Link</a>
+                <a href="https://github.com/PavloSeniv/Frontend_Project" class="btn btn--med btn--theme-inv project-details__links-btn" target="_blank" rel="noopener noreferrer">Code Link</a>
             </div>
             </div>
         </div>
@@ -144,28 +141,32 @@
     <div class="main-container">
         <div class="main-footer__upper">
             <div class="main-footer__row main-footer__row-1">
-                <h2 class="heading heading-sm main-footer__heading-sm">
+                <h3 class="heading heading-sm main-footer__heading-sm">
                     <span>Social</span>
-                </h2>
+                </h3>
                 <div class="main-footer__social-cont">
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/pavlo-seniv/">
+                    <a target="_blank" rel="noopener noreferrer" aria-label="Pavlo Seniv on LinkedIn"
+                       href="https://www.linkedin.com/in/pavlo-seniv/">
                         <img
                                 class="main-footer__icon"
                                 src="assets/images/components/footer/linkedin-ico.png"
-                                alt="icon"
+                                alt=""
+                                aria-hidden="true"
                         />
                     </a>
-                    <a target="_blank" rel="noreferrer" href="https://github.com/PavloSeniv">
+                    <a target="_blank" rel="noopener noreferrer" aria-label="Pavlo Seniv on GitHub"
+                       href="https://github.com/PavloSeniv">
                         <img
                                 class="main-footer__icon"
                                 src="assets/images/components/footer/github-ico.png"
-                                alt="icon"
+                                alt=""
+                                aria-hidden="true"
                         />
                     </a>
                 </div>
             </div>
             <div class="main-footer__row main-footer__row-2">
-                <h4 class="heading heading-sm text-lt">Pavlo Seniv</h4>
+                <h3 class="heading heading-sm text-lt">Pavlo Seniv</h3>
                 <p class="main-footer__short-desc">
                     I’m not always motivated, but I’m always disciplined
                 </p>
@@ -187,13 +188,14 @@
 
 
 <!-- ======== AOS Script ======== -->
-<script src="assets/plugins/aos/dist/aos.min.js?_v=20260703014115"></script>
+<script defer src="assets/plugins/aos/dist/aos.min.js?_v=1783035393922"></script>
 
 <!-- ======== AOS Script Init ======== -->
-<script src="assets/plugins/aos/js/aos_init.min.js?_v=20260703014115"></script>
+<script defer src="assets/plugins/aos/js/aos_init.min.js?_v=1783035393922"></script>
 
 <!-- ======== Main Script ======== -->
-<script src="assets/js/app.min.js?_v=20260703014115"></script>
+<script defer src="assets/js/app.min.js?_v=1783035393922"></script>
+
 
 </body>
 </html>
