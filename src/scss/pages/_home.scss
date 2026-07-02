@@ -360,6 +360,16 @@
     box-shadow: 0 0 0 4px rgba($themeClrPrimary, 0.12);
   }
 
+  // Повідомлення про помилку під полем (кастомна валідація)
+  &__form-error {
+    display: block;
+    margin-top: 0.6rem;
+    color: $themeClrPrimary;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: left;
+  }
+
   // Стилізована відповідь форми (замість сірого підзаголовка / native alert)
   &__response {
     margin-top: 2rem;

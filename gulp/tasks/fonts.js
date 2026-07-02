@@ -1,5 +1,31 @@
 import fs from "fs";
-import ttf2woff2 from "gulp-ttf2woff2"; // Конвертація шрифтів у woff2
+import {Transform} from "node:stream";
+import nodePath from "node:path";
+import ttf2woff2 from "ttf2woff2"; // Пряма (немейнтейнена gulp-обгортка не потрібна)
+
+// Невелика gulp-трансформація TTF → WOFF2 через прямий виклик ttf2woff2@8
+// (замінює вразливий gulp-ttf2woff2).
+function toWoff2() {
+    return new Transform({
+        objectMode: true,
+        transform(file, _enc, cb) {
+            if (
+                file.isNull() ||
+                file.isDirectory() ||
+                nodePath.extname(file.path).toLowerCase() !== ".ttf"
+            ) {
+                return cb(null, file);
+            }
+            try {
+                file.contents = ttf2woff2(Buffer.from(file.contents));
+                file.path = file.path.replace(/\.ttf$/i, ".woff2");
+                cb(null, file);
+            } catch (err) {
+                cb(err);
+            }
+        },
+    });
+}
 
 // TTF → WOFF2 (єдиний сучасний формат — підтримується всіма браузерами з 2020)
 export const ttfToWoff2 = (params) => {
@@ -16,7 +42,7 @@ export const ttfToWoff2 = (params) => {
                 )
             )
             // Конвертуємо в .woff2
-            .pipe(ttf2woff2())
+            .pipe(toWoff2())
             // Вивантажуємо у папку з результатом
             .pipe(app.gulp.dest(`${app.path.build.fonts}`))
     );

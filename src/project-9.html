@@ -29,7 +29,10 @@
         <div class="project-details__content">
             <div class="project-details__showcase-img-cont">
                 <picture><source type="image/webp" srcset="assets/images/components/row-item/project-mockup-example.webp"><img src="assets/images/components/row-item/project-mockup-example.jpeg" alt="" class="project-details__showcase-img" loading="lazy"/></picture>
-                <picture><source type="image/webp" srcset="assets/images/components/row-item/go-trip.webp"><img src="assets/images/components/row-item/go-trip.jpg" alt="GoTrip screenshot" class="project-details__showcase-img-project" loading="lazy"/></picture>
+                <picture>
+                        <source type="image/webp" srcset="assets/images/components/row-item/go-trip-640.webp 640w, assets/images/components/row-item/go-trip.webp 1280w" sizes="(max-width: 900px) 92vw, 45vw">
+                        <img src="assets/images/components/row-item/go-trip.jpg" srcset="assets/images/components/row-item/go-trip-640.jpg 640w, assets/images/components/row-item/go-trip.jpg 1280w" sizes="(max-width: 900px) 92vw, 45vw" alt="GoTrip screenshot" class="project-details__showcase-img-project" loading="lazy"/>
+                      </picture>
             </div>
 
             <div class="project-details__content-main">
