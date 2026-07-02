@@ -1,10 +1,10 @@
-import del from "del";
+import {deleteSync} from "del";
 import zipPlugin from "gulp-zip";
 
 export const zip = () => {
-    del(`./${app.path.rootFolder}.zip`);
+    deleteSync(`./${app.path.rootFolder}.zip`);
     return app.gulp
-        .src(`${app.path.buildFolder}/**/*.*`, {})
+        .src(`${app.path.buildFolder}/**/*.*`, {encoding: false})
         .pipe(
             app.plugins.plumber(
                 app.plugins.notify.onError({

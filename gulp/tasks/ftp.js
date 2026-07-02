@@ -1,12 +1,12 @@
 import {configFTP} from "../config/ftp.js";
 import vinylFTP from "vinyl-ftp";
-import util from "gulp-util";
+import log from "fancy-log";
 
 export const ftp = () => {
-    configFTP.log = util.log;
+    configFTP.log = log;
     const ftpConnect = vinylFTP.create(configFTP);
     return app.gulp
-        .src(`${app.path.buildFolder}/**/*.*`, {})
+        .src(`${app.path.buildFolder}/**/*.*`, {encoding: false})
         .pipe(
             app.plugins.plumber(
                 app.plugins.notify.onError({

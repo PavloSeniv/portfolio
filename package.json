@@ -1,9 +1,12 @@
 {
-  "name": "gulp-build-2022",
-  "version": "1.0.0",
-  "description": "My gulp-build-2022",
+  "name": "portfolio",
+  "version": "2.0.0",
+  "description": "Personal portfolio — Gulp 5 build pipeline (2026)",
   "main": "gulpfile.js",
   "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
   "directories": {
     "doc": "docs"
   },
@@ -14,52 +17,57 @@
     "ftp": "gulp deployFtp --build",
     "svgSprite": "gulp svgSprite"
   },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PavloSeniv/gulp-build-2022.git"
+    "url": "git+https://github.com/PavloSeniv/portfolio.git"
   },
   "keywords": [
-    "Gulp"
+    "gulp",
+    "portfolio",
+    "scss",
+    "webpack"
   ],
   "author": "Seniv Pavlo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PavloSeniv/gulp-build-2022/issues"
+    "url": "https://github.com/PavloSeniv/portfolio/issues"
   },
-  "homepage": "https://github.com/PavloSeniv/gulp-build-2022#readme",
+  "homepage": "https://github.com/PavloSeniv/portfolio#readme",
   "devDependencies": {
-    "browser-sync": "latest",
-    "del": "^6.1.1",
-    "gulp": "latest",
-    "gulp-autoprefixer": "latest",
-    "gulp-clean-css": "latest",
-    "gulp-file-include": "latest",
-    "gulp-fonter": "latest",
-    "gulp-group-css-media-queries": "latest",
-    "gulp-if": "latest",
-    "gulp-imagemin": "latest",
-    "gulp-newer": "latest",
-    "gulp-notify": "latest",
-    "gulp-plumber": "latest",
-    "gulp-pug": "latest",
-    "gulp-rename": "latest",
-    "gulp-replace": "latest",
-    "gulp-sass": "latest",
-    "gulp-svg-sprite": "latest",
-    "gulp-ttf2woff2": "latest",
+    "browser-sync": "^3.0.4",
+    "del": "^8.0.1",
+    "fancy-log": "^2.0.0",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^10.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^3.1.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^9.2.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.1.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^6.0.1",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-ttf2woff2": "^5.0.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-util": "latest",
-    "gulp-version-number": "latest",
-    "gulp-webp": "latest",
-    "gulp-webp-html-nosvg": "latest",
-    "gulp-webpcss": "latest",
-    "gulp-zip": "latest",
-    "sass": "latest",
-    "swiper": "latest",
-    "vinyl-ftp": "latest",
-    "webp-converter": "2.2.3",
-    "webpack": "latest",
-    "webpack-stream": "latest"
+    "gulp-version-number": "^0.2.4",
+    "gulp-webp": "^5.1.0",
+    "gulp-webp-html-nosvg": "^1.1.1",
+    "gulp-zip": "^6.1.0",
+    "sass": "^1.101.0",
+    "vinyl-ftp": "^0.6.1",
+    "webpack": "^5.108.3",
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "bad-words": "^3.0.4"

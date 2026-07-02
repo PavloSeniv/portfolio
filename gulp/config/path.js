@@ -26,7 +26,7 @@ export const path = {
         // html: `${srcFolder}/*.pug`, // Для pug
         scss: `${srcFolder}/scss/main.scss`,
         // css: `${srcFolder}/style/scss/style.scss`,
-        js: [`${srcFolder}/assets/js/app.js`, `${srcFolder}/js/plugins*.js`],
+        js: `${srcFolder}/assets/js/app.js`,
         //Якщо не  вказати розширення також іх верхнього регістру то можливий варіант не копіювання зображення
         images: `${srcFolder}/assets/**/*.+(png|PNG|jpg|JPG|jpeg|JPEG|gif|ico|webp)`,
         svg: `${srcFolder}/assets/**/*.svg`,

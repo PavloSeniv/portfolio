@@ -1,9 +1,8 @@
-import dartSass from "sass";
+import * as dartSass from "sass";
 import gulpSass from "gulp-sass";
 import rename from "gulp-rename"; // Для перейменування css файлу(переважно .min.css)
 
 import cleanСss from "gulp-clean-css"; // Очищення та зжимання css файлу
-import webpcss from "gulp-webpcss"; // Інтеграція webp в css
 import autoprefixer from "gulp-autoprefixer"; // Додавання вендорних префіксів
 import groupCssMediaQueries from "gulp-group-css-media-queries"; //  Для групування та  збирання всіх медіа запитів в кінець файлу
 
@@ -30,15 +29,9 @@ export const scss = () => {
         )
         .pipe(app.plugins.if(app.isBuild, groupCssMediaQueries()))
         .pipe(app.plugins.if(app.isBuild,
-            webpcss({
-                webpClass: ".webp",
-                noWebpClass: ".no-webp",
-            })
-        ))
-        .pipe(app.plugins.if(app.isBuild,
             autoprefixer({
                 grid: true,
-                overrideBrowserlist: ["last 3 versions"],
+                overrideBrowserslist: ["last 3 versions"],
                 cascade: true,
             })
         ))

@@ -21,7 +21,7 @@ import fileSvgSpriteInclude from "gulp-svg-sprite"; // Створення svg с
 
 export const svgSprite = () => {
     return app.gulp
-        .src(`${app.path.src.svgicons}`, {})
+        .src(`${app.path.src.svgicons}`, {encoding: false})
         .pipe(
             app.plugins.plumber(
                 app.plugins.notify.onError({

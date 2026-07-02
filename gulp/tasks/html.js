@@ -2,7 +2,6 @@
 import fileInclude from "gulp-file-include"; // Для об'єднання декількох html файлів в єдиний index.html
 import webpHtmlNoSvg from "gulp-webp-html-nosvg"; //Інтеграція webp в html
 import versionNumber from "gulp-version-number";
-import pug from "gulp-pug";
 
 export const html = () => {
     return (

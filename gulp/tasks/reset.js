@@ -1,5 +1,5 @@
-import del from "del";
+import {deleteAsync} from "del";
 
 export const reset = () => {
-    return del(app.path.clean); //Видалення попередньої папки з результатом
+    return deleteAsync(app.path.clean); //Видалення попередньої папки з результатом
 };

@@ -1,12 +1,13 @@
 import fs from "fs";
 import fonter from "gulp-fonter"; // Конвертація шрифтів з otf формату
-import ttf2woff2 from "gulp-ttf2woff2"; // Конвертація шрифтів
+import ttf2woff2 from "gulp-ttf2woff2"; // Конвертація шрифтів у woff2
 
+// OTF → TTF (виконується лише якщо у папці є вихідні .otf шрифти)
 export const otfToTtf = (params) => {
     // Шукаємо файли шрифтів .otf
     return (
         app.gulp
-            .src(`${app.path.srcFolder}/assets/fonts/*.otf`, {})
+            .src(`${app.path.srcFolder}/assets/fonts/*.otf`, {allowEmpty: true, encoding: false})
             .pipe(
                 app.plugins.plumber(
                     app.plugins.notify.onError({
@@ -26,29 +27,20 @@ export const otfToTtf = (params) => {
     );
 };
 
-export const otfToWoff = (params) => {
+// TTF → WOFF2 (єдиний сучасний формат — підтримується всіма браузерами з 2020)
+export const ttfToWoff2 = (params) => {
     // Шукаємо файли шрифтів .ttf
     return (
         app.gulp
-            .src(`${app.path.srcFolder}/assets/fonts/*.ttf`, {})
+            .src(`${app.path.srcFolder}/assets/fonts/*.ttf`, {allowEmpty: true, encoding: false})
             .pipe(
                 app.plugins.plumber(
                     app.plugins.notify.onError({
-                        title: "FONTS TTF",
+                        title: "FONTS WOFF2",
                         message: "Error: <%= error.message %>",
                     })
                 )
             )
-            // Конвертуємо в .ttf
-            .pipe(
-                fonter({
-                    formats: ["woff"],
-                })
-            )
-            // Вивантажуємо у папку з результатом
-            .pipe(app.gulp.dest(`${app.path.build.fonts}`))
-            // Шукаємо файли шрифтів .ttf
-            .pipe(app.gulp.src(`${app.path.srcFolder}/assets/fonts/*.ttf`))
             // Конвертуємо в .woff2
             .pipe(ttf2woff2())
             // Вивантажуємо у папку з результатом
