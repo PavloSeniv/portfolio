@@ -89,8 +89,8 @@ textarea {
 }
 
 ::selection {
-  color: #ffffff;
-  background-color: #040303;
+  color: #fff;
+  background-color: $themeClrPrimary;
 }
 
 // Respect users who ask for less motion: kill smooth scroll, AOS-style

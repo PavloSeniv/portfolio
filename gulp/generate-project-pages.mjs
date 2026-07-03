@@ -187,28 +187,26 @@ projects.forEach((p, i) => {
   const descParas = p.desc.map((d) => `                <p class="project-details__desc-para">${d}</p>`).join('\n');
   const toolChips = p.tools.map((t) => `                    <div class="skills__skill">${t}</div>`).join('\n');
 
-  let linksBlock;
+  // The hero already carries the primary CTA, so the bottom section only adds
+  // what's new — never a duplicate button.
+  let linksBlock = '';
   if (p.private) {
     const note = p.landing
       ? 'This is a commercial product and the app runs behind login, so there is no public repository. You can explore what it does on the product site, or request a guided demo.'
       : 'This is a private / internal project, so there is no public repository or open demo. A guided walkthrough is available on request.';
-    const visitBtn = p.landing
-      ? `                <a href="${p.landing}" class="btn btn--med btn--theme project-details__links-btn" ${REL}>Visit Site</a>\n`
-      : '';
     linksBlock = `            <div class="project-details__links">
                 <h2 class="project-details__content-title">Availability</h2>
                 <p class="project-details__desc-para">${note}</p>
-${visitBtn}                <a href="index.html#contact" class="btn btn--med btn--theme-inv project-details__links-btn">Request a demo</a>
+                <a href="index.html#contact" class="btn btn--med btn--theme-inv project-details__links-btn">Request a demo</a>
             </div>`;
-  } else {
-    const btns = [];
-    if (p.live) btns.push(`                <a href="${p.live}" class="btn btn--med btn--theme project-details__links-btn" ${REL}>Live Link</a>`);
-    if (p.code) btns.push(`                <a href="${p.code}" class="btn btn--med btn--theme-inv project-details__links-btn" ${REL}>Code Link</a>`);
+  } else if (p.live && p.code) {
+    // Hero shows the live demo; surface the source code here (secondary).
     linksBlock = `            <div class="project-details__links">
-                <h2 class="project-details__content-title">See Live</h2>
-${btns.join('\n')}
+                <h2 class="project-details__content-title">Source code</h2>
+                <a href="${p.code}" class="btn btn--med btn--theme-inv project-details__links-btn" ${REL}>Code Link</a>
             </div>`;
   }
+  // live-only or code-only public projects: the hero CTA is the single link.
 
   const html = `<!doctype html>
 <html lang="en">

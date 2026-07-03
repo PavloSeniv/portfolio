@@ -96,7 +96,7 @@
   }
 
   &__desc {
-    margin: 0 0 7rem 0;
+    margin: 0;
 
     &-para {
       font-size: $fs-md;
@@ -107,7 +107,9 @@
   }
 
   &__tools-used {
-    margin: 0 0 7rem 0;
+    margin: 4rem 0 0 0;
+    padding-top: 4rem;
+    border-top: 1px solid $clr-border;
 
     &-list {
       display: flex;
@@ -127,7 +129,9 @@
   }
 
   &__links {
-    margin: 0 0;
+    margin: 4rem 0 0 0;
+    padding-top: 4rem;
+    border-top: 1px solid $clr-border;
 
     &-btn {
       margin-right: 2rem;

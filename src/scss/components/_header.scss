@@ -6,13 +6,25 @@
   width: 100%;
   z-index: 1000;
   background: $clr-surface;
-  box-shadow: $shadow-md;
+  box-shadow: $shadow-sm;
+  transition: box-shadow 0.3s ease;
+
+  // Після прокрутки — трохи стискається й отримує помітнішу тінь
+  &--scrolled {
+    box-shadow: $shadow-md;
+
+    .header__content {
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+    }
+  }
 
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 5rem;
+    transition: padding 0.3s ease;
     @include respond(tab-port) {
       padding: 0 2rem;
     }

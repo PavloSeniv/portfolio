@@ -56,6 +56,16 @@
         top: calc(100% + 1.2rem);
       }
     }
+
+    // Акцент «виїжджає» коли секція зʼявляється у вьюпорті (progressive enhancement;
+    // без JS рисочка просто показана статично)
+    html.has-js &::after {
+      width: 0;
+      transition: width 0.6s ease 0.1s;
+    }
+    html.has-js &.is-revealed::after {
+      width: 3rem;
+    }
   }
 
   &__sub {
