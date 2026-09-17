@@ -1,0 +1,74 @@
+name: Deploy to GitHub Pages
+
+# Збирає сайт Gulp-ом і публікує його через GitHub Pages (джерело Pages має бути
+# перемкнуте на "GitHub Actions", інакше Pages і далі віддаватиме закомічену теку portfolio/).
+on:
+    push:
+        branches: [main, update]
+    workflow_dispatch:
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+# Одночасно публікується лише один деплой; запущені раніше не скасовуємо.
+concurrency:
+    group: pages
+    cancel-in-progress: false
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '22'
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm ci
+
+            # gulp/config/ftp.js у .gitignore (там креденшали FTP), але gulpfile.js
+            # імпортує таск ftp безумовно — без цього файлу збірка падає з ERR_MODULE_NOT_FOUND.
+            # Кладемо порожню заглушку: деплою по FTP тут немає, публікуємо через Pages.
+            - name: Create FTP config placeholder
+              run: |
+                  mkdir -p gulp/config
+                  printf 'export let configFTP = {host: "", user: "", password: "", parallel: 5};\n' > gulp/config/ftp.js
+
+            # npm run build === gulp build --build, результат лягає в ./portfolio
+            - name: Build
+              run: npm run build
+
+            # Повторюємо поточну структуру сайту: корінь із index.html-редиректом + тека portfolio/
+            # (щоб посилання виду /portfolio/portfolio/index.html лишились робочими).
+            - name: Assemble site
+              run: |
+                  rm -rf _site
+                  mkdir -p _site
+                  cp index.html _site/index.html
+                  cp -R portfolio _site/portfolio
+
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
+
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: _site
+
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
