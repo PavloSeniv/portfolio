@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Павло Сенів — CV</title>
+<style>
+  @page { size: A4; margin: 11mm 0 12mm; }
+  @page :first { margin-top: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; color: #212b36; font-size: 9.3pt; line-height: 1.42; }
+  a { color: inherit; text-decoration: none; }
+
+  header { background: #0f1726; color: #fff; display: flex; align-items: center; gap: 22px; padding: 24px 36px 22px; }
+  .photo { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 3px solid #3b82f6; flex: none; }
+  h1 { margin: 0 0 2px; font-size: 21pt; letter-spacing: 5px; font-weight: 700; }
+  .role { color: #8ab6ff; font-size: 10.5pt; font-weight: 600; letter-spacing: 0.4px; margin-bottom: 8px; }
+  .contacts { font-size: 8.2pt; color: #c4cedd; display: flex; flex-wrap: wrap; gap: 4px 0; }
+  .contacts span + span::before { content: "·"; margin: 0 7px; color: #5b6b82; }
+  .contacts a { color: #c4cedd; }
+
+  .content { padding: 14px 36px 0; }
+  .summary { margin: 0 0 4px; font-size: 9.4pt; }
+
+  h2 { font-size: 10.5pt; letter-spacing: 2.5px; color: #0f1726; margin: 14px 0 8px; padding-bottom: 4px; border-bottom: 2px solid #3b82f6; break-after: avoid; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; break-after: avoid; }
+  .job-title { font-size: 10.5pt; font-weight: 700; }
+  .dates { color: #51607a; font-size: 8.6pt; font-weight: 600; white-space: nowrap; }
+  .products { font-size: 8.8pt; color: #51607a; margin: 1px 0 8px; }
+  .products a { color: #2563eb; font-weight: 600; }
+
+  .proj { margin: 0 0 9px; }
+  .proj-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; break-after: avoid; }
+  .proj-name { font-weight: 700; font-size: 9.8pt; color: #0f1726; }
+  .proj-intro { margin: 1px 0 3px; color: #51607a; font-size: 8.8pt; break-after: avoid; }
+  ul { margin: 0; padding-left: 15px; }
+  li { margin: 0 0 2.5px; break-inside: avoid; padding-left: 2px; }
+  li::marker { color: #3b82f6; }
+  b, strong { color: #0f1726; }
+
+  .skill-list { margin: 0; padding-left: 15px; }
+  .skill-list li { margin-bottom: 2.5px; }
+  .skill-label { font-weight: 700; color: #0f1726; }
+
+  .grid2 { display: flex; gap: 36px; }
+  .grid2 > div { flex: 1; }
+  .earlier li { margin-bottom: 3px; }
+  .link { color: #2563eb; font-weight: 600; }
+</style>
+</head>
+<body>
+<header>
+  <img class="photo" src="photo.jpg" alt="Павло Сенів">
+  <div>
+    <h1>ПАВЛО СЕНІВ</h1>
+    <div class="role">Middle Frontend Engineer — React / React Native / Next.js</div>
+    <div class="contacts">
+      <span>Івано-Франківськ, Україна (EET) · Remote</span>
+      <span>+380 68 185 95 41</span>
+      <span><a href="mailto:senivpavlo16it@gmail.com">senivpavlo16it@gmail.com</a></span>
+      <span><a href="https://www.linkedin.com/in/pavlo-seniv">linkedin.com/in/pavlo-seniv</a></span>
+      <span><a href="https://github.com/PavloSeniv">github.com/PavloSeniv</a></span>
+      <span><a href="https://pavloseniv.github.io/portfolio/portfolio/index.html">pavloseniv.github.io/portfolio</a></span>
+    </div>
+  </div>
+</header>
+
+<div class="content">
+  <p class="summary">Фронтенд-інженер із 4+ роками досвіду у веброзробці (з 2021): створюю веб- і мобільні продукти end-to-end. Основний фронтенд-інженер enterprise-системи управління складом — <b>самостійно перебудував увесь її фронтенд на Next.js 16 / React 19 (75&nbsp;сторінок, ~65&nbsp;тис. рядків) і вивів у продакшн менш ніж за місяць</b>; <b>єдиний розробник</b> кросплатформного застосунку GPS-трекінгу для водіїв логістичної компанії; <b>повний цикл володіння</b> продакшн e-commerce-магазином — вітрина, Strapi-бекенд, оплати, інфраструктура. Впевнено працюю і поза фронтендом: Node/Strapi-бекенди, платіжні й логістичні інтеграції, продакшн-операції на Vercel і DigitalOcean.</p>
+
+  <h2>ДОСВІД</h2>
+  <div class="job-head">
+    <div class="job-title">Frontend Developer — SK Group EU</div>
+    <div class="dates">груд. 2022 – дотепер</div>
+  </div>
+  <div class="products">Продукти: <a href="https://app.wareflow.ai">Wareflow WMS — app.wareflow.ai</a> · <a href="https://consolid.ai">Consolid — consolid.ai</a> · <a href="https://maryline.ua">Maryline — maryline.ua</a></div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Wareflow — enterprise система управління складом</span><span class="dates">груд. 2022 – дотепер</span></div>
+    <p class="proj-intro">Multi-tenant WMS для інвентаризації, логістики та складських операцій — щодня використовується складськими командами кількох компаній; команда до 10&nbsp;інженерів, стек Laravel 12, PostgreSQL, Redis, React/Next.js.</p>
+    <ul>
+      <li><b>Самостійно перебудував увесь фронтенд платформи</b> як SPA на Next.js 16 (App Router), React 19 і strict TypeScript — 75&nbsp;сторінок у 23&nbsp;бізнес-модулях — і вивів у продакшн через CI менш ніж за місяць, замінивши legacy-інтерфейс обсягом ~305&nbsp;тис. рядків кодовою базою на ~65&nbsp;тис. (−80% коду)</li>
+      <li><b>Спроєктував ядро нового SPA:</b> JWT-автентифікація із single-flight оновленням токена, універсальний backend-driven фреймворк таблиць (TanStack Query/Table), локалізація EN/UK на next-intl</li>
+      <li><b>Провів задокументований security/performance-аудит:</b> CSP і security-заголовки, усунення вразливого до підробки auth-заголовка у проксі, форсований logout-флоу; побудував власний Playwright e2e-аудит, що проходить реальні CRUD-флоу і фіксує кожну 4xx/5xx-відповідь та console-помилку</li>
+      <li><b>До переходу на SPA</b> — основний автор React-кодової бази під час модернізації legacy jQuery/Blade UI на React 18 + TypeScript бандли; побудував інтерактивну 2D/3D-мапу складу на Three.js (~10&nbsp;тис. рядків) і переніс її в новий SPA</li>
+      <li><b>Розвиваю мобільний термінал складу</b> як один із двох основних розробників (React 19, Ionic 8, Capacitor 7 — 43&nbsp;маршрути, 149&nbsp;файлів тестів): апаратне сканування штрихкодів як основний спосіб введення даних, OTA-релізи через Capgo з RSA-підписаними бандлами</li>
+      <li><b>Повністю відповідаю за frontend-тулчейн і процеси</b> (ESLint 9, Husky, Conventional Commits, автоматичний релізний версіонінг у CI); щоденна командна робота — код-рев’ю, узгодження API-контрактів із backend-розробниками; у Laravel-бекенді регулярно вношу точкові правки бізнес-логіки (скоупінг multi-tenancy, розрахунки одиниць виміру)</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Consolid Tracker — GPS-трекінг для водіїв логістичної компанії</span><span class="dates">квіт. 2024 – квіт. 2026</span></div>
+    <p class="proj-intro">Кросплатформний iOS/Android застосунок, яким користуються водії автопарку компанії: Expo SDK 54, React Native 0.81, React 19, TypeScript.</p>
+    <ul>
+      <li><b>Фактично єдиний розробник від MVP до продакшну</b> впродовж 2&nbsp;років</li>
+      <li><b>Спроєктував offline-first пайплайн фонової геолокації:</b> GPS-семплінг кожні 60&nbsp;с, буферизація в AsyncStorage у разі втрати мережі, дедуплікація за часовими мітками, пакетна відправка після відновлення зв’язку</li>
+      <li><b>Інтегрував Google Routes API v2</b> (ETA з урахуванням трафіку) і власний Haversine-геофенсинг; deep links навігації в Google Maps, Apple Maps і Waze</li>
+      <li><b>Відповідав за весь релізний пайплайн на EAS</b> з каналами OTA-оновлень і React Native New Architecture; кастомний Expo config plugin зменшив розмір APK на ~15–20&nbsp;МБ</li>
+      <li><b>Реалізував</b> безпечне зберігання токенів (expo-secure-store), push-нотифікації через FCM і локалізацію на 3&nbsp;мови (EN/UK/PL); мігрував стейт з React Context на типізовані Zustand stores, перебудував UI на NativeWind 4</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Maryline — продакшн e-commerce, maryline.ua</span><span class="dates">жовт. 2024 – дотепер</span></div>
+    <p class="proj-intro">Інтернет-магазин fashion-бренду, що обробляє живі замовлення покупців; повний цикл володіння — вітрина, CMS-бекенд, інтеграції, інфраструктура.</p>
+    <ul>
+      <li><b>Побудував вітрину</b> на Next.js 16 App Router, React 19 і TypeScript: 18&nbsp;сторінок, BFF-шар з API route handlers, ~22,5&nbsp;тис. рядків</li>
+      <li><b>Спроєктував і розвиваю бекенд на Strapi 5</b> (30&nbsp;content types): каталог із залишками в розрізі магазинів, замовлення, промокоди, інтеграційні вебхуки</li>
+      <li><b>Інтегрував Monobank-еквайринг end-to-end:</b> створення інвойсів із деталізованим кошиком, redirect-флоу та вебхук-підтвердження оплати з оновленням статусу в KeyCRM</li>
+      <li><b>Реалізував синхронізацію залишків у реальному часі:</b> вебхук KeyCRM → інвалідація REST-кешу Strapi → точкова ревалідація кешів Next.js — замість оновлення за таймером</li>
+      <li><b>Автоматизував доставку і CRM:</b> генерація ТТН «Нової пошти» (адресна доставка та відділення), синхронізація замовлень у KeyCRM з автопризначенням менеджера за графіком</li>
+      <li><b>Задеплоїв і супроводжую інфраструктуру:</b> вітрина на Vercel, Strapi на DigitalOcean (PostgreSQL з SSL, медіа у Spaces, автоматичні бекапи з ротацією), Redis-кешування відповідей; SEO та аналітика — JSON-LD для Google Merchant, динамічні sitemap/robots, GA4 e-commerce events</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Внутрішні інструменти (вибране)</span></div>
+    <ul>
+      <li><b>Побудував веб-інструмент стиснення відео на FFmpeg</b> (Next.js 16): прогрес у реальному часі через Server-Sent Events, завантаження напряму в S3 через presigned URL, HLS-пакування зі стрімінг-проксі</li>
+      <li>Також: розгорнув і посилив захист self-hosted <b>Vaultwarden</b> (Docker, Nginx TLS, автоматичні бекапи); розробив admin UI та cron-раннер <b>PHP-сервісу синхронізації KeyCRM → Strapi</b></li>
+    </ul>
+  </div>
+
+  <h2>ВЛАСНІ ПРОЄКТИ (2021 – дотепер)</h2>
+  <ul class="earlier">
+    <li><b>The Glass Huts</b> — 10-сторінковий адаптивний сайт бронювання за Figma-макетом: власний i18n-рушій на 4&nbsp;мови (EN/DA/UK/DE) без бібліотек, калькулятор вартості бронювання, валідація форм · <a class="link" href="https://pavloseniv.github.io/The-Glass-Huts/The-Glass-Huts/index.html">демо</a></li>
+    <li><b>go-surf</b> — односторінковий лендінг для серф-кемпів за Figma-макетом: інтерактивна мапа узбережжя, синхронізована зі слайдерами, калькулятор вартості поїздки, a11y (vanilla JS, SCSS/BEM) · <a class="link" href="https://pavloseniv.github.io/go-surf/go-surf/index.html">демо</a></li>
+  </ul>
+
+  <h2>НАВИЧКИ</h2>
+  <ul class="skill-list">
+    <li><span class="skill-label">Frontend:</span> React 18/19, Next.js 16 (App Router, ISR), TypeScript (strict), Tailwind CSS, SCSS/Bootstrap, TanStack Query/Table/Router, Zustand, React Hook Form + Zod, Three.js, next-intl/react-intl</li>
+    <li><span class="skill-label">Mobile:</span> React Native 0.81 / Expo SDK 54 (EAS Build &amp; Update), Ionic 8 / Capacitor 7, OTA (Capgo), фонова геолокація, сканування штрихкодів, FCM push</li>
+    <li><span class="skill-label">Backend:</span> Strapi 5, Node.js, PostgreSQL, Redis, проєктування REST API; PHP 8 / Laravel 12 — впевнене читання коду й точкові правки</li>
+    <li><span class="skill-label">Інтеграції:</span> Monobank-еквайринг, «Нова пошта», KeyCRM, Google Maps &amp; Routes API, Telegram-боти, Pusher, S3 / DO Spaces, FFmpeg/HLS</li>
+    <li><span class="skill-label">DevOps:</span> Vercel, DigitalOcean, Docker / Docker Compose, Nginx, Let’s Encrypt, cron/bash ops, Sentry</li>
+    <li><span class="skill-label">Якість і тулінг:</span> Vitest + Testing Library, Playwright, Jest, ESLint 9, Prettier, Husky; Vite, Webpack, esbuild, Gulp</li>
+  </ul>
+
+  <div class="grid2">
+    <div>
+      <h2>МОВИ</h2>
+      <ul>
+        <li>Українська — рідна</li>
+        <li>Англійська — Intermediate (B1): вільно читаю технічну документацію, впевнено листуюся</li>
+      </ul>
+    </div>
+    <div>
+      <h2>ОСВІТА</h2>
+      <ul>
+        <li><b>Прикарпатський національний університет імені Василя Стефаника</b></li>
+        <li>Магістр комп’ютерних наук, 2022–2024</li>
+        <li>Бакалавр комп’ютерних наук, 2018–2022</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

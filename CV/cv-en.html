@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pavlo Seniv — CV</title>
+<style>
+  @page { size: A4; margin: 11mm 0 12mm; }
+  @page :first { margin-top: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; color: #212b36; font-size: 9.3pt; line-height: 1.42; }
+  a { color: inherit; text-decoration: none; }
+
+  header { background: #0f1726; color: #fff; display: flex; align-items: center; gap: 22px; padding: 24px 36px 22px; }
+  .photo { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 3px solid #3b82f6; flex: none; }
+  h1 { margin: 0 0 2px; font-size: 21pt; letter-spacing: 5px; font-weight: 700; }
+  .role { color: #8ab6ff; font-size: 10.5pt; font-weight: 600; letter-spacing: 0.4px; margin-bottom: 8px; }
+  .contacts { font-size: 8.2pt; color: #c4cedd; display: flex; flex-wrap: wrap; gap: 4px 0; }
+  .contacts span + span::before { content: "·"; margin: 0 7px; color: #5b6b82; }
+  .contacts a { color: #c4cedd; }
+
+  .content { padding: 14px 36px 0; }
+  .summary { margin: 0 0 4px; font-size: 9.4pt; }
+
+  h2 { font-size: 10.5pt; letter-spacing: 2.5px; color: #0f1726; margin: 14px 0 8px; padding-bottom: 4px; border-bottom: 2px solid #3b82f6; break-after: avoid; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; break-after: avoid; }
+  .job-title { font-size: 10.5pt; font-weight: 700; }
+  .dates { color: #51607a; font-size: 8.6pt; font-weight: 600; white-space: nowrap; }
+  .products { font-size: 8.8pt; color: #51607a; margin: 1px 0 8px; }
+  .products a { color: #2563eb; font-weight: 600; }
+
+  .proj { margin: 0 0 9px; }
+  .proj-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; break-after: avoid; }
+  .proj-name { font-weight: 700; font-size: 9.8pt; color: #0f1726; }
+  .proj-intro { margin: 1px 0 3px; color: #51607a; font-size: 8.8pt; break-after: avoid; }
+  ul { margin: 0; padding-left: 15px; }
+  li { margin: 0 0 2.5px; break-inside: avoid; padding-left: 2px; }
+  li::marker { color: #3b82f6; }
+  b, strong { color: #0f1726; }
+
+  .skill-list { margin: 0; padding-left: 15px; }
+  .skill-list li { margin-bottom: 2.5px; }
+  .skill-label { font-weight: 700; color: #0f1726; }
+
+  .grid2 { display: flex; gap: 36px; }
+  .grid2 > div { flex: 1; }
+  .earlier li { margin-bottom: 3px; }
+  .link { color: #2563eb; font-weight: 600; }
+</style>
+</head>
+<body>
+<header>
+  <img class="photo" src="photo.jpg" alt="Pavlo Seniv">
+  <div>
+    <h1>PAVLO SENIV</h1>
+    <div class="role">Middle Frontend Engineer — React / React Native / Next.js</div>
+    <div class="contacts">
+      <span>Ivano-Frankivsk, Ukraine (EET) · Remote</span>
+      <span>+380 68 185 95 41</span>
+      <span><a href="mailto:senivpavlo16it@gmail.com">senivpavlo16it@gmail.com</a></span>
+      <span><a href="https://www.linkedin.com/in/pavlo-seniv">linkedin.com/in/pavlo-seniv</a></span>
+      <span><a href="https://github.com/PavloSeniv">github.com/PavloSeniv</a></span>
+      <span><a href="https://pavloseniv.github.io/portfolio/portfolio/index.html">pavloseniv.github.io/portfolio</a></span>
+    </div>
+  </div>
+</header>
+
+<div class="content">
+  <p class="summary">Frontend engineer with 4+ years in web development (since 2021), shipping web and mobile products end-to-end. Core frontend engineer of an enterprise warehouse management system — <b>single-handedly rebuilt its entire frontend on Next.js 16 / React 19 (75&nbsp;pages, ~65K&nbsp;LOC) and shipped it to production in under a month</b>; <b>sole developer</b> of a cross-platform GPS tracking app for a logistics company's drivers; <b>full ownership</b> of a production e-commerce store — storefront, Strapi backend, payments, infrastructure. Comfortable beyond the frontend: Node/Strapi backends, payment and logistics integrations, and production operations on Vercel and DigitalOcean.</p>
+
+  <h2>EXPERIENCE</h2>
+  <div class="job-head">
+    <div class="job-title">Frontend Developer — SK Group EU</div>
+    <div class="dates">Dec 2022 – Present</div>
+  </div>
+  <div class="products">Products: <a href="https://app.wareflow.ai">Wareflow WMS — app.wareflow.ai</a> · <a href="https://consolid.ai">Consolid — consolid.ai</a> · <a href="https://maryline.ua">Maryline — maryline.ua</a></div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Wareflow — enterprise warehouse management system</span><span class="dates">Dec 2022 – Present</span></div>
+    <p class="proj-intro">Multi-tenant WMS for inventory, logistics, and warehouse operations, used daily by warehouse teams at multiple companies; built by a team of up to 10 engineers on Laravel 12, PostgreSQL, Redis, and React/Next.js.</p>
+    <ul>
+      <li><b>Single-handedly rebuilt the platform's entire frontend</b> as an SPA on Next.js 16 (App Router), React 19, and strict TypeScript — 75&nbsp;pages across 23&nbsp;business modules — and shipped it to production via CI in under a month, replacing a ~305K-line legacy UI with a ~65K-LOC codebase (−80% code)</li>
+      <li><b>Designed the new SPA's core:</b> JWT auth with single-flight token refresh, a reusable backend-driven table framework (TanStack Query/Table), and EN/UK localization on next-intl</li>
+      <li><b>Ran a documented security/performance audit:</b> CSP and security headers, removal of a spoofable auth header in the proxy, a forced-logout flow; built a custom Playwright e2e audit harness that walks real CRUD flows and records every 4xx/5xx response and console error</li>
+      <li><b>Before the SPA rebuild</b> — primary author of the React codebase during the modernization of the legacy jQuery/Blade UI into React 18 + TypeScript bundles; built the interactive Three.js 2D/3D warehouse map (~10K&nbsp;LOC) and later ported it to the new SPA</li>
+      <li><b>Co-develop the mobile warehouse terminal</b> as one of two core engineers (React 19, Ionic 8, Capacitor 7 — 43&nbsp;routes, 149&nbsp;test files): hardware barcode scanning as the primary input method, OTA releases via Capgo with RSA-signed bundles</li>
+      <li><b>Own the frontend toolchain and process end-to-end</b> (ESLint 9, Husky, Conventional Commits, automated release versioning in CI); day-to-day teamwork — code reviews and API-contract alignment with the backend engineers; regularly ship targeted business-logic fixes to the Laravel backend (multi-tenancy scoping, unit-of-measure calculations)</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Consolid Tracker — GPS tracking app for a logistics company's drivers</span><span class="dates">Apr 2024 – Apr 2026</span></div>
+    <p class="proj-intro">Cross-platform iOS/Android app used by the drivers of the company's fleet: Expo SDK 54, React Native 0.81, React 19, TypeScript.</p>
+    <ul>
+      <li><b>Effectively the sole developer from MVP through production</b> over 2&nbsp;years</li>
+      <li><b>Engineered an offline-first background geolocation pipeline:</b> GPS sampling every 60&nbsp;s, AsyncStorage buffering through connectivity loss, timestamp deduplication, batched flush on reconnect</li>
+      <li><b>Integrated Google Routes API v2</b> (traffic-aware ETA) and custom Haversine geofencing; navigation deep links to Google Maps, Apple Maps, and Waze</li>
+      <li><b>Owned the full release pipeline on EAS</b> with OTA update channels and React Native New Architecture; a custom Expo config plugin cut APK size by ~15–20&nbsp;MB</li>
+      <li><b>Implemented</b> secure token storage (expo-secure-store), FCM push notifications, and EN/UK/PL localization; migrated state from React Context to typed Zustand stores, rebuilt the UI on NativeWind 4</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Maryline — production e-commerce, maryline.ua</span><span class="dates">Oct 2024 – Present</span></div>
+    <p class="proj-intro">Fashion-brand online store processing live customer orders; full ownership — storefront, CMS backend, integrations, and infrastructure.</p>
+    <ul>
+      <li><b>Built the storefront</b> on Next.js 16 App Router, React 19, and TypeScript: 18&nbsp;pages, a BFF layer of API route handlers, ~22.5K&nbsp;LOC</li>
+      <li><b>Designed and maintain the Strapi 5 backend</b> (30&nbsp;content types): catalog with per-store stock, orders, promo codes, and integration webhooks</li>
+      <li><b>Integrated Monobank acquiring end-to-end:</b> invoice creation with an itemized basket, redirect flow, and webhook payment confirmation syncing status to KeyCRM</li>
+      <li><b>Implemented real-time stock synchronization:</b> KeyCRM webhook → Strapi REST-cache invalidation → targeted Next.js cache revalidation, replacing interval-based refresh</li>
+      <li><b>Automated delivery and CRM:</b> Nova Poshta waybill (TTN) generation (address and branch delivery) and KeyCRM order sync with schedule-based manager auto-assignment</li>
+      <li><b>Deployed and now operate the infrastructure:</b> storefront on Vercel, Strapi on DigitalOcean (SSL-secured PostgreSQL, Spaces media storage, automated backups with rotation), Redis response caching; SEO and analytics — JSON-LD for Google Merchant, dynamic sitemap/robots, GA4 e-commerce events</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-name">Internal tools (selected)</span></div>
+    <ul>
+      <li><b>Built an FFmpeg video-compression web tool</b> (Next.js 16): real-time progress over Server-Sent Events, direct-to-S3 uploads via presigned URLs, HLS packaging with a streaming proxy</li>
+      <li>Also: deployed and hardened a self-hosted <b>Vaultwarden</b> (Docker, Nginx TLS, automated backups); developed the admin UI and cron runner of a <b>PHP KeyCRM → Strapi sync service</b></li>
+    </ul>
+  </div>
+
+  <h2>PERSONAL PROJECTS (2021 – Present)</h2>
+  <ul class="earlier">
+    <li><b>The Glass Huts</b> — 10-page responsive booking website from a Figma design: dependency-free 4-language i18n engine (EN/DA/UK/DE), booking price calculator, form validation · <a class="link" href="https://pavloseniv.github.io/The-Glass-Huts/The-Glass-Huts/index.html">demo</a></li>
+    <li><b>go-surf</b> — single-page surf-camp landing from a Figma design: interactive coastline map synced with content sliders, trip price calculator, a11y (vanilla JS, SCSS/BEM) · <a class="link" href="https://pavloseniv.github.io/go-surf/go-surf/index.html">demo</a></li>
+  </ul>
+
+  <h2>SKILLS</h2>
+  <ul class="skill-list">
+    <li><span class="skill-label">Frontend:</span> React 18/19, Next.js 16 (App Router, ISR), TypeScript (strict), Tailwind CSS, SCSS/Bootstrap, TanStack Query/Table/Router, Zustand, React Hook Form + Zod, Three.js, next-intl/react-intl</li>
+    <li><span class="skill-label">Mobile:</span> React Native 0.81 / Expo SDK 54 (EAS Build &amp; Update), Ionic 8 / Capacitor 7, OTA (Capgo), background geolocation, barcode scanning, FCM push</li>
+    <li><span class="skill-label">Backend:</span> Strapi 5, Node.js, PostgreSQL, Redis, REST API design; PHP 8 / Laravel 12 — fluent code reading and targeted fixes</li>
+    <li><span class="skill-label">Integrations:</span> Monobank acquiring, Nova Poshta, KeyCRM, Google Maps &amp; Routes API, Telegram bots, Pusher, S3 / DO Spaces, FFmpeg/HLS</li>
+    <li><span class="skill-label">DevOps:</span> Vercel, DigitalOcean, Docker / Docker Compose, Nginx, Let’s Encrypt, cron/bash ops, Sentry</li>
+    <li><span class="skill-label">Quality &amp; tooling:</span> Vitest + Testing Library, Playwright, Jest, ESLint 9, Prettier, Husky; Vite, Webpack, esbuild, Gulp</li>
+  </ul>
+
+  <div class="grid2">
+    <div>
+      <h2>LANGUAGES</h2>
+      <ul>
+        <li>Ukrainian — native</li>
+        <li>English — Intermediate (B1): confident with technical documentation and written communication</li>
+      </ul>
+    </div>
+    <div>
+      <h2>EDUCATION</h2>
+      <ul>
+        <li><b>Vasyl Stefanyk Precarpathian National University</b></li>
+        <li>M.Sc. in Computer Science, 2022–2024</li>
+        <li>B.Sc. in Computer Science, 2018–2022</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
