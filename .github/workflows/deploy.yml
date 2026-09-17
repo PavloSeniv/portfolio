@@ -2,9 +2,12 @@ name: Deploy to GitHub Pages
 
 # Збирає сайт Gulp-ом і публікує його через GitHub Pages (джерело Pages має бути
 # перемкнуте на "GitHub Actions", інакше Pages і далі віддаватиме закомічену теку portfolio/).
+# Джерело публікації — гілка `update`: саме її Pages віддає сьогодні, і саме вона
+# дефолтна в репо. Дві гілки в одному environment: github-pages гоняться за прод-деплой,
+# тож тут навмисно ОДНА. Коли `main` справді стане продом за законом гілок — перемкнути сюди.
 on:
     push:
-        branches: [main, update]
+        branches: [update]
     workflow_dispatch:
 
 permissions:
